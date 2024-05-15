@@ -234,7 +234,7 @@ Alias: `panning()`
 
 ### effect
 
-Add an effect to the sound of the instrument to manipulate the sounds timbre in different ways. The first argument is always the `effect-name`. The arguments that follow depend on the selected effect. `fx()` can be used as an alias to reduce some typing. See [Effects Options](effects-options) for more details and an up-to-date list of all the available effects for both *Mercury4Max* and the *MercuryPlayground*.
+Add an effect to the sound of the instrument to manipulate the sounds timbre in different ways. The first argument is always the `effect-name`. The arguments that follow depend on the selected effect. `fx()` can be used as an alias to reduce some typing. See [Effects](./effects.md) for more details and an up-to-date list of all the available effects for both *Mercury4Max* and the *MercuryPlayground*.
 
 **arguments**
 - `Name` -> the effect name
@@ -248,7 +248,7 @@ Alias: `fx()`, <!-- `add_fx()` `with_fx()`-->
 
 **static vs. dynamic effect-chains**
 
-The Mercury4Max version has a static effects-chain. This means the order in the effects under the hood is fixed. The order is documented under [Effects Options](effects-options). Because of this there is:
+The Mercury4Max version has a static effects-chain. This means the order in the effects under the hood is fixed. The order is documented under [Effects](./effects.md). Because of this there is:
 
 - No option to change the order of effects with the code
 - No option to use effects multiple times in one instrument
@@ -772,7 +772,7 @@ Alias: `out()`
 
 ### chord
 
-By default the `midi` instrument's output is monophonic. You can turn the chord output (polyphony) on for a midi instrument with this function. This allows you to use `2D-list`s where the 2nd dimension is used to generate chords. Read more about chords under [`polySynth`](polySynth).
+By default the `midi` instrument's output is monophonic. You can turn the chord output (polyphony) on for a midi instrument with this function. This allows you to use `2D-list`s where the 2nd dimension is used to generate chords. Read more about chords under [`polySynth`](#polySynth).
 
 **arguments**
 

@@ -202,7 +202,7 @@ Alias: `drive`
 
 ## double
 
-Add an Automated-Double-Tracking (ADT) effect to the sound. It will sound like two versions of the sound are created, one left and one right. This effect is the `chorus` effect but with `wet = 1`. See [`chorus`](chorus) for more info about all the parameters.
+Add an Automated-Double-Tracking (ADT) effect to the sound. It will sound like two versions of the sound are created, one left and one right. This effect is the `chorus` effect but with `wet = 1`. See [`chorus`](#chorus) for more info about all the parameters.
 
 ```js
 new sample clap_808 fx(double) time(1/4)

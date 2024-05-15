@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## new
 
-Create a new instance of an instrument object. For example this can be a `sample`, `synth`, `loop`, `polySynth` or `midi` object, followed by the name of the sample, the name of the waveshape to use for the synth, the or the midi device name (See [Instrument Methods](instrument-methods) for more details). Use instrument methods to set parameters for that object on the same line.
+Create a new instance of an instrument object. For example this can be a `sample`, `synth`, `loop`, `polySynth` or `midi` object, followed by the name of the sample, the name of the waveshape to use for the synth, the or the midi device name (See [Instrument Functions](./instrument-functions.md) for more details). Use instrument methods to set parameters for that object on the same line.
 
 **arguments**
 
@@ -34,7 +34,7 @@ new midi "AU DLS Synth 1" note(3 1)
 
 ## list
 
-Create a list, which is sometimes called a `circular array` or `ring`. This list can contain many types of items such as whole numbers (integers), decimal numbers (floats), names, strings, fractions and other rings (2-dimensional). Use these to change parameters over time for instruments. The `list` must be declared with a `name` before it can be used as a variable in an instrument function. Read more about all the algorithmic functions available for generating and transforming lists under [List Functions](list-functions).
+Create a list, which is sometimes called a `circular array` or `ring`. This list can contain many types of items such as whole numbers (integers), decimal numbers (floats), names, strings, fractions and other rings (2-dimensional). Use these to change parameters over time for instruments. The `list` must be declared with a `name` before it can be used as a variable in an instrument function. Read more about all the algorithmic functions available for generating and transforming lists under [List Functions](./list-functions.md).
 
 **arguments**
 - `Name` -> list `name`

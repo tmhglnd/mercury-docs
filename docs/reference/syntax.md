@@ -10,6 +10,32 @@ Mercury is a minimal and human-readable language for the live coding of algorith
 
 Mercury code is evaluated as an `entire page`, `per line` and from `top to bottom`. One of the main reasons the entire code page is evaluated is that this allows the code to always be a direct reflection of the state of the system and therefore what you hear. This helps to keep an overview what is going on in the system. The downside is that it is more difficult to prepare snippets of code in the same file without evaluating them. Code that you don't want to hear can therefore be `commented`, or you can store it in a separate file.
 
+## Syntax Structure
+
+The following chart gives an overview of how the syntax is structured when you type code in Mercury. There are of course many combinations of instruments, lists, methods and functions possible. Please refer to the specific functions in the reference and the tutorials for more concrete examples.
+
+```
+new   <instrument-type>   <name>  function(value1 value2 ... value-n)
+                                  function1() function2() ... function-n()
+```
+```
+list  <list-name>         [ value1 value2 ... value-n ]
+                          [ list1 list2 ... list-n ]
+                          function(value1 value2 ... value-n)
+```
+```
+set   <global-name>       value
+      <instrument-name>   function(...)
+                          function1() function2() ... function-n()
+      all                 function(...)
+                          function1() function2() ... function-n()
+```
+```
+print <list-name>
+      function(...)
+```
+
+
 ## Syntax Vocabulary
 
 - `linebreak`
@@ -72,31 +98,6 @@ Mercury code is evaluated as an `entire page`, `per line` and from `top to botto
 - `print` 
 	- Print allows you to show the content of a `list` or result of a `list-function` in the console window
 
-## Syntax Structure
-
-The following chart gives an overview of how the syntax is structured when you type code in Mercury. There are of course many combinations of instruments, lists, methods and functions possible. Please refer to the specific functions in the reference and the tutorials for more concrete examples.
-
-```
-new   <instrument-type>   <name>  function(value1 value2 ... value-n)
-                                  function1() function2() ... function-n()
-```
-```
-list  <list-name>         [ value1 value2 ... value-n ]
-                          [ list1 list2 ... list-n ]
-                          function(value1 value2 ... value-n)
-```
-```
-set   <global-name>       value
-      <instrument-name>   function(...)
-                          function1() function2() ... function-n()
-      all                 function(...)
-                          function1() function2() ... function-n()
-```
-```
-print <list-name>
-      function(...)
-```
-
 ## Param Glossary
 
 When describing input arguments for functions it is useful to know if the values can be a number (positive and/or negative), a decimal number (float), a name or string or a boolean value (0/1). Below is an overview what words are used for these various scenarios.
@@ -113,7 +114,7 @@ When describing input arguments for functions it is useful to know if the values
 	- `name` -> A combination of letter-characters, may include capital letter, underscores and digits
 	- `string` -> A combination of letters between `" "` or `' '`
 
-#### List Types
+### List Types
 
 - `list` -> A list with `value`'s
 	- `number-list` -> A list with `number`'s

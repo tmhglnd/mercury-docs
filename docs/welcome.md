@@ -30,15 +30,15 @@ Mercury currently has 2 versions:
 - 📟 [Mercury?](#-about)
 - 🎮 [What can I do with Mercury?](#-features-overview)
 - 🔭 [Who is it for?](#-vision--goals)
-- 👩‍💻 [Code together with others!](#-collaborative-coding)
+<!-- - 👩‍💻 [Code together with others!](#-collaborative-coding) -->
 - 🚀 [Let's get started!](#-install)
-	- [Quick Start](/docs/quick-start.md)
-	- [Tutorial](/docs/tutorial.md)
-	- [External Editor](#%EF%B8%8F-external-editor)
-	- [Documentation](/docs/table-of-content.md)
-	- [Troubleshooting](/docs/08-troubleshooting.md)
-	- [System Requirements](#-system-requirements)
-	- [Sounds in Mercury](https://github.com/tmhglnd/mercury/blob/master/mercury_ide/media/README.md)
+	<!-- - [Quick Start](/docs/quick-start.md) -->
+	<!-- - [Tutorial](/docs/tutorial.md) -->
+	<!-- - [External Editor](#%EF%B8%8F-external-editor) -->
+	<!-- - [Documentation](/docs/table-of-content.md) -->
+	<!-- - [Troubleshooting](/docs/08-troubleshooting.md) -->
+	<!-- - [System Requirements](#-system-requirements) -->
+	<!-- - [Sounds in Mercury](https://github.com/tmhglnd/mercury/blob/master/mercury_ide/media/README.md) -->
 	<!-- - [Build Application](#-build-application) -->
 - 🔎 [Read more](#-further-reading-and-listening)
 - 👾 [Hear what others made](#-made-with-mercury)
@@ -210,7 +210,7 @@ new synth triangle fx(reverb '/extOSC/verbAmount') fx(filter low '/extOSC/cutoff
 
 You can code together in Mercury using the amazing [**Flok**](https://flok.cc/) live coding environment in the browser. The easiest way to get started is by combining **Flok** with the **Mercury Playground**, but you can also combine Flok with the Mercury Max8 version.
 
-- [Start coding together here](./docs/collaborate.md)
+<!-- - [Start coding together here](./docs/collaborate.md) -->
 
 <!-- 
 There are 3 options for how you can use Flok with Mercury:
@@ -249,9 +249,9 @@ Flok will send the entire code via OSC messaging to port 4880. Mercury should be
 
 ## 💻 Install
 
-- 📖 [I need some help installing](./docs/tutorial.md)
-- 🚀 [I'm an experienced computer user](./docs/quick-start.md)
-- 💻 [Is my computer powerful enough?](#-system-requirements)
+<!-- - 📖 [I need some help installing](./docs/tutorial.md) -->
+<!-- - 🚀 [I'm an experienced computer user](./docs/quick-start.md) -->
+<!-- - 💻 [Is my computer powerful enough?](#-system-requirements) -->
 
 OR
 
@@ -280,7 +280,7 @@ $ open mercury_ide/mercury_ide.maxproj
 
 It could be that you are having issues with Mercury. Please follow the steps below:
 
-- [Open the Troubleshooting](./docs/08-troubleshooting.md)
+<!-- - [Open the Troubleshooting](./docs/08-troubleshooting.md) -->
 
 ### ⌨️ External Editor
 
@@ -293,7 +293,7 @@ Instead of using the editor built in the Max Mercury version you can also load a
 
 Full explanation of all the possibilities in Mercury:
 
-- [Open the documentation](./docs/table-of-content.md)
+<!-- - [Open the documentation](./docs/table-of-content.md) -->
 
 ### 💻 System Requirements
 
@@ -316,7 +316,7 @@ These system requirements are recommended to install and run Max and Mercury on 
 
 Most sounds in Mercury are downloaded from [freesound.org](http://www.freesound.org) and are licensed with Creative Commons Attribution or Creative Commons 0 licenses. If not downloaded from freesound it is made sure that the license allows to redistribute the sounds via the Mercury environment and that you can use them in your projects. A list of all the available sounds and the original sample can be found here:
 
-- [List of sounds and credits](././mercury_ide/media/README.md)
+<!-- - [List of sounds and credits](././mercury_ide/media/README.md) -->
 
 ## 🔍 Further reading
 
@@ -402,7 +402,7 @@ During the development of Mercury (both the playground and the full version) I'v
 ## 📄 Licenses
 
 - Main Source - [The GNU GPL v.3 License](https://choosealicense.com/licenses/gpl-3.0/) (c) Timo Hoogland 2019-2023
-- Sound Files - Individually licensed, listed under [media/README.md](/mercury_ide_0.9.9/media/README.md)
+<!-- - Sound Files - Individually licensed, listed under [media/README.md](/mercury_ide_0.9.9/media/README.md) -->
 - Documentation - [The CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/) (c) Timo Hoogland 2019-2023
 - Examples - [The CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/) (c) Timo Hoogland 2019-2023
 - Max8 - Proprietary Software, Max (c) 1990-2019 Cycling'74 / IRCAM All rights reserved
