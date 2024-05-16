@@ -161,20 +161,11 @@ Instead of using the editor built in the Max Mercury version you can also load a
 - [Follow the instructions here for the Pulsar Plugin](https://github.com/tmhglnd/mercury-pulsar#-mercury-plugin-for-pulsar)
 - [Follow the instructions here for other editors](https://github.com/tmhglnd/mercury/blob/master/docs/07-environment.md#external-editor)
 
-### 📖 Documentation
+<!-- ### 📖 Documentation
 
-Full explanation of all the possibilities in Mercury:
+Full explanation of all the possibilities in Mercury: -->
 
 <!-- - [Open the documentation](./docs/table-of-content.md) -->
-
-### 💻 System Requirements
-
-These system requirements are recommended to install and run Max and Mercury on your computer. Lower specs may work but it's not guaranteed. A dedicated Graphics Card (GPU) is also recommended to run the visual side of Mercury smoothly (the text-editor runs on the graphics card as well).
-
-| OS | CPU | RAM |
-| -- | --- | --- |
-| Mac OSX 10.13 (at least 10.11.6+) | Intel i5 processor | 8 GB | 
-| Windows 10 (7 or 8 may work) | Intel i5 or AMD mult-core processor | 8 GB |
 
 <!-- ### 🛠 Build Application
 
