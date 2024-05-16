@@ -1,8 +1,8 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 ---
 
-# Effects
+# Instrument Effects
 
 You can add one ore multiple effects to the sound of the instrument to manipulate the sounds timbre in different ways. The first argument is always the `effect-name`. The arguments that follow depend on the selected effect. `fx()` can be used as an alias to reduce some typing. For ease of use some arguments can be skipped to access the most used arguments. How this works is explained per effect if applicable.
 

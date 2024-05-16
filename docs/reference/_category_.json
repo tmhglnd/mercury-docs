@@ -1,8 +1,8 @@
 {
-  "label": "Reference",
+  "label": "📖 Reference",
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Mercury function reference"
+    "description": "Welcome to the Mercury reference pages"
   }
 }

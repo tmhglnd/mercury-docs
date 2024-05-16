@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # List Functions
@@ -330,15 +330,15 @@ Generate a binary sequence (which can be used as a rhythm) from a positive integ
 
 ```js
 // generate a binary list from a single number
-list bny1 binaryBeat(358);
+list bny1 binaryBeat(358)
 //=> [1 0 1 1 0 0 1 1 0]
 
 // use a list of numbers and concatenate binary representations
-list bny2 binaryBeat([4 3 5]);
+list bny2 binaryBeat([4 3 5])
 //=> [1 0 0 1 1 1 0 1]
 
 // negative values are clipped to 0
-list bny3 binaryBeat([-4 4]);
+list bny3 binaryBeat([-4 4])
 //=> [0 1 0 0]
 ```
 
@@ -594,7 +594,7 @@ list dr2 drunk(10 4 0 12 6 false)
 
 ```js
 list dr1 drunkFloat(5)
-//=> [ 0.493, 0.459, 0.846, 0.963, 0.400 ] 
+//=> [ 0.493 0.459 0.846 0.963 0.400 ] 
 
 //  0.88 ┼╮╭╮  
 //  0.76 ┤╰╯│  
@@ -1582,6 +1582,52 @@ list vals lte([0 10 20 30] [20 0 30 30])
 
 Alias: `lte`
 
+## size
+
+Return the length/size of a list as a `number` if the argument is a list. If the argument is a number return the number as a positive integer greater than 0. If the argument is not a number return 1. The method can be used to input lists as arguments for other functions.
+
+**type: `analyser`**
+
+**arguments**
+- `Value(List)` -> input list to check size of
+
+```js
+size([5 7 3 2 9])
+//=> 5
+
+size(8)
+//=> 8
+
+size(3.1415)
+//=> 3
+
+size('foo')
+//=> 1
+
+```
+
+Alias: `length`
+
+## sum
+
+Return the sum of all values in a list as a `number`. The function ignores all non-numeric values. Works recursively with n-dimensional lists.
+
+**type: `analyser`**
+
+**arguments**
+- `Value(List)` -> input list to check size of
+
+```js
+sum([1 2 3 4])
+//=> 10 
+
+sum([10 'foo' 11 'bar' 22])
+//=> 43 
+
+sum([1 2 [3 4 [5 6] 7] 8])
+//=> 36
+```
+
 ## Translate Functions
 
 ### Conversion between pitch units
@@ -1737,7 +1783,7 @@ toScale([0 4.1 6.5 7.1 9.25])
 toScale([0 1 2 3 4 5 6 7 8 9 10 11] major)
 //=> [ 0 0 2 2 4 5 5 7 7 9 9 11 ]
 
-toScale([0 1 2 3 4 5 6 7 8 9 10 11] minor eb);
+toScale([0 1 2 3 4 5 6 7 8 9 10 11] minor eb)
 //=> [ 3 3 5 6 6 8 8 10 11 11 13 13 ]
 ```
 
@@ -1745,17 +1791,19 @@ toScale([0 1 2 3 4 5 6 7 8 9 10 11] minor eb);
 
 Convert a string or list of strings to their ASCII code integer representation. The ASCII code is the American Standard Code for Information Interchange. In this code every unique character/symbol/number is represented by a whole number (integer). For example `a=97`, but `A=65` and `SPACE=32`.
 
-Alias: `textCode`, `ttoc`
+**type: `translator`**
 
 **arguments**
 - `String(List)` -> input to convert to ASCII 
 
 ```js
 // single string input
-textCode('bach cage');
+textCode('bach cage')
 //=> [ 98 97 99 104 32 99 97 103 101 ]
 
 // multiple strings in a list results in a 2D list output
-textCode([bach cage]);
+textCode([bach cage])
 //=> [ [ 98 97 99 104 ] [ 99 97 103 101 ] ]
 ```
+
+Alias: `textCode`, `ttoc`

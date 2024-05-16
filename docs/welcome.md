@@ -1,6 +1,6 @@
 ---
-title: Welcome
-sidebar_position: 1
+title: 👋 Welcome
+sidebar_position: 0
 ---
 
 # 🌕 Mercury Live Coding Environment 
