@@ -10,6 +10,10 @@
   position: relative;
   overflow: hidden;
   /* background-color: black; */
+  background: linear-gradient( var(--image-overlay), var(--image-overlay)), url("./../../static/img/performance.jpg");
+  filter: hue-rotate(var(--image-hue));
+
+  background-size: 100%;
 }
 
 @media screen and (max-width: 996px) {

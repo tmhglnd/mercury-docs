@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Mercury',
-  tagline: 'A minimal and human-readable language for the live coding of algorithmic electronic music performances',
+  tagline: 'A beginner-friendly, minimal and human-readable language for the live coding of algorithmic electronic music performances',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -156,7 +156,7 @@ const config = {
           //   ],
           // },
         ],
-        copyright: `Copyright (c) ${new Date().getFullYear()} Mercury Live Coding Environment by Timo Hoogland. Built with Docusaurus.`,
+        copyright: `Copyright (c) ${new Date().getFullYear()} Mercury Live Coding Environment by Timo Hoogland. Docs built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
