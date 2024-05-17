@@ -180,27 +180,6 @@ Most sounds in Mercury are downloaded from [freesound.org](http://www.freesound.
 - [Paper in ICLC 2019](http://iclc.livecodenetwork.org/2019/papers/paper67.pdf)
 - [Total Serialism Library](https://github.com/tmhglnd/total-serialism#total-serialism)
 
-## 👾 Made with Mercury
-
-- *Made something with Mercury? Please add a URL here and send a pull request!* 😎
-- [iTypeMusic - Electronic Music Stream with Live Coding](https://www.youtube.com/watch?v=x77RP20uWxA&ab_channel=itypemusic)
-- [LXT @levoxtrip (at Solstice Stream December 2023)](https://www.youtube.com/watch?v=TzM-koWkRow&ab_channel=Eulerroom)
-- [Linalab(Mercury) + Turbulente(p5Live) - Live at Algorave Lisbon](https://youtu.be/WSPNDC0a2X4)
-- [T.mo - Liber Abaci (Mercury Coding Sessions)](https://youtu.be/syUL76qCV6w)
-- [Roald van Dillewijn - Smashing Temparateness (Mercury Coding Sessions)](https://youtu.be/KJ4OpJ3-Ik0)
-- [Rafa & Timo - "Hello, off-world!" (Mercury Coding Sessions)](https://youtu.be/BbOz1XBu8f8)
-- [Guillem Góngora Moral - Transcription #1 (Mercury Coding Sessions)](https://youtu.be/wRVQHlghitM)
-- [Anne Veinberg - CodeKlavier meets Mercury (Mercury Coding Sessions)](https://youtu.be/e4sPKOlaYS8)
-- [Nick Levantis - Wake Up](https://youtu.be/UsfKF0ggn7k)
-- [Rafa & Timo - "Hello, off-world!" (Live at NMF)](https://www.youtube.com/watch?v=7UWywv_DPHI&t=4s)
-- [Roald van Dillewijn - Mercury & DigiLog](https://www.youtube.com/watch?v=1v7xicXuSbo&t=346s)
-- [Sasj & Timo - Amalgam (Live at Github Sattelite 2020)](https://www.youtube.com/watch?v=zzmgX4QSBMM)
-- [Anne Veinberg - CodeKlaver & Mercury Extension Tryout](https://www.youtube.com/watch?v=VSoibHwQJ98&t=175s)
-- [Timo - Live at NerdLab VR 2020](https://www.youtube.com/watch?v=EW9x68sxhvM)
-- [T.mo - Live at Eulerroom Equinox 2020](https://www.youtube.com/watch?v=X0FFcdd1QEE)
-- [T.mo - Live at Algo:Ritmi 2020](https://www.facebook.com/timohoogland/videos/3654187371320680/)
-- [T.mo - Live at NLCL Meetup STEIM](https://www.youtube.com/watch?v=leckC_yUMss)
-
 ## 🔋 Powered By
 
 - Mercury has been granted funding from [**Creative Industries Fund NL**](https://stimuleringsfonds.nl/en/)

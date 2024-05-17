@@ -65,10 +65,22 @@ For a full overview of the included sounds see [Sounds in Mercury](sounds).
 
 ### Help
 
+Clicking help opens a new tab with the Mercury documentation.
+
 ### Collaborate
+
+Open a new [**Flok**](https://flok.cc) session to start collaborating with `mercury` or `mercury-web`.
 
 ### Add Sounds
 
+You can add sounds from your computer to the web version. This is temporarily, sounds are not uploaded to any server but just played locally from your device. If you refresh or restart the browser you have to add the files again. You can select multiple files at once before clicking `open`. The files you can use are `.wav` and `.mp3`. If the loading is succesful you see a log in the console with something like: `sound added as: <name>`. The `<name>` is what you'll have to use in the code after `new sample <name>`
+
+When you run the application locally you can also replace or add any sounds to the public/assets/samples folder and run npm run build, this creates a new database of soundfiles in src/data/samples.json.
+
 ### Hide Menu
 
+Hide the menu so you only see the code-editor. Useful for performance situations where you like to focus on the code and nothing more. You can also show/hide the code-editor with `Ctrl Shift H`. This is useful when you have Hydra visuals running in the background and you'd like to only see those.
+
 ### Use Hydra
+
+It is possible to include [**Hydra visuals**](https://hydra.ojack.xyz) from the Hydra live coding language created by Olivia Jack as a background in the Mercury Playground. Go to the Hydra website and start editing the code. When you're done you can copy all the code and past it in the little textarea that says: `<paste hydra code for background visuals>`. Click outside the textarea to make the visuals active.

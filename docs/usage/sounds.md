@@ -5,6 +5,8 @@ id: sounds
 
 # 📢 Sounds in Mercury
 
+Most of the sounds in Mercury are from [freesound.org](http://www.freesound.org) and are licensed with Creative Commons Attribution or Creative Commons 0 licenses. If not downloaded from freesound it is made sure that the license allows you to redistribute the sounds via the Mercury environment and that you can use them in your projects. All the sounds are listed below with their original source, license and credits.
+
 - [Credits](#credits)
 - [One-shots](#one-shots)
 	- [Drums](#drums) (kick, snare, hat, ...)
