@@ -4,11 +4,11 @@ sidebar_position: 5
 
 # 🛠 Extending Mercury
 
-## Create a synth for Mercury4Max
-
 :::warning EXPERIMENTAL
-**This feature is still experimental and in the future things might change!**
+**These features are still experimental and in the future things might change!**
 :::
+
+## Create a synth for Mercury4Max
 
 You can extend Mercury4Max with custom synths and other sound designing patches programmed in Max8. This requires knowledge/experience with the MaxMSP programming paradigm. It also requires you to have a Max8 license so you can edit and save the patches. Follow the steps below to setup your own patch. You can also copy-paste the compressed code on the bottom of the page.
 
@@ -91,3 +91,57 @@ BfHiLBm7dAxeD.kLELZL9nWCjKcOqr7dtppQaKFXUsu5tM7jE1g4B2P64G8T
 
 The Mercury Playground uses the [**ToneJS**](https://tonejs.github.io/) framework for creating the Transport, Sequencer, Synths, Sampler and almost everything WebAudio related. It also uses [**WebMidiJS**](https://webmidijs.org/) for the MIDI related instruments and [**SocketIO**](https://socket.io/) for the OSC related functionalities. Extending the engine with your own synths requires knowledge/experience with JavaScript programming.
 
+### Setup
+
+First clone the project from `https://github.com/tmhglnd/mercury-playground` so you can run it locally. Follow the steps in the [Getting Started](./../getting-started.md#🌑-without-internet)
+
+### Create an Instrument Class
+
+You can create a new `Class` for your instrument. Depending on what you want the instrument to do (Sound, MIDI, Sample, OSC, Polyphonic) you can `extend` your class from the `Sequencer`, the `Instrument` or the `PolyInstrument`.
+
+```js
+class MyCustomInstrument extends Sequencer {
+	...
+}
+```
+
+```js
+class MyCustomSynth extends Instrument {
+	...
+}
+```
+
+```js
+class MyCustomPoly extends PolyInstrument {
+	...
+}
+```
+
+:::tip
+You can use the other instrument class files (such as MonoSynth.js) as an example or starting point for making your own
+:::
+
+### Add to the language
+
+In the `worker.js` file you can add your instrument to the language so the parser knows what `Class` to use when you type:
+
+```js
+new mySynth <name> function()
+```
+
+Add the instrument to the `objectMap` like so:
+
+```js
+const objectMap = {
+	...,
+	'mySynth' : (obj) => {
+		let type = obj.type;
+		let args = obj.functions;			
+		let inst = new MyCustomSynth(engine, type, canvas);
+
+		objectMap.applyFunctions(args, inst, type);
+		return inst;
+	},
+	...
+}
+```
