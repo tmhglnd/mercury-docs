@@ -13,13 +13,13 @@ sidebar_position: 1
 I recommend to use the MercuryPlayground (browser version) first. Please read further in chapter [MercuryPlayground](#mercuryplayground).
 :::
 
-If you have experience with Max8 you can also consider using Mercury4Max instead. Please read further in chapter [Mercury4Max](#mercury4max) for instructions on installing and setting up the environment.
+If you have experience with Max8 you can also consider using Mercury4Max instead. Please read further in chapter [Mercury4Max](#-mercury4max) for instructions on installing and setting up the environment.
 
 <!-- If you are curious what the pros and cons are between these two versions please read [Browser or Max?](browser-max). -->
 
 ## 🌎 MercuryPlayground
 
-The MercuryPlayground runs directly in the browser using WebAudio and WebMIDI technologies. This makes it very accessible for everyone, no matter if you're a beginner or an expert.
+The MercuryPlayground runs directly in the browser using WebAudio and WebMIDI technologies based on the JavaScript and the ToneJS framework. This makes it very accessible for everyone, no matter if you're a beginner or an expert.
 
 1. Install a Chromium based browser on your computer (for example Chrome, Brave, Arc, Opera)
 
@@ -114,7 +114,7 @@ $ open mercury_ide/mercury_ide.maxproj
 You can create a shortcut or alias on your desktop or Applications folder if you like for easy access.
 
 - ⏳ Now give it some time to load.
-	- **Mac Users**: You may need to give some permissions under Security & Privacy Preferences. Please be aware of any messages popping up
+	- **Mac Users**: You may need to give some permissions under Security & Privacy Preferences. Please be on the lookout for any messages popping up.
 
 Once it's ready you will see two windows:
 

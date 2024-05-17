@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # 👩‍💻👨‍💻 Collaborative Coding
 
-You can code together in Mercury by using the amazing [**Flok**](https://flok.cc/) live coding environment for the browser developed by Damián Silvani (a.k.a. Munshkr). 
+You can code together in Mercury by using the amazing [**Flok**](https://flok.cc/) live coding environment for the browser developed by Damián Silvani (a.k.a. Munshkr). Flok is a web-based P2P collaborative editor for live coding music and graphics. Similar to Etherpad, but focused on code evaluation for livecoding.
 
 There are 3 options for how you can use Flok with Mercury:
 1. Use Flok to combine Mercury with Hydra visuals (or other languages like Tidal, Foxdot and SuperCollider) on a localhost

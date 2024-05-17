@@ -154,13 +154,6 @@ It could be that you are having issues with Mercury. Please follow the steps bel
 
 <!-- - [Open the Troubleshooting](./docs/08-troubleshooting.md) -->
 
-### ⌨️ External Editor
-
-Instead of using the editor built in the Max Mercury version you can also load an external textfile or use a plugin for Pulsar (previously Atom).
-
-- [Follow the instructions here for the Pulsar Plugin](https://github.com/tmhglnd/mercury-pulsar#-mercury-plugin-for-pulsar)
-- [Follow the instructions here for other editors](https://github.com/tmhglnd/mercury/blob/master/docs/07-environment.md#external-editor)
-
 <!-- ### 📖 Documentation
 
 Full explanation of all the possibilities in Mercury: -->

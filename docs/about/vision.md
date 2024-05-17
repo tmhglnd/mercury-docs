@@ -2,9 +2,9 @@
 sidebar_position: 2
 ---
 
-# 🔭 What does Mercury for you?
+# 🔭 What can you do with Mercury?
 
-Are you not sure if Mercury is for you? Maybe after reading this you have a better idea if so:
+Are you not sure if Mercury is for you? Maybe after reading this you have a better idea:
 
 ---
 

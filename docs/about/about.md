@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# 👀 What is Mercury?
+# 🤔 What is Mercury?
 
-:::note Mercury is a beginner-friendly, minimal and human-readable language for the live coding of algorithmic electronic music
+:::note Mercury is a free/open-source, beginner-friendly, minimal and human-readable language for the live coding of algorithmic electronic music
 :::
 
 All elements of the language are designed around making code more accessible and less obfuscating for both the programmer-performer and the audience alike. This motivation stretches down to the coding-style itself which uses clear descriptive names for functions and a simple clear syntax. Mercury provides the performer with an extensive library of algorithms to generate or transform sequences that can modulate musical parameters, such as (but not limited to) melody and rhythm, over time. The environment focuses on creating sound in the first place, but is not limited to that and can for example also output MIDI, OSC to control other processes such as visuals.

@@ -1,76 +1,62 @@
 ---
-sidebar_position: 6
+sidebar_position: 2
+id: mercury4max-overview
 ---
 
-# Mercury4Max Overview
+# 🏔 Mercury4Max Overview
 
-- [Mercury Main Window](#mercury-main-window)
-	- [Editor / Visuals](#editor-visuals)
-	- [Sound](#sound)
-	- [FPS CPU Meter](#fps-and-cpu-meter)
-	- [Auto Log Sketch](#auto-log-sketch)
-	- [Auto Copy Sketch](#auto-copy-sketch)
-	- [Record Audio](#record-audio)
-	- [Show Variables](#show-variables)
-	- [Show Audiofiles](#show-audiofiles)
-	- [External Editor](#external-editor)
-- [Menubar](#menubar)
-	- [File](#file)
-	- [Sounds](#sounds)
-	- [Settings](#settings)
-		- [Audio Setup](#audio-setup)
-		- [Visual Setup](#visual-setup)
-		- [Editor Setup](#editor-setup)
-		- [Shortkeys Setup](#shortkeys-setup)
-	- [Explanation](#explanation)
+This chapter gives an overview of the features in the user interface of Mercury4Max
 
-# Mercury Main Window
+## Mercury Main Window
 
-The Mercury main window gives you access to the most used settings in the Mercury Environment. For more detailed settings you can use the menubar.
+The Mercury main window gives you access to the most used settings in the Mercury Environment. For more detailed settings you can use the menubar on top.
 
-## Editor / Visuals
+### Sound
 
-Start or stop the rendering of the text-editor. This is an OpenGL environment that renders the responsive texteditor in the second window. The rendering is done at a framerate synced to the screen you use (which usually defaults to 60fps). This rendering is also necessary to use when coding visuals displayed behind the text.
+Start or stop the audio calculations (Digital Signal Processing, DSP). Turning this off will disable all processes that are connected to audio or sequencing.
 
-## Sound
+### Editor / Visuals
 
-Start or stop the audio calculations (Digital Signal Processing). Turning this off will disable all processes that are considered audio.
+Start or stop the rendering of the text-editor. This is an OpenGL environment that renders the responsive texteditor in the second window. The rendering is done at a framerate synced to the screen you use (which usually defaults to 60fps). This rendering is also necessary to use when coding visuals displayed behind the text. You don't have to use this texteditor, you can also use an external editor like Pulsar or Flok.
 
-## FPS and CPU Meter 
-
-The FPS meter shows the current Frames Per Second that the rendering engine is running at. If you experience a very slow framerate (less then 25fps) you can find some info under [Visual Setup](#visual-setup) to help you adjust settings for your computer. 
+### CPU and FPS Meter 
 
 This CPU meter shows the current CPU usage of the audio processes running in Mercury. If you experience a very high cpu-usage (more then 70) you can find some info under [Audio Setup](#audio-setup) to help you adjust settings for your computer.
 
-## Auto Log Sketch
+The FPS meter shows the current Frames Per Second that the rendering engine is running at. If you experience a very slow framerate (less then 25fps) you can find some info under [Visual Setup](#visual-setup) to help you adjust settings for your computer.
+
+### Auto Log Sketch
 
 Enabling the Auto Log Code will store a version of your code to the folder `~/Documents/Mercury/Code Logs` for every time you execute your code. This can be helpful to create a history of your code and allow you to look back at your code after a performance.
 
-## Auto Copy Sketch
+<!-- ### Auto Copy Sketch
 
-When enabling the 'Auto Copy Sketch' Mercury will copy the full sketch to the clipboard everytime you execute your code. The copy will include a timestamp in the header of the snippet. Paste it in a different text-editor, or use it to send your code in a chat message to someone else.
+When enabling the 'Auto Copy Sketch' Mercury will copy the full sketch to the clipboard everytime you execute your code. The copy will include a timestamp in the header of the snippet. Paste it in a different text-editor, or use it to send your code in a chat message to someone else. -->
 
-## Record Audio 
+### Record Audio 
 
 Start and stop the recording of the current sound output. The recorded file will be stored to the `~/Documents/Mercury/Recordings` folder with the date and time as the filename.
 
-## Show Variables 
+### Show Variables 
 
-View the current `ring`'s that are created from the code in a dictionary.
+View the current `list`'s that are created from the code in a dictionary. This could be helpful while debugging some code.
 
-## Show Audiofiles
+### Show Audiofiles
 
-View the loaded soundfiles and waveforms as a system path in a dictionary with their associated name that can be used in Mercury code. 
+View the loaded soundfiles and waveforms as a system path in a dictionary with their associated name that can be used in Mercury code. Helpful if you want to find the `name` to use in `new sample`
 
-## External Editor
+### External Editor
+
+:::warning Use the Pulsar plugin or Flok instead
+:::
 
 The external editor allows you to use a textfile from outside the Mercury environment to run as code. Generate a `.txt` file somewhere on your computer. Drag-n-drop the file in the box *drop code file here*. This will automatically enable the *Use External Editor* button. Now you can use a external editor such as Atom, VSCode or Sublime to edit your code. Upon saving the code Mercury will detect the changes and execute the current state of the file.
 
-# Menubar
+## Menubar
 
 The menubar gives you access to more functionalities in Mercury such as opening a new file, opening an existing file, saving your code, executing or deleting your code, adding sounds to your library, changing settings for the audio, visuals, editor and keyboard shortcuts and opening examples, documentation and the list of sounds.
 
-## File
+### File
 
 Via the File menu you can:
 
@@ -82,49 +68,46 @@ Via the File menu you can:
 - Clear Code (same as new file) : `CMD + N`
 - Load External Editor File (see [external editor](#external-editor))
 
-## Sounds
+### Sounds
 
 Via the Sounds menu you can add folders of sounds and waveforms to the searchpath of the Mercury environment. The filenames of these sounds can then be used in the code to refer to. This works best if you rename your files to shorter filenames and **don't** use spaces in the name. It will recursively search for all the files that match `.wav`, `.aiff` or `.mp3`, so be careful with selecting a folder with many subdirectories and audiofiles. These files will be loaded into the RAM, so try to keep the loaded soundfiles under **4 GB**.
 
-### Add
+#### Add
 
 The **Add** option appends all the found audiofiles to the current list of already loaded files. A library with the loaded sounds is stored under `~/Documents/Mercury/Data`. 
 
-### Replace
+#### Replace
 
 The **Replace** option removes all the current loaded files from the library and only addes the files that are found in the currently selected folder. The library is updated accordingly.
 
-### Default
+#### Default
 
 The **Default** option resets the library to the files that are included in the Mercury project by default. These files can be found in the `mercury_ide/media` folder
 
-### Show Loaded
+#### Show Loaded
 
 The **Show Loaded** option opens the library of loaded soundfiles. This will give you insight in if your files were loaded correctly and also shows you the buffername, duration, number of channels and samplerate of the files.
 
-### Example for file naming
+#### Example for file naming
 I have a soundfile: `my cool Sound 05.wav` on the computer. 
 
 Using this in Mercury like so:
 
-```java
+```js
 new sample my cool Sound 05
 ```
 
 will not work, since it will interpret the spaces as new keywords. Therefore I rename the file with underscores to: `my_cool_Sound_05.wav`. Now I can use this file like so:
 
-```java
+```js
 new sample my_cool_Sound_05
 ```
 
 Since I find this filename a bit long to type during a live coding session I decide to rename it a bit shorter like so: `sound05.wav`. Now the code will look like this after importing the sound:
 
-
-```java
+```js
 new sample sound05
 ```
-
-## Settings
 
 ### Audio Setup
 
@@ -270,6 +253,15 @@ Adjust the look of the texteditor. Change the font, color, blinking color, curso
 ### Shortkeys Setup
 
 You can customize the shortkeys by opening the `Setup Shortkeys` under `Settings` in the menubar. You can also reset to the default key commands. 
+
+#### Customize Shortkeys
+
+You can customize the shortkeys by opening the `Setup Shortkeys` under `Settings` in the menubar. You can also reset to the default key commands. 
+
+1. Select the key you would like to customize in the dropdown menu on the top.
+2. Click `change keycommand`, it now displays `waiting for keys...`.
+3. Hit the key combination you would like to use for this command and release the keys to store.
+4. Check if stored correctly in the scroll-menu below. Every command displays the shortcut and keycode.
 
 <!-- For a full explanation see [Shortkeys](./06-shortkeys.md) -->
 
