@@ -16,13 +16,19 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle" style={{fontSize: "2em", color: "white"}}>{siteConfig.tagline}</p>
-        {/* <div className={styles.buttons}>
+        <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            to="https://mercury.timohoogland.com">
+            Start Coding
           </Link>
-        </div> */}
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/welcome">
+            Read Documentation
+          </Link>
+        </div>
       </div>
     </header>
   );

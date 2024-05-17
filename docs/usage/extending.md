@@ -4,6 +4,8 @@ sidebar_position: 5
 
 # 🛠 Extending Mercury
 
+In this page you can find help on how to create your own synths for Mercury4Max or the MercuryPlayground in the engine. For this you will work with Max8 or with JavaScript. It is currently not possible to code new synths with the Mercury language itself.
+
 :::warning EXPERIMENTAL
 **These features are still experimental and in the future things might change!**
 :::
@@ -22,7 +24,7 @@ Don't give your synth a filename with spaces! Instead I recommend using programm
 
 ### I/O 
 
-The patch will be loaded inside a `poly~` object. Therefore it is required to use an `[in 1]` object to receive incoming messages and an `[out~ 1]` message to send a signal out.
+The patch will be loaded inside a `poly~` object. Therefore it is required to use an `[in 1]` object to receive incoming messages and an `[out~ 1]` object to send a signal out.
 
 ### Muting
 
