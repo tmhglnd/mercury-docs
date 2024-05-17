@@ -160,20 +160,6 @@ Full explanation of all the possibilities in Mercury: -->
 
 <!-- - [Open the documentation](./docs/table-of-content.md) -->
 
-<!-- ### 🛠 Build Application
-
-`Optional`
-
-**Why?** - Building the Application is recommended when using Mercury with other MaxMSP projects. This will allow Mercury to have a seperate thread from the other Max processes, giving it enough RAM and CPU space. Also the application will probably run more stable because the project can not be editted anymore. This, of course, also dependents on your system specifications.
-
-**How?** - The Cycling'74 Max8 coding environment is needed to build the application from the `mercury_ide_x.x.x.maxproj` file. Open the `.maxproj` file and select `Build Collective/Application` from the `Settings` menu on the bottom of the project window. *Building the Application is not necessary in order to run the environment!* -->
-
-### 🎵 Sounds
-
-Most sounds in Mercury are downloaded from [freesound.org](http://www.freesound.org) and are licensed with Creative Commons Attribution or Creative Commons 0 licenses. If not downloaded from freesound it is made sure that the license allows to redistribute the sounds via the Mercury environment and that you can use them in your projects. A list of all the available sounds and the original sample can be found here:
-
-<!-- - [List of sounds and credits](././mercury_ide/media/README.md) -->
-
 ## 🔍 Further reading
 
 - [Mercury homepage](http://www.timohoogland.com/mercury-livecoding)

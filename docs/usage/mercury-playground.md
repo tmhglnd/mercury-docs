@@ -83,4 +83,4 @@ Hide the menu so you only see the code-editor. Useful for performance situations
 
 ### Use Hydra
 
-It is possible to include [**Hydra visuals**](https://hydra.ojack.xyz) from the Hydra live coding language created by Olivia Jack as a background in the Mercury Playground. Go to the Hydra website and start editing the code. When you're done you can copy all the code and past it in the little textarea that says: `<paste hydra code for background visuals>`. Click outside the textarea to make the visuals active.
+It is possible to include [**Hydra visuals**](https://hydra.ojack.xyz) from the Hydra live coding language created by Olivia Jack as a background in the Mercury Playground. Go to the Hydra website and start editing the code. When you're done you can copy all the code and past it in the little textarea that says: `<paste hydra code for background visuals>`. Click outside the textarea to make the visuals.
