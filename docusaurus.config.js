@@ -88,29 +88,19 @@ const config = {
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/tmhglnd/mercury-playground',
-            label: 'Github',
+            label: 'github',
             position: 'right',
           },
-          // {
-          //   href: 'https://mercury.timohoogland.com',
-          //   label: 'Playground',
-          //   position: 'right',
-          // },
-          // {
-          //   href: 'https://github.com/tmhglnd/mercury-playground',
-          //   label: 'Mercury Playground',
-          //   position: 'right',
-          // },
-          // {
-          //   href: 'https://github.com/tmhglnd/mercury',
-          //   label: 'Mercury4Max',
-          //   position: 'right',
-          // },
-          // {
-          //   href: 'https://github.com/tmhglnd/mercury-engine',
-          //   label: 'Mercury Engine',
-          //   position: 'right',
-          // },
+          {
+            href: 'https://mercury.timohoogland.com',
+            label: 'playground',
+            position: 'right',
+          },
+          {
+            href: 'https://www.timohoogland.com',
+            label: 'tmhglnd',
+            position: 'right',
+          },
         ],
       },
       footer: {
@@ -139,6 +129,10 @@ const config = {
               {
                 label: 'Mastodon',
                 href: 'https://social.toplap.org/@mercury',
+              },
+              {
+                label: 'Website',
+                href: 'https://timohoogland.com/mercury-livecoding',
               },
             ],
           },

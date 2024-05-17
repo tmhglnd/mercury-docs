@@ -5,166 +5,42 @@ sidebar_position: 0
 
 # 🌕 Mercury Live Coding Environment 
 
-**A minimal and human-readable language for the live coding of algorithmic electronic audiovisual performances.**
+Welcome to the Mercury Live Coding Environment! ✌️ ☮️ **Make Music, Not War!** ☮️ ✌️
 
-Mercury currently has 2 versions:
+**Mercury is a free/open-source, beginner-friendly, minimal and human-readable language for the live coding of algorithmic electronic music performances**
+
+In the menu on the left side you can find everything you need, from [About](about) and [Getting Started](getting-started) to Tips&Tricks, How-To's and the [Reference](./reference/syntax.md). Also make sure you check out the [Collaborative Coding](collaborate) chapter, because making music together is fun!
+
+<!-- Mercury currently has 2 versions:
 
 * Original version running in Max8 (Windows/Mac only) (you're in the right place)
-* Web version running in the browser (Windows/Mac/Linux) [go to this repo](https://github.com/tmhglnd/mercury-playground)
+* Web version running in the browser (Windows/Mac/Linux) [go to this repo](https://github.com/tmhglnd/mercury-playground) -->
 
-**🚀 Start coding with the latest full version:** 
+[**🚀 Start coding directly in the playground!**](https://mercury.timohoogland.com/)
 
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/tmhglnd/mercury)](https://github.com/tmhglnd/mercury/releases)
-
-[**👾 Or sketch in the browser playground!** (recommended for beginners)](https://mercury.timohoogland.com/)
-
-[**🙏 Support Mercury by becoming a Patron**](https://www.patreon.com/bePatron?u=9649817) 
+[**🙏 Support Mercury by buying me a Ko-Fi**](https://ko-fi.com/tmhglnd)
 
 [**💬 Join the Discord Community!**](https://discord.gg/vt59NYU)
 
-<!-- ![Livecoding Performance with Mercury (photo: Zuzanna Zgierska)](media/mercury-live.png) -->
+<!-- ⭐️ *watch and star the [**repo**](https://github.com/tmhglnd/mercury) to keep up-to-date with the latest changes whenever they're made* -->
 
-## 📋 Table of Contents
+:::info Life on earth is in crisis; Please Donate!
 
-<!-- - [Newest Features](#-newest-features) -->
-- 📟 [Mercury?](#-about)
-- 🎮 [What can I do with Mercury?](#-features-overview)
-- 🔭 [Who is it for?](#-vision--goals)
-<!-- - 👩‍💻 [Code together with others!](#-collaborative-coding) -->
-- 🚀 [Let's get started!](#-install)
-	<!-- - [Quick Start](/docs/quick-start.md) -->
-	<!-- - [Tutorial](/docs/tutorial.md) -->
-	<!-- - [External Editor](#%EF%B8%8F-external-editor) -->
-	<!-- - [Documentation](/docs/table-of-content.md) -->
-	<!-- - [Troubleshooting](/docs/08-troubleshooting.md) -->
-	<!-- - [System Requirements](#-system-requirements) -->
-	<!-- - [Sounds in Mercury](https://github.com/tmhglnd/mercury/blob/master/mercury_ide/media/README.md) -->
-	<!-- - [Build Application](#-build-application) -->
-- 🔎 [Read more](#-further-reading-and-listening)
-- 👾 [Hear what others made](#-made-with-mercury)
-- 🤓 [I like to help](#-contribute)
-- 🔋 [Powered By](#-powered-by)
-- 🙏 [Thanks](#-thanks)
-- ✨ [Inspiration](#-inspiration)
-- 📄 [Licenses](#-licenses)
+**We live in a war-torn world, where millions of people have their lives destroyed by conflict. On top of that our climate is changing faster than scientists predicted and the stakes are high.**
 
-<!-- ##  Newest Features
+If you considered donating money for my efforts, then please instead consider donating that money to a charity fund like:
+- [**International Committee of the Red Cross**](https://www.icrc.org/en/donate)
+- [**Doctors Without Borders**](https://donate.doctorswithoutborders.org/secure/rr-donate-monthly-web?source=ADU2011U0W46)
+- [**Oxfam International**](https://www.oxfam.org/en?form=general)
+- [**Save the Children**](https://support.savethechildren.org/site/Donation2?df_id=1620&1620.donation=form1)
+- [**World Wildlife Fund**](https://protect.worldwildlife.org/page/65220/donate/1?en_og_source=Web_Donation&ea.tracking.id=Web_Topnav&supporter.appealCode=AWE2402OQ18299A01179RX)
+- [**Extinction Rebellion**](https://rebellion.global/)
+- [**Future For Fridays**](https://fridaysforfuture.org/what-we-do/contact-us/#countries)
 
-**Control external midi devices or send midi to other Applications with the new `midi` instrument**
-
-```java
-set midi getPorts
-//=> prints the available devices to the console
-
-new midi "Your Awesome Midi Device" time(1/4) note(7 1) length(100) gain(0.8)
-```
-
-**Input OSC addresses as arguments or output osc-messages in a similar way as using instruments**
-
-```java
-set osc default
-
-new synth sine name(sn)
-    set sn note(/sine/pitch 0) shape(5 /sine/release)
-    set sn fx(reverb 1 /sine/verb)
-
-new emitter osc name(myOSC) someParam(3.14)
-    // result => /myOsc/someParam 3.14
-``` -->
-
-<!-- ![Screenshot of the Mercury environment](media/mercury-screenshot2.png) -->
-
-**AND MANY MORE (TO COME...)**
-
-⭐️ *watch and star this repo to keep up-to-date with the latest changes whenever they're made*
-
-## 👩‍💻👨‍💻 Collaborative Coding
-
-You can code together in Mercury using the amazing [**Flok**](https://flok.cc/) live coding environment in the browser. The easiest way to get started is by combining **Flok** with the **Mercury Playground**, but you can also combine Flok with the Mercury Max8 version.
-
-<!-- - [Start coding together here](./docs/collaborate.md) -->
-
-<!-- 
-There are 3 options for how you can use Flok with Mercury:
-1. Use Flok to combine Mercury with Hydra visuals (or other languages like Tidal, Foxdot and SuperCollider) on a localhost
-2. Collaborate together in the same room (only requires 1 computer to run Mercury)
-3. Collaborate remotely over a network (all computers need to run Mercury)
-
-Install NodeJS v.12 [for Mac](https://nodejs.org/dist/latest-v12.x/node-v12.20.0.pkg) or [for Windows](https://nodejs.org/dist/latest-v12.x/node-v12.20.0-x64.msi).
-
-Install the latest version of Mercury via the [quick start quide](https://github.com/tmhglnd/mercury/blob/master/docs/quick-start.md).
-
-Install Flok via the Terminal with `npm install -g flok-web flok-repl`
-
-**Localhost**
-
-1. Run `flok-web` in the terminal
-2. Open Google Chrome and go to `localhost:3000`
-3. Setup Flok with target `mercury` (and optionally other targets like `hydra`) and click **Create session**.
-4. Copy the `flok-repl -H xxx -s xxx -t mercury` command and run in the terminal.
-5. **Join** the Flok with your nickname.
-
-**Collaborate**
-
-Now follow these steps for a succesful setup.
-1. Open Google Chrome and go to [https://flok.clic.cf/](https://flok.clic.cf/)
-1. Setup Flok with target `mercury` and click **Create session**.
-2. Copy the `flok-repl -H xxx -s xxx -t mercury` command and run in the terminal.
-4. **Join** the Flok with your nickname.
-
-Now start typing some code! 🎵
-
-- `Ctrl/Alt + Return` to evaluate
-- `Ctrl/Alt + .` to silence
-
-Flok will send the entire code via OSC messaging to port 4880. Mercury should be listening to this port automatically. Bug reports are very much welcome in the issues! -->
-
-## 💻 Install
-
-<!-- - 📖 [I need some help installing](./docs/tutorial.md) -->
-<!-- - 🚀 [I'm an experienced computer user](./docs/quick-start.md) -->
-<!-- - 💻 [Is my computer powerful enough?](#-system-requirements) -->
-
-OR
-
-- 🤓 I'll just [download](https://github.com/tmhglnd/mercury/releases) and figure it out myself
-
-```
-$ cd ~/Documents/Max\ 8/Projects
-$ git clone http://github.com/tmhglnd/mercury
-$ cd mercury
-$ open mercury_ide/mercury_ide.maxproj
-```
-
-<!-- ### 🚀 Quick Start -->
-
-<!-- [Open the Quick Start Guide](./docs/quick-start.md) -->
-
-<!-- ### 📖 Tutorial -->
-
-<!-- 🚧 (work in progress) 🚧 -->
-
-<!-- If this is your first time with either the usage of creative coding software (like Max8), music theory, electronic music making and programming in general I highly recommend following the tutorial. -->
-
-<!-- [Open the Tutorial](./docs/tutorial.md) -->
-
-### ⚠ Troubleshooting
-
-It could be that you are having issues with Mercury. Please follow the steps below:
-
-<!-- - [Open the Troubleshooting](./docs/08-troubleshooting.md) -->
-
-<!-- ### 📖 Documentation
-
-Full explanation of all the possibilities in Mercury: -->
-
-<!-- - [Open the documentation](./docs/table-of-content.md) -->
-
-## 🔍 Further reading
-
-- [Mercury homepage](http://www.timohoogland.com/mercury-livecoding)
-- [Paper in ICLC 2019](http://iclc.livecodenetwork.org/2019/papers/paper67.pdf)
-- [Total Serialism Library](https://github.com/tmhglnd/total-serialism#total-serialism)
+Or find another high-rated charity you like to support on for example:
+- [CharityWatch](https://www.charitywatch.org/)
+- [CharityNavigator](https://www.charitynavigator.org/)
+:::
 
 ## 🔋 Powered By
 
@@ -173,16 +49,17 @@ Full explanation of all the possibilities in Mercury: -->
 
 ## 🙏 Thanks
 
-- Roald van Dillewijn for working together on osc and midi functionalities combined with his [Digilog modified guitar-pedals](https://roaldvandillewijn.nl/projects/digilog)
-- Guillem Gongora Moral for using Mercury as a composition tool and sharing valuable feedback in the process
-- Anne Veinberg for working with Mercury and a Mercury extensions for the [CodeKlavier](https://codeklavier.space/) project
-- Rafaele Maria Andrade for collaboration on [networked performance](https://www.youtube.com/watch?v=7UWywv_DPHI&t=4s) between Mercury and Knurl
-- Repo banner image by Annebel Bunt
+- [Lina Bautista](https://axolot.cat/about/lina-bautista/) for working together on developing functionalities in Mercury to control modular synths via cv
+- [SEMA/MIMIC project](https://mimicproject.com/about) team (Thor Magnusson, Chris Kiefer and Francisco Bernardo) for their awesome full week workshop at Sussex University in Brighton on designing a live coding language in the browser combined with machine learning
+- [Roald van Dillewijn](https://roaldvandillewijn.nl/) for working together on osc and midi functionalities combined with his [Digilog modified guitar-pedals](https://roaldvandillewijn.nl/projects/digilog)
+- [Guillem Gongora Moral](https://www.guillemgongora.com/) for using Mercury as a composition tool and sharing valuable feedback in the process
+- [Anne Veinberg](https://anneveinberg.com/) for working with Mercury and a Mercury extensions for the [CodeKlavier](https://codeklavier.space/) project
+- [Rafaele Maria Andrade](https://www.rafaele-andrade.com/) for collaboration on [networked performance](https://www.youtube.com/watch?v=7UWywv_DPHI&t=4s) between Mercury and Knurl
 - Live performance image by Zuzanna Zgierska
 
 ## ✨ Inspiration
 
-During the development of Mercury (both the playground and the full version) I've found inspiration in many other live coding environments, practices and other platforms. Some of these are:
+During the development of Mercury (both the playground and the full version) I've found inspiration in many other live coding environments, practices and platforms. Some of these are:
 
 - [Hydra](https://hydra.ojack.xyz/) - Live coding visual synthesizer by Olivia Jack
 - [Sema](https://sema.codes/about) - Live coding language design platform combined with Machine Learning
@@ -194,10 +71,10 @@ During the development of Mercury (both the playground and the full version) I'v
 
 ## 📄 Licenses
 
-- Main Source - [The GNU GPL v.3 License](https://choosealicense.com/licenses/gpl-3.0/) (c) Timo Hoogland 2019-2023
-<!-- - Sound Files - Individually licensed, listed under [media/README.md](/mercury_ide_0.9.9/media/README.md) -->
-- Documentation - [The CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/) (c) Timo Hoogland 2019-2023
-- Examples - [The CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/) (c) Timo Hoogland 2019-2023
-- Max8 - Proprietary Software, Max (c) 1990-2019 Cycling'74 / IRCAM All rights reserved
+- Main Source - [The GNU GPL v.3 License](https://choosealicense.com/licenses/gpl-3.0/) (c) Timo Hoogland 2019-2024
+- Sound Files - Individually licensed, listed under [Sounds in Mercury](sounds)
+- Documentation - [The CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/) (c) Timo Hoogland 2019-2024
+- Examples - [The CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/) (c) Timo Hoogland 2019-2024
+- Max8 - Proprietary Software, Max (c) 1990-2024 Cycling'74 / IRCAM All rights reserved
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

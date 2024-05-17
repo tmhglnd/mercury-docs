@@ -181,31 +181,28 @@ new sample hat_min time(1/16) play(0.5) // play 50% of the time
 
 ## Combining rhythms
 
-In order to make more complex rhythms we can take a step back to our pop beat from [more samples](#more-samples). Now instead of using different `time()` arguments to make a rhythm, we will use the power of `list`'s to look up a `1` or `0` to let it play the sound or not. First we make sure that all instruments play in the same time.
+In order to make more complex rhythms we can go back to our pop beat, but instead of using different `time()` arguments to make a rhythm, we will use the power of `list`'s to look up a `1` or `0` to let it play the sound or not. First we make sure that all instruments play in the same time of 1/16th notes.
 
-Make the following code:
-
-```java
-set tempo 95
+```js
+set tempo 100
 
 new sample kick_house time(1/16) play(1)
 new sample snare_fat time(1/16) play(1)
 new sample hat_click time(1/16) play(1)
 ```
 
-Execute this code and you will hear all samples play all 16th notes. Now we create different lists for the different instruments. Notice the lists don't have to be the same length. They will each *loop* individually. This allows you to quickly create quite complex rhythms that change over time with just a few lines of code!
+Execute this code and you will hear all samples play all 16th notes. Now we add lists for the different instruments. Note the lists don't have to be the same length. They will each *loop* individually. This allows you to quickly create quite complex rhythms that phase over time with just a few lines of code!
 
-Adjust and execute:
-```java
-set tempo 95
+```js
+set tempo 100
 
 list kickBeat [1 0 0]
-list snareBeat [0 0 0 0 1 0 0 0]
+list snareBeat [0 0 0 0 1 0 1 0]
 list hatBeat [1 1 0 1 1 0 1]
 
 new sample kick_house time(1/16) play(kickBeat)
-new sample snare_fat time(1/16) play(kickBeat)
-new sample hat_click time(1/16) play(kickBeat)
+new sample snare_808 time(1/16) play(snareBeat)
+new sample hat_min time(1/16) play(hatBeat)
 ```
 
 ## Linear beats
@@ -213,7 +210,7 @@ new sample hat_click time(1/16) play(kickBeat)
 Instead of using multiple instruments to create our beat, we can also use one sampler and let it play different sounds. For this we need to declare a list with the names of the samples in the order we want to play them. The playing of samples without any overlap or playing at the same time is sometimes called a *linear beat*. For example we want to play kick, hat, snare, hat. 
 
 Now our code will look like this:
-```java
+```js
 set tempo 110
 
 list theSounds [kick_house hat_click snare_fat hat_click]
@@ -224,7 +221,7 @@ new sample theSounds time(1/8)
 Now to make this a bit more interesting we can combine this technique with another list that holds some zeroes and ones to play a rhythm at a time of `1/16`.
 
 For example like so:
-```java
+```js
 set tempo 110
 
 list theSounds [kick_house hat_click snare_fat hat_click]
