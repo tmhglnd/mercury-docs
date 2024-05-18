@@ -1,6 +1,16 @@
-# Website
+# 🌕 Mercury Docs
+
+**Welcome to the Mercury Docs! ✌️ ☮️ Make Music, Not War!** ☮️ ✌️
+
+**Mercury is a free/open-source, beginner-friendly, minimal and human-readable language for the live coding of algorithmic electronic music performances**
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+
+[**🚀 Start coding directly in the playground!**](https://mercury.timohoogland.com/)
+
+[**🙏 Support Mercury by buying me a coffee on ko-fi**](https://ko-fi.com/tmhglnd)
+
+[**💬 Join the Discord Community!**](https://discord.gg/vt59NYU)
 
 ### Installation
 

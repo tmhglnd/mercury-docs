@@ -5,7 +5,7 @@ sidebar_position: 0
 
 # 🌕 Mercury Live Coding Environment 
 
-Welcome to the Mercury Live Coding Environment! ✌️ ☮️ **Make Music, Not War!** ☮️ ✌️
+**Welcome to Mercury! ✌️ ☮️ Make Music, Not War!** ☮️ ✌️
 
 **Mercury is a free/open-source, beginner-friendly, minimal and human-readable language for the live coding of algorithmic electronic music performances**
 
@@ -18,34 +18,27 @@ In the menu on the left side you can find everything you need, from [About](abou
 
 [**🚀 Start coding directly in the playground!**](https://mercury.timohoogland.com/)
 
-[**🙏 Support Mercury by buying me a Ko-Fi**](https://ko-fi.com/tmhglnd)
+[**🙏 Support Mercury by buying me a coffee ko-fi**](https://ko-fi.com/tmhglnd)
 
 [**💬 Join the Discord Community!**](https://discord.gg/vt59NYU)
 
 <!-- ⭐️ *watch and star the [**repo**](https://github.com/tmhglnd/mercury) to keep up-to-date with the latest changes whenever they're made* -->
 
-:::info Life on earth is in crisis; Please Donate!
+:::info Life on earth is in crisis. Please support a charity! No one is too small to make a difference!
 
 **We live in a war-torn world, where millions of people have their lives destroyed by conflict. On top of that our climate is changing faster than scientists predicted and the stakes are high.**
 
-If you considered donating money for my efforts, then please instead consider donating that money to a charity fund like:
-- [**International Committee of the Red Cross**](https://www.icrc.org/en/donate)
-- [**Doctors Without Borders**](https://donate.doctorswithoutborders.org/secure/rr-donate-monthly-web?source=ADU2011U0W46)
-- [**Oxfam International**](https://www.oxfam.org/en?form=general)
-- [**Save the Children**](https://support.savethechildren.org/site/Donation2?df_id=1620&1620.donation=form1)
-- [**World Wildlife Fund**](https://protect.worldwildlife.org/page/65220/donate/1?en_og_source=Web_Donation&ea.tracking.id=Web_Topnav&supporter.appealCode=AWE2402OQ18299A01179RX)
-- [**Extinction Rebellion**](https://rebellion.global/)
-- [**Future For Fridays**](https://fridaysforfuture.org/what-we-do/contact-us/#countries)
+If you enjoy the work I do and consider donating money for my efforts, then please instead (or also) consider donating that money to a charity like:
 
-Or find another high-rated charity you like to support on for example:
-- [CharityWatch](https://www.charitywatch.org/)
-- [CharityNavigator](https://www.charitynavigator.org/)
+[**International Committee of the Red Cross**](https://www.icrc.org/en/donate) | [**Doctors Without Borders**](https://donate.doctorswithoutborders.org/secure/rr-donate-monthly-web?source=ADU2011U0W46) | [**Oxfam International**](https://www.oxfam.org/en?form=general) | [**Save the Children**](https://support.savethechildren.org/site/Donation2?df_id=1620&1620.donation=form1) | [**World Wildlife Fund**](https://protect.worldwildlife.org/page/65220/donate/1?en_og_source=Web_Donation&ea.tracking.id=Web_Topnav&supporter.appealCode=AWE2402OQ18299A01179RX) | [**Extinction Rebellion**](https://rebellion.global/) | [**Future For Fridays**](https://fridaysforfuture.org/what-we-do/contact-us/#countries) | [**Greenpeace**](https://engage.us.greenpeace.org/onlineactions/GB7jeaDze0eR5tWt3kWG_w2?sourceid=1015094)
+
+Or find another high-rated charity you like to support on for example [CharityWatch](https://www.charitywatch.org/) and [CharityNavigator](https://www.charitynavigator.org/)
 :::
 
 ## 🔋 Powered By
 
-- Mercury has been granted funding from [**Creative Industries Fund NL**](https://stimuleringsfonds.nl/en/)
-- Mercury has been granted in-kind funding from [**Creative Coding Utrecht**](https://creativecodingutrecht.nl/)
+- Mercury was granted funding from [**Creative Industries Fund NL**](https://stimuleringsfonds.nl/en/)
+- Mercury was granted in-kind funding from [**Creative Coding Utrecht**](https://creativecodingutrecht.nl/)
 
 ## 🙏 Thanks
 
@@ -72,7 +65,7 @@ During the development of Mercury (both the playground and the full version) I'v
 ## 📄 Licenses
 
 - Main Source - [The GNU GPL v.3 License](https://choosealicense.com/licenses/gpl-3.0/) (c) Timo Hoogland 2019-2024
-- Sound Files - Individually licensed, listed under [Sounds in Mercury](sounds)
+- Sound Files - Individually licensed, listed under [Sounds in Mercury](./usage/sounds.md)
 - Documentation - [The CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/) (c) Timo Hoogland 2019-2024
 - Examples - [The CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/) (c) Timo Hoogland 2019-2024
 - Max8 - Proprietary Software, Max (c) 1990-2024 Cycling'74 / IRCAM All rights reserved
