@@ -4,7 +4,7 @@ Below is some inspiration of awesome things made by the Mercury community.
 
 Made something with Mercury? I'm very happy to add it to the list! So please edit this file by adding a URL here and send a pull request! 😎 Read [Contribute](./../contribute) to find out more about editting files on github.
 
-- [Damage Such - Live at Algorave Barcelon](https://youtu.be/Ykhjx7ZkaEQ?si=_POsFQqALz3jeijJ&t=336)
+- [Damage Such - Live at Algorave Barcelona](https://youtu.be/Ykhjx7ZkaEQ?si=_POsFQqALz3jeijJ&t=336)
 - [Sabrina Verhage & Flor de Fuego - Live at LIVECODERA8M](https://www.youtube.com/live/iY9Vc8LpMFQ?si=vsDIlYW3YXhF29iq&t=3494)
 - [iTypeMusic - Live Coding Techno Vibes](https://youtu.be/aB1mdxLCR7c?si=6Vk0MzKmK0bDoX_K&t=856)
 - [LXT @levoxtrip (at Solstice Stream December 2023)](https://www.youtube.com/watch?v=TzM-koWkRow&ab_channel=Eulerroom)

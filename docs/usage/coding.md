@@ -96,7 +96,7 @@ new sample hat_min time(1/4 1/8)
 
 You can of course also try other samples that are included in Mercury! A full list of samples is available in [**Sounds in Mercury**](sounds). Try for example: `bamboo_g`, `shatter`, `tabla_mid`.
 
-## Changing `tempo`
+### Changing `tempo`
 
 When you hear this beat it might sound great, but maybe you want it to play faster or slower all together. You can change the overall (*global*) tempo of the environment with a `set` action.
 
@@ -114,7 +114,7 @@ The tempo is definited in BPM, or *Beats Per Minute* on a quarter note (`1/4`). 
 
 >The `set` command is a command that allows you to change parameters of global settings such as the tempo. Later on we'll see how to use it for instruments as well.
 
-## `play()` and `list`
+### `play()` and `list`
 
 After a short while of playing the tempo and time you maybe think to yourself: *"Is it also possible to play this sample in the same tempo and timing, but maybe with a different rhythm?"*
 
@@ -148,7 +148,7 @@ Lists have to be created on a line **before** they are used, because the code is
 
 ### To `play(1)` or not to `play(0)`
 
-In order to create a rhythm for an instrument we can make a list consisting of zeroes and ones. The `1` represents a `true`/`on` value, resulting in the triggering of the sound, the `0` a `false`/`off` value that will not play. Now lets put this into practice.
+In order to create a rhythm for an instrument we can make a list consisting of zeroes and ones. The `1` represents a `true`/`on` value, resulting in the triggering of the sound, the `0` a `false`/`off` value that will not play. Let's put this into practice.
 
 ```js
 set tempo 110
@@ -156,7 +156,7 @@ set tempo 110
 new sample hat_min time(1/16) play(1)
 ```
 
-This sounds the same to what we heard before. This is because the `play()` function only has a single `1` as argument, which means all notes are played. This is the default and was already the case in the code above. But let's now create a list with `0`s and `1`s and apply the name of the list as argument in the function.
+This sounds the same to what we heard before. This is because the `play()` function only has a single `1` as argument, which means all notes are played. This is the *default* and was already the case in the code above. But let's now create a list with `0`s and `1`s and apply the name of the list as argument in the function.
 
 ```js
 set tempo 110
@@ -179,7 +179,7 @@ new sample hat_min time(1/16) play(0.5) // play 50% of the time
 ```
 :::
 
-## Combining rhythms
+### Combining rhythms
 
 In order to make more complex rhythms we can go back to our pop beat, but instead of using different `time()` arguments to make a rhythm, we will use the power of `list`'s to look up a `1` or `0` to let it play the sound or not. First we make sure that all instruments play in the same time of 1/16th notes.
 
@@ -205,22 +205,20 @@ new sample snare_808 time(1/16) play(snareBeat)
 new sample hat_min time(1/16) play(hatBeat)
 ```
 
-## Linear beats
+### Linear beats
 
-Instead of using multiple instruments to create our beat, we can also use one sampler and let it play different sounds. For this we need to declare a list with the names of the samples in the order we want to play them. The playing of samples without any overlap or playing at the same time is sometimes called a *linear beat*. For example we want to play kick, hat, snare, hat. 
+Instead of using multiple instruments to create our beat, we can also use one sampler and let it play different sounds sequentially. For this we need to create a list with the names of the samples in the order we want to play them. The playing of samples without any overlap or playing at the same time is sometimes called a *linear beat*. For example we want to play kick, hat, snare, hat. Now our code will look like this:
 
-Now our code will look like this:
 ```js
 set tempo 110
 
-list theSounds [kick_house hat_click snare_fat hat_click]
+list drumSounds [kick_house hat_click snare_fat hat_click]
 
-new sample theSounds time(1/8)
+new sample drumSounds time(1/8)
 ```
 
-Now to make this a bit more interesting we can combine this technique with another list that holds some zeroes and ones to play a rhythm at a time of `1/16`.
+Now to make this a bit more interesting we can combine this technique with another list that has some zeroes and ones to play a rhythm at a time of `1/16`. For example:
 
-For example like so:
 ```js
 set tempo 110
 
@@ -230,6 +228,207 @@ list rhythm [1 0 1 0 0 1 0 1]
 new sample theSounds time(1/16) play(rhythm)
 ```
 
-Give yourself some time to experiment with all the code so far to get yourself comfortable with the different functions and their arguments and making of lists. Try some different rhythms in various lengths, try some different samples in different orders as well. Have fun!
+Give yourself some time to experiment with all the code so far to get comfortable with the different functions and their arguments and making of lists. Try some different rhythms in various lengths, try some different samples in different orders as well. Have fun!
 
 There is still so much to do with just the sampler, but for now we'll first introduce another instrument in Mercury: the Synthesizer.
+
+## 🎹 The Synth
+
+A synthesizer generates its sound through an electrical circuit or a digital chip running some computer code. This code produces a periodic waveshape, an oscillator. The amplitude value of the oscillator controls the motion of your speaker. The synth can therefore be used to create sounds in many different ways and control the pitch to play melodies, basslines, chords and more.
+
+<details>
+<summary>What is a synthesizer and synthesis?</summary>
+<div>
+A synthesizer is an electronic musical instrument that generates its sound through analog electrical circuits or in a digital manner through chips and computer code. Generating sounds in these ways is called synthesis. The first instrument that was defined as a synthesizer ([the Moog](https://en.wikipedia.org/wiki/Moog_synthesizer)) was introduced in 1964, but before that there were already other electrical instruments available such as the [Theremin](https://en.wikipedia.org/wiki/Theremin) (1928) and the [Hammond Organ](https://en.wikipedia.org/wiki/Hammond_organ) (1935). 
+
+The basic building blocks needed to do synthesis are one or multiple oscillators (audio signal generators), methods to add or multiply signals and filters to remove parts of a signal. By combining these in different ways you can perform a wide variety of synthesis techniques, such as [additive synthesis](https://en.wikipedia.org/wiki/Additive_synthesis), [subtractive synthesis](https://en.wikipedia.org/wiki/Subtractive_synthesis), [amplitude modulation synthesis](https://en.wikipedia.org/wiki/Amplitude_modulation), [ring modulation synthesis](https://en.wikipedia.org/wiki/Ring_modulation), [frequency modulation synthesis](https://en.wikipedia.org/wiki/Frequency_modulation), [physical modelling synthesis](https://en.wikipedia.org/wiki/Physical_modelling_synthesis), [analyse synthesis](https://en.wikipedia.org/wiki/Vocoder) (or resynthesis), [wavetable synthesis](https://en.wikipedia.org/wiki/Wavetable_synthesis) and [sample-based synthesis](https://en.wikipedia.org/wiki/Sample-based_synthesis). On top of that different techniques can of course be combined to generate even more sounds.
+
+An oscillator is a signal generator that produces a periodic wave. This periodic wave is what drives your speaker (move it back and forth) and produces airpressure differences that you will perceive as sound. The four most common [waveforms](https://en.wikipedia.org/wiki/Waveform) are a sine-, sawtooth-, square- and triangle-wave. The name describes the shape of the wave if you would plot it in a graph of time against amplitude. The sinewave is a pure tone consisting of a single frequency. The pitch (how high or low does it sound) is called the Frequency and is expressed in Hertz (Hz). The other waveforms have a richer sound because they consist of more frequencies called harmonics. [Harmonics](https://en.wikipedia.org/wiki/Harmonic) can be defined as a range of stacked sinewaves of different frequencies on top of the [*fundamental* frequency](https://en.wikipedia.org/wiki/Fundamental_frequency). The relationship between these frequencies is different between the three waves (saw, square and triangle) and determines the *color* of the sound (also called [*timbre*](https://en.wikipedia.org/wiki/Timbre)). The timbre is that what makes an instrument sound like a flute, violin, guitar or voice, even if they play or sing the same note. 
+</div>
+</details>
+
+### Play the `synth`
+
+Lets create our first synthesizer. For this we type the following code and execute it:
+
+```js
+new synth saw
+```
+
+You will hear the sawtooth waveform play a note. The default `time()` for the synth is `1`, the same as with the `sample`. Now try the other waveforms as well: `square`, `triangle`, `sine`. Notice that the triangle sounds a bit darker, this is because its overtones (harmonics) aren't as loud as with the square and the saw. Also notice that the sine is almost impossible to hear (depending on your headphones or speakers). This is because the sine is only a single frequency, no overtones. And the default frequency for the synth is quite low.
+
+### A `note()`
+
+For now lets stick with the `sine` oscillator for a while and try to make some different pitches. In a moment we will look into how the notes work in Mercury, but first let's try some different values to get a feeling of what happens to the sound.
+
+Try these following code snippets and hear how the pitch changes, you can try as many other values as you want of course:
+
+```js
+new synth sine note(0 1)
+```
+```js
+new synth sine note(7 1)
+```
+```js
+new synth sine note(0 2)
+```
+```js
+new synth sine note(7 2)
+```
+
+#### 12-TET system
+
+In western music the most common tuning system is the so called 12-Tone Equal Temperament, or 12-TET. This means that we divide a full octave (an octave is a range of one frequency to the doubling of that frequency, for example 200 to 400 Hz) into 12 equal steps: C, C#/Db, D, D#/Eb, E, F, F#/Gb, G, G#/Ab, A, A#/Bb, B, C (octave higher)
+
+<details>
+<summary>Pythagorean tuning</summary>
+<div>
+You've maybe heard of [Pythagoras](https://en.wikipedia.org/wiki/Pythagoras), a greek philospher and mathematician famous for the pythagorean theorem. He discoverd around 500 BCE that when you take a string (like a guitar) and make another string with half the distance, that string sounds twice as high in pitch. This doubling of pitch is called an Octave. This means that if you have a string with a frequency of 200 Hz, a string that is half that long will have a pitch of 400 Hz. Phytagoras took this idea and expanded it by taking a third of that string, a fourth, a fifth and so on. This let to the discovery of the harmonic series (for example 100 Hz, 200, 300, 400, 500...). 
+
+The distance of an octave is quite big, and we can fit more pitches of different intervals in between two octaves. Pythagoras build its [tuning system](https://en.wikipedia.org/wiki/Pythagorean_tuning) based on stacking perfect fifths (ratio 3:2) and scaling down octaves to fit in one octave. This system had a slight problem that the octaves were slightly out of tune though.
+</div>
+</details>
+
+<details>
+<summary>Scales in the 12-TET system</summary>
+<div>
+Our current note name system - C D E F G A B - started out around the 12th century. At that time there was not really a notation system and scales (a ascending sequence of notes). The different scales were referred to as modes and all ended and started at a different note. These were later on defined as do, re, mi, fa, sol, la, ti and do again. Later on these became A up till G. The do's are both the same note only an octave higher, so they need to have the same name. In the past this was notated as A, a, aa for three octaves. Sometimes when the mode starts on a different letter, some notes are supposed to sound higher or lower. This is where the accidentals came in to play. If a not is made a bit lower, it is called flat (b) and a bit higher it is called sharp (#). This completed the 12 tone system that we know now. C, C#/Db, D D#/Eb, E, F, F#/Gb, G, G#/Ab, A, A#/Bb, B. You will notice that some notes don't have a sharp or flat note in between (E-F and B-C), this is because these notes are already a half-step apart, while all the other notes are actually a whole-step apart.
+
+Since the 18th century the [12-Tone Equal Temperament](https://en.wikipedia.org/wiki/Equal_temperament) is used. In this system all the octaves are completely consonant over the entire range of the keyboard, and all the notes in between are at an equal distance from eachother. Because of this manner of tuning some notes are every so slightly out of tune when compared with the harmonic series ratios, but the system allows for quick switching between scales and tonal centre, and therefore it is still used mostly today. There are other tuning systems in the world as well, for example [Slendro](https://en.wikipedia.org/wiki/Slendro) is a 5-TET tuning system from Indonesia. 
+
+From our tuning-system we can make various scales. The scale that has all the notes is called the [*chromatic*](https://en.wikipedia.org/wiki/Chromatic_scale) scale. Other scales usually consist of 7 notes picked from those 12 (originating from the modes). The distances between the 12 tones in the chromatic scale are called semitones (half steps). Most scales have a combination of tones and semitones (full and half steps). This is what is called a Diatonic scale. The most famous scales are the major and minor scale. The major scale when starting from C has no accidentals (C D E F G A B, with steps W W H W W W H), but when starting this same series from A you get a minor scale (A B C D E F G, with steps W H W W H W).
+</div>
+</details>
+
+#### The Mercury Notation System
+
+Now let's go back to our coding of notes. In Mercury the notes are not written down as letters, but as numbers. These numbers are added as arguments to the `note()` method. The arguments consist of 2 numbers, the first number is the tone-step (semitone) in the chromatic 12-TET system, the second number is an octave-step. Later on we'll see how we can work with `scale`s and changing the root (tonal centre) as well. 
+
+By default Mercury works with `C` as the root and `chromatic` as the scale used. This means that the `note(0 0)` corresponds to the 1st note (counting starts at 0) in the 12-TET system (which is `C`) and the second `0` is the default octave. `note(0 0)` therefore corresponds with MIDI-note `36`. Now a `note(0 2)` would also be a `C`, only 2 octaves higher. A `note(7 1)` would be the 8th note in the 12-TET system starting at `C`, one octave higher, resulting in `G`.
+
+### A melody
+
+Now that we know which numbers make up which notes we can make a melody. By putting the numbers in a list and giving the name of the list as argument to the `note()` function. You can try different numbers to hear which ones sound nice and which ones don't. You can also try different octaves as well or different waveforms of course. Maybe add a rhythm too? It's all up to you! 🎶
+
+```js
+list myMelody [0 4 7 5 7 9 4 5]
+
+new synth sine note(myMelody 2) time(1/8)
+```
+
+### Set a `scale`
+
+It can be tough to know all the various scales that can be used and which numbers belong to these scales. In order to help you code melodies and harmonies that fit within a specific scale you can specify the global `scale` via the `set` action. Applying a scale to the entire environment will force all numbers that don't fit in a scale to be replaced by a number that is closest to them. This happens at runtime (so when the note gets played). The content of the list doesn't change. Some scale names are for example: `major`, `minor`, `dorian`.
+
+```js
+set scale minor c
+
+list myMelody [0 1 2 3 4 5 6 7 8 9 10 11 12]
+new synth sine note(myMelody 2) time(1/8)
+```
+
+As you can see and hear in the example above there is a list of all the 12 notes in an octave. But when you play it you will hear some notes double. This is because some numbers are not part of the `minor` scale. For example `1` and `4` are not part of this scale, therefore they are mapped to a number closest that does fit, like `2` and `3`.
+
+By changing the *root* behind the name of the scale it is possible to offset what the `0` means in the `note(0)`. By default the `0` corresponds with the `c`. But if we set the scale to for example `e`, the `note(0 0)` will correspond with `e`, 4 semitons higher, MIDI-note `40`.
+
+```js
+set scale major a
+
+list myMelody [0 1 2 3 4 5 6 7 8 9 10 11 12]
+new synth sine note(myMelody 2) time(1/8)
+```
+
+:::tip scales with randomness
+It is especially helpful to use `set scale` when you start generating lists with functions such as `random()`. More on lists functions in a later chapter. But you can already try this:
+
+```js
+set scale dorian
+
+list randomMelody random(16 0 12)
+new synth sine note(randomMelody) time(1/16)
+```
+:::
+
+### Harmony
+
+When two or more melodic instruments play together you hear multiple pitches at the same time. This is called a harmony. We can make two instances of a `synth` and make different notes for them to play, or we can use one list for multiple instruments and let them play at the same time. We use the `octave` argument in `note()` to move the instruments to different hights.
+
+```js
+set tempo 100
+set scale minor a
+
+list myMelody [0 4 7 5 7 9 4 5]
+list melodyTwo [7 7 5 5 4 4 0 0]
+
+new synth sine note(myMelody 0) time(1/6)
+new synth sine note(melodyTwo 1) time(1/8)
+new synth sine note(myMelody 2) time(1/8)
+```
+
+### `shape`-ing the sound
+
+As you may have noticed the synth has by default quite a short sound. This is because the default synth has a so called *envelope*, which we refer to in Mercury as the `shape`. The shape describes the fade-in and fade-out time of the synth's source (the oscillator). The shape is necessary, because without it the oscillator would continue sounding forever. We can adjust the fade-in and fade-out times with arguments in the `shape()` function. The argument can be a `number`, which describe the fade time in milliseconds, or it can be a `fraction` which describes the fade time relative to the `tempo`.
+
+```js
+set tempo 100
+
+// fade-in of 5ms and fade-out of 100ms
+new synth saw time(1/4) shape(5 100)
+
+// fade in and out exactly in the time of 1/2
+new synth square time(1/2) shape(1/4 1/4) 
+```
+
+Just like with `play()` and `note()` we can also use a `list` in the `shape()` function to apply different fade-in and fade-out times for the synth per trigger of the note. This gives us more flexibility in creating interesting synthesizer parts.
+
+```js
+set tempo 130
+
+list notes [0 0 3 12 7]
+list lengths [40 100 40 1/8 40 1/1]
+list rhythm [1 0 1 1 0 1 0 1]
+
+new synth saw time(1/16) note(notes 0) shape(lengths) play(rhythm)
+```
+
+:::tip Shape a sample
+It is also possible to shape the `sample`. This is useful in the case you have a sample that sounds quite long.
+
+```js
+set tempo 100
+
+new sample harp_down shape(1 1/8)
+new sample gong_hi shape(1/2 1/2)
+```
+:::
+
+## 🎲 Power of Algorithms
+
+In this chapter we'll look at Algorithmic Composition. This is a way of composing music (or other forms of art) through the means of algorithms. An algorithm is a set of steps (or rules) that you or the system follows in order to gain a result. The result in this case is the composition.
+
+<details>
+<summary>A brief history on Algorithmic Composition</summary>
+<div>
+
+For many years composers have been experimenting with ways to create new musical pieces. For example J.S. Bach published the Musikalisches Opfer (Musical Offerings) in 1747, which included many fugues that were "generated" (by hand) based on the rules of counterpoint (a polyphonic composition technique). It also included the [*Canon Cancrizans* (Crab Canon)](https://www.youtube.com/watch?v=DAIc1XvnPkI), a musical piece of two voices that are a mirror image of each other, played forward and backwards at the same time.
+
+Another example is from the famous classical composer Mozart in 1792 who used a game called [*Muzikalisches Würfelspiel*](https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel) (german for "musical dice game"), where he would first compose 176 short pieces of music with the length of one measure. Then by rolling some dice he would decide which pieces come after one another. This is a form of what is called [*Algorithmic Composition*](https://en.wikipedia.org/wiki/Algorithmic_composition). Composing music based on a predefined set of rules also called an algorithm. More on Algorithmic Composition will be explained further ahead.
+
+Around 1920 a new form of composition technique was described, namely `Serialism`. Serialism originated from the `twelve-tone` technique, described in 1919 by Josef Hauer in his published work "Law of the twelve tones". This technique starts out with a randomly ordered set of the twelve chromatic notes. From there on out you can apply transformations on this set, such as reverse/retrograde, inverse, transpose, and combinations between those.
+
+In the 60's the Greek Iannis Xenakis published the book Formalized Music containing many techniques and his philosophy on composing music with mathematics and stochastic functions (forms of randomness). An example in his work is the piece [Pithoprakta](https://www.youtube.com/watch?v=nvH2KYYJg-o), using brownian motion, the stochastic movement of particles bumping into each other, to compose a piece.
+
+Later in the 70's we've seen composers such as Laurie Spiegel work on musical pieces generated with computer code such as her work [Harmony of the Worlds](https://www.youtube.com/watch?v=fKX21xp6hhA), a sonification of the motion of the planets, based on the research of Johannes Kepler. She also wrote the paper [*Manipulation of Musical Patterns*](https://github.com/calpicasso/Manipulations-of-musical-patterns/blob/master/Manipulations%20of%20Musical%20Patterns.md) (1981) in which she suggests to *"extract a basic "library" consisting of the most elemental  transformations which have consistently been successfully used on musical patterns, a basic group of "tried-and-true" musical manipulations."* beyond that which already exists in such a way as to preserve continuity with it.
+
+After that there have been more and more examples of musicians using electronic instruments (such as modular synthesizers) and computers to generate electronic music algorithmically. Books such as [Algorithmic Composition](https://books.google.nl/books?id=jaowAtnXsDQC&printsec=frontcover&dq=Nierhaus+Algorithmic+composition&hl=en&sa=X&redir_esc=y#v=onepage&q=Nierhaus%20Algorithmic%20composition&f=false), [Oxford Handbook on Algorithmic Composition](https://academic.oup.com/edited-volume/28278), [Oxford Handbook of Computer Music](https://academic.oup.com/edited-volume/28207?login=false), [Live Coding: A User's Manual](https://direct.mit.edu/books/oa-monograph/5495/Live-CodingA-User-s-Manual) and many more give great insights in various techniques that can be used in algorithmic composition.
+
+Artists/composers such as Alvin Lucier, Pauline Oliveros, Terry Riley, Daphne Oram, Lilian Schwartz, Aphex Twin, Autechre, Suzanne Ciani, Caterina Barbieri, Robert Henke, Emptyset, Holly Herndon, Rian Treanor, Mark Fell, Dawn of Midi, Zoë McPherson, Jlin, Björk, Gábor Lázar, James Holden, Portrait XO, and many more have for example all been working with algorithms in their audio(visual) compositions in one way or the other.
+
+</div>
+</details>
+
+### `random`ising rhythms and melodies
+
+
+
+<!-- ⚠️ **The following chapters have never been finished, and since Mercury moved to the browser version the tutorials there are much more extensive. Please visit [mercury.timohoogland.com](https://mercury.timohoogland.com) to continue** ⚠️ -->
