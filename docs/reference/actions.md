@@ -28,7 +28,7 @@ new midi "AU DLS Synth 1" note(3 1)
 
 By default Mercury has a small library of samples included in the environment. It is possible to include your own sounds as well:
 
-- [Load  sounds in Mercury4Max](./../usage/mercury4max.md#sounds)
+- [Load sounds in Mercury4Max](./../usage/mercury4max.md#sounds)
 - [Load sounds in MercuryPlayground](./../usage/mercury-playground.md#add-sounds)
 - [Full list of all the included sounds](./../usage/sounds.md)
 

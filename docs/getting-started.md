@@ -151,11 +151,5 @@ You are now ready to play all you want! For example you can listen some random e
 
 - [Usage](category/-usage)
 - [Reference](category/-reference)
-
 <!-- - [Examples](category/-examples) -->
 <!-- - [Tutorials](category/-tutorials) -->
-
-<!-- - *Mac users: Disable the Alert Volume in `System Preferences > Sounds` to disable the error sound when using shortkeys* -->
-
-<!-- - Adjust shortkey commands under `Menubar > Settings > Shortkeys Setup` -->
-<!-- - Adjust settings under `Menubar > Settings`. [For detailed explanation go here](./07-environment.md#settings) -->

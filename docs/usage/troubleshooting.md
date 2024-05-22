@@ -55,7 +55,7 @@ Go to the settings in `Settings > Audio`:
 - Overdrive: `on`
 - Audio Interrupt: `on`
 
-<!-- For a detailed explanation of all the Audio Settings please go [here](./07-environment.md#audio-setup) -->
+For a detailed explanation of all the Audio Settings please go [here](./../usage/mercury4max.md#audio-setup)
 
 **in MercuryPlayground**
 

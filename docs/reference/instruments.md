@@ -354,9 +354,6 @@ new synth <waveform>
 The waveforms in MercuryPlayground are currently not created with single-cycle soundfiles but via WebAudio's `PeriodicWave`, constructing a waveform from a Fourier Series.
 :::
 
-<!-- - [How to load other waveforms into Mercury](./07-environment.md#sounds) -->
-<!-- - [Full list of all the included waveforms](https://github.com/tmhglnd/mercury/blob/master/mercury_ide/media/README.md) -->
-
 ### note
 
 Set the pitch for the instrument to play a note in a melody or chord. The note is specified as a 2-dimensional coordinate system, where the first argument is the semitone offset (positive or negative) and the second argument is the octave offset (positive or negative). 
@@ -508,9 +505,9 @@ The sample instrument allows you to play sound-recordings and loops. These so ca
 new sample <sample-name>
 ```
 
-<!-- - [How to load other sounds into Mercury](./07-environment.md#sounds) -->
-<!-- - [How to load sounds in the Mercury Playground](./01-global.md#samples) -->
-<!-- - [Full list of all the included sounds](https://github.com/tmhglnd/mercury/blob/master/mercury_ide/media/README.md) -->
+- [Load sounds in Mercury4Max](./../usage/mercury4max.md#sounds)
+- [Load sounds in MercuryPlayground](./../usage/mercury-playground.md#add-sounds)
+- [Full list of all the included sounds](./../usage/sounds.md)
 
 ### speed
 
