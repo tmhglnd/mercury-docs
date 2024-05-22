@@ -24,6 +24,8 @@ In the menu on the left side you can find everything you need, from [About](abou
 
 <!-- ⭐️ *watch and star the [**repo**](https://github.com/tmhglnd/mercury) to keep up-to-date with the latest changes whenever they're made* -->
 
+## ☮️ Make Music, Not War!
+
 :::info Life on earth is in crisis. Please support a charity! No one is too small to make a difference!
 
 **We live in a war-torn world, where millions of people have their lives destroyed by conflict. On top of that our climate is changing faster than scientists predicted and the stakes are high.**
