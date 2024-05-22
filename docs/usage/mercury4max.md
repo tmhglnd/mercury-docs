@@ -263,8 +263,6 @@ You can customize the shortkeys by opening the `Setup Shortkeys` under `Settings
 3. Hit the key combination you would like to use for this command and release the keys to store.
 4. Check if stored correctly in the scroll-menu below. Every command displays the shortcut and keycode.
 
-<!-- For a full explanation see [Shortkeys](./06-shortkeys.md) -->
-
 ## Explanation
 
 Open a random example, the documentation, the list of sounds and waveforms, the github repository and the published paper.
