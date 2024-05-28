@@ -874,9 +874,9 @@ In the browser you will need to give permission to use the microphone. Afterward
 
 ## osc
 
-:::warning MercuryPlayground only (currently)
+<!-- :::warning MercuryPlayground only (currently)
 For sending osc from Mercury4Max use [`emitter`](#emitter)
-:::
+::: -->
 
 Create an instrument that sends OSC-messages. The `<address-name>` is used to set the opening address of the message to `/<address-name>`. Any arbitrary function name is used to set as second address in the osc-string. If no name is provided it will default to a unique number for every instrument instance. By adding other functions with any arbitrary name you can send a message with the address in the form of `/<address-name>/<function> <arguments>`
 
@@ -925,6 +925,56 @@ new osc myOSC name(osc2) time(1/2)
     set osc2 anotherParam(values)
 ```
 :::
+
+<!-- ### address
+
+:::warning Mercury4Max Only
+:::
+
+Alternatively, if you want multiple emitters to send to the same address, you can use the `address()` method. The `address` is prepended as first address in the osc-message in the format: `/<address>/<function> argument`. Useful if you want to send messages to the same address, but with different timing-intervals.
+
+```js
+list params [0.25 0.5 0.75]
+list values [3 1 4]
+
+new emitter osc name(osc1) address(myOSC) time(1/4) 
+    set osc1 someParam(params)
+
+new emitter osc name(osc2) address(myOSC) time(1/2)
+    set osc2 anotherParam(values)
+
+// emits => /myOSC/someParams 0.25
+//          /myOSC/someParams 0.5
+//          /myOSC/anotherParam 3
+//          /myOSC/someParams 0.75
+//          /myOSC/someParams 0.25
+//          /myOSC/anotherParam 1
+//          etc...
+```
+
+### sendOSC
+
+You can enable/disable sending messages with the sendOSC function
+
+```js
+new emitter osc name(osc3) sendOSC(0)
+``` -->
+
+### receiving
+
+You can use osc adresses as arguments for other functions by putting the address as argument in the form: `/<address>/<tag>/<etc.>`. For example to control the `gain()` of a `sample` and the `note()` value of a `synth` enter the following:
+
+```js
+new sample kick_909 time(1/4) gain(/myOSC/sliderValue1)
+new synth saw note(/myOSC/sliderValue2) shape(1 100) time(1/8)
+```
+
+It is possible to scale the incoming osc value to a different range by using `{}` after the address inputting a low and high output range separated by a colon `:`. The scaling function considers an incoming range of `0 - 1` floatingpoint values. For example to control the `note()` and `shape()` ranges in a `synth` enter the following:
+
+```js
+new synth saw note(/myOsc/sliderValue3{2:19} 0) shape(1 /myOsc/sliderValue4{50:500}) 
+// => converts incoming slider values from 0-1 to 2-19 for note and 0-1 to 50-500 for note length
+```
 
 ## modulator
 
@@ -1031,13 +1081,17 @@ new modulator trigger time(1/8) hold(1/16)
 
 ## emitter
 
+:::warning Deprecated in Mercury4Max
+Use [`osc`](#osc) instead (similar as in MercuryPlayground now)
+:::
+<!-- 
 :::warning
 Soon to be deprecated in Mercury4Max, then use [`osc`](#osc) instead (similar as in MercuryPlayground now)
-:::
+::: -->
 
 Create an emitter object. Use this object to send messages to other platforms. The emitter object works similarly to the Instruments in the sense that it also has the `time`, `beat` and `name` functions by default. The `time` determines the time-interval at which messages are send. The `beat` can turn send moments on or off.
 
-### osc
+<!-- ### osc
 
 Create an emitter object of type `osc`. The `name(<name>)` method is used to set the opening address of the message to `/<name>`. Any arbitrary function name is used to set as second address in the osc-string. If no name is provided it will default to a unique number for every instrument instance. By adding other functions with any arbitrary name you can send a message with the address in the form of `/<name>/<function> <arguments>`
 
@@ -1082,51 +1136,4 @@ new emitter osc name(myOSC) time(1/4)
 
 ### name
 
-Set the name for the OSC emitter. This can be any string of 2 or more characters. The `name` is used as reference to the instrument when the `set` method is used to call methods for a specific object. The `name` is also prepended as first address in the osc-message of the format `/<name>/<function> argument`.
-
-### address
-
-Alternatively, if you want multiple emitters to send to the same address, you can use the `address()` method. The `address` is prepended as first address in the osc-message in the format: `/<address>/<function> argument`. Useful if you want to send messages to the same address, but with different timing-intervals.
-
-```js
-list params [0.25 0.5 0.75]
-list values [3 1 4]
-
-new emitter osc name(osc1) address(myOSC) time(1/4) 
-    set osc1 someParam(params)
-
-new emitter osc name(osc2) address(myOSC) time(1/2)
-    set osc2 anotherParam(values)
-
-// emits => /myOSC/someParams 0.25
-//          /myOSC/someParams 0.5
-//          /myOSC/anotherParam 3
-//          /myOSC/someParams 0.75
-//          /myOSC/someParams 0.25
-//          /myOSC/anotherParam 1
-//          etc...
-```
-
-### sendOSC
-
-You can enable/disable sending messages with the sendOSC function
-
-```js
-new emitter osc name(osc3) sendOSC(0)
-```
-
-### receiving
-
-You can use osc adresses as arguments for other functions by putting the address as argument in the form: `/<address>/<tag>/<etc.>`. For example to control the `gain()` of a `sample` and the `note()` value of a `synth` enter the following:
-
-```js
-new sample kick_909 time(1/4) gain(/myOSC/sliderValue1)
-new synth saw note(/myOSC/sliderValue2) shape(1 100) time(1/8)
-```
-
-It is possible to scale the incoming osc value to a different range by using `{}` after the address inputting a low and high output range separated by a colon `:`. The scaling function considers an incoming range of `0 - 1` floatingpoint values. For example to control the `note()` and `shape()` ranges in a `synth` enter the following:
-
-```js
-new synth saw note(/myOsc/sliderValue3{2:19} 0) shape(1 /myOsc/sliderValue4{50:500}) 
-// => converts incoming slider values from 0-1 to 2-19 for note and 0-1 to 50-500 for note length
-```
+Set the name for the OSC emitter. This can be any string of 2 or more characters. The `name` is used as reference to the instrument when the `set` method is used to call methods for a specific object. The `name` is also prepended as first address in the osc-message of the format `/<name>/<function> argument`. -->

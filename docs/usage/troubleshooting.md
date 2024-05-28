@@ -84,7 +84,7 @@ For Mac users with Retina display and Max version 8.1.0 or higher and MacOS 10.1
 - Select `Open in Low Resolution`
 - Restart Max and the Mercury project
 
-<!-- For a detailed explanation of all the Visual Settings please go [here](./07-environment.md#visual-setup) -->
+For a detailed explanation of all the Visual Settings please go [here](./../usage/mercury4max.md#visual-setup)
 
 You can also consider using an [External Editor](./../usage/editors) instead.
 
