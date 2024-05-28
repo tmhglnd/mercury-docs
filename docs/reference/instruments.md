@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Instrument Functions
 
-An instrument is the main sound or sequencing source in Mercury. Instruments can produce sounds natively in Mercury by means of synthesis or sampling, but can also send out MIDI or OSC-messages to trigger external devices or plugins, and are able to take input from for example your microphone. The following functions apply to all the types of instruments such as `synth`, `sample`, `loop`, `polySynth`, `polySample`, `midi` and `input`.
+An instrument is the main sound or sequencing source in Mercury. Instruments can produce sounds natively in Mercury by means of synthesis or sampling, but can also send out MIDI or OSC-messages to trigger external devices or plugins, and are able to take input from for example your microphone. The following functions apply to all the types of instruments such as `synth`, `sample`, `loop`, `polySynth`, `polySample`, `midi`, `osc` and `input`.
 
 For detailed explanation of the syntax see: [Syntax](syntax) and [`list`](actions#list) under [Actions](actions).
 
@@ -19,7 +19,7 @@ For detailed explanation of the syntax see: [Syntax](syntax) and [`list`](action
 - [`midi`](#midi)
 - [`osc`](#osc)
 - [`modulator`](#modulator) *Mercury4Max only*
-- [`emitter`](#emitter)
+<!-- - [`emitter`](#emitter) -->
 
 ## All Instruments
 
