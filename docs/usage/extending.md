@@ -32,7 +32,7 @@ Make sure you include a `[thispoly~]` and send it a `[loadmess mute 1]` to make 
 
 ### Functions
 
-Use the `[route]` object to route arguments from functions to parts of the patcher that you want to be able to control with the code. For example typing `new synth myCustomSynth freq(100)` will allow you to use `[route freq]` and retrieve the value `100`.
+Use the `[route]` object to route arguments from functions to parts of the patcher that you want to be able to control with the code. For example typing `new synth myCustomSynth freq(100)` will allow you to use `[route freq]` and retrieve the value `100`. This functiong routing has to come after the `[route method]`.
 
 ### Trigger
 
@@ -57,34 +57,44 @@ Below is copy-compressed code of an example patcher that generates a short sinew
 ```
 <pre><code>
 ----------begin_max5_patcher----------
-1219.3oc0Y80aihCD+4jOEygtSpcUtJr4Ogtud5d79DTspxAbRYWhMmwzlrq
-19Y+FaCsoWI.MkTo8EPdxX+ieyLdlwN+X9LuUxc7JO3yvMvrY+X9rYVQFAyZ
-FOyaKaWZAqxplWpb6VtP6sv8aZ9NsUtrVWVqg7JfAU4aDrhG+sVkJY5z6xEa
-tUwS0NvHAQW4u.hH9lWDRh4EEG.eoYRh5s3ZVv0Vb8ajtVJzqYobiLRir7L2
-Wvpu9mj.ummdtnc1DireNet4wh2IQ02gbrjorbUvS4UUL0dPKAEOqNkCok0.
-SCUZTm5x14Wji5JqE1EI73FFZPnwTDRLOShMOiG1rbfIf5OYl.A+AbEekEnP
-xx1hzF1Vq4.oOuLw5kCsOI9VeMkdT1z5Pchz6K4tkwy6oIb.Qu9bySimtTVr
-+wgY3RWzb7.DL3XDL2Dn8hWcwX5jw3RlfWzGsPeUzBHvs6LfXFjPGLLbkTkw
-UoxBoxsN14+7CxAqfSWiZzN1Gurap1HbqLieHtLwlBq.5RCNM.r4EeHzEu3w
-yeHkJYoToykB6RdUzDlrnthCZU9lMbErVI2BYRA2jqnUHCP3M4P.1ZsYbQAv
-TapMqVEX1owy5LERPOoPhb62RbuVtztGb4aJIRz4dy0ZLaueOQfKSLwbMTwU
-r3TxbrFMgcuYhz8tI5D68uo7dPH07+x339BvPGs.xEY7clvfBo7a0kv8rhZd
-kKBA+YlRw1ehd8Vmebza2qSN6d8+.B5KqSbfkBt.W501HfSvoer7mjjIykeD
-988hqZboXFTSDND0aTdCiCbUQHzgJfPOZExEGoJII9by4CCvGgy0EelLs8BP
-9.Z6ii6O4+qqC200hTSECPeG1pWJtmcEGdPkq0bArVp.i54hJsxlIGJx+F+y
-14eAFPbYm6soCmQOxY0BsuBBdSYzC9PLQqvRwFSTEWj4xmYjpy2xu3RXKWem
-LCt.WfUHyyfGx02AkEr8Wb4B3AlpDUhgSTYLAbMN5jMUjCyF9FMUzyto5u2w
-1VVvsgJnLzXgr.9Gr2oZ7rDVyBCRqqznArZu.sgU4eG6V5MVSHX4g8eGbJkD
-BO2kDP7er2CQ35Dn4jhgzAxazAGB6sWxJ187raQ8P.ukowFyVgGqopgHMLAa
-wD+kaacmlU1y9CVavDYIxE8ZGBOvWRSlzzmA+hXgTRyINs4Xr4hMcSOnEqsO
-X5PkbB6s35h9Jx18YQCmNl+oGGtzZXCCO49lb2aS2LjLYsQXt5.1F9qnHAnf
-O76jQztjywFQm1dH7O2cJYRaOB+XSVa2EAcJMC13GwnUyVkNI6YuS3dCXcoz
-CiiNawqKO27KceZA+wQcH1lv033SMbsGdFMHOsyxF58+tmW62qQ9KIekrVk1
-hby8rAO+Imwqz4BV60kbyS2LkQmNMuiEmjQfiIMzAJ8zUHQ9XPl7Zj8eWHub
-DHGNA11nQfyxI.mfwXIudB.xtHjgPhNUHMHmlBfFUXX7TfT7XPxeJPhNBjhl
-BfHiLBm7dAxeD.kLELZL9nWCjKcOqr7dtppQaKFXUsu5tM7jE1g4B2P64G8T
-76ya021XgGSgkyzXsrZk86xaWr6jT1qeWIpyax7hrCgzVwTvvt6Ja9+4rEVm
-+y4+Gd.sopC
+1673.3oc2ZE0biZCD94jeEpLcllzw0EDfAm25z45SWaenWeJNyMxfrMW.INg
+3Rbu4xu8tRB6.mchUB3KYtGhwRVnUe6t5a2UJe9zSblyukV4ft.cI5jS97om
+bhtKUGmzz9DmBxsI4jJ8vbR3EETlzYj42jzak59+q+9cu4BjbEEcIQr7sYUx
+2x4WWWdEpHa4JIJGZgxytlhxj+TEhwkna3hqyXKQmIno+JWPXKomOBlBhDkU
+glSSH0UTzZdMZE4STjjipzOAYTRjIqPYLciDtPPSjnE77Tp.QXoptYnJIQHQ
++IUjTKVuYAmmwnI7ZldUGzzIqtHikSkZH50zYVpFX74e3W7Cctej7Z4lg51z
+qd4.P48p0gQa5O0cr6Hje3T0CbXn5wDnOzUMuzBNStfjPUiGq55Kmdp5iQVZ
+IlWKkblisPv2Y6hUPJnRp38TFYdNsMP5BuMSioK45RpAaNyAakyVfrGz6g03
+0KVqDvAa9Dc0y.nL5M.B1wiqia1dUC3cUC3.mmFTebXNUCSeO8iXCLwuFfo2
+PBy3iOJEvJhhVHneDo1gtWb5uKNmreX5+fvbTyeGFt3.suaLtWv8gnKgUVYs
+lmifJ3LfZKaIije2OX69YO+mLkjmuFXgdZf4EZLjODkj2.h12sB.ZohMFdB7
+uzpJhXshQGn9qS.J7xZDP6qYru2KuCWsukJFr6SVwf80ph.CmE1S2HZXcvy4
+jzB.2nBkitmsl4oCJckYGbCNccOFajkfotjmu9NaQH9ItENS4e04gEPNx34O
+oWHtjvn4Vu+L5wcCmyEPxJI7btvrR0Vi6+vq01x8gKv5EBbxlw56oZDia8Nl
+4uc3gBdZmX8PLbSvebjZVZdskcVR3Qc9n0RRvK4BYFj.hZJGGNfrEAiQ+akI
+OOUhFPTAdAZlSJmQm4nHMjhrkKUY5gfkghLAQVHUsyy0uEDxrVMyP+BJRsyi
+l1ONkmc9eAlnHdQQ8hT4gTU9iQpbjur7SpLpo+tBXWAIDWLGfYJ5lL4pcxGG
+TfyAcDj4m5qpWOG90pMYSunlknrqfxq5dM4XzevEH5sjhxb5EyXyXpWBs3in
+KAWQHJhK3K5d0LFPKfpVy.4Vr9ezOUA0OawGOeuVfI1tc5YaALd2ax.Odfo0
+aq3slZXXSAMpc1JtGkrUviQ+ldG1LGnxgU7TXenptrDBCYxbivVu0yQ+S2PX
+Rk+EIMUukE7rztEcbjLI7oSBZ6Kqq+SMwfS5MhLoDpjaagdoTcMjWXbpBccg
+BFU06o7orXdz0epF6Y3P286PFZKkf+y0gzaRXKGxnfA1V4MF8NPWMSWjFXm.
+sREETQZVTkVTlUPO6bjwPhNqKYQYNY8YfR8FhnDFjR2JTHgJgVmOioHlyjsI
+gkJTtk8vTXtVOunkcln052gftHoUh6F2qxww3mqtep6NUiOfp92rwqVibvgK
+Uc7FMG.gQ+RPI0URvRn2LPqx9OHH89zEXaISBd1glBaEYx2eX4EgUxc1mk6S
+GCwsKkI.eLxjE7nsF.9CIkdPqrzwwGups0IW0PCnRtZufMXOtbOPQIAGrp6Q
+VgbuvlrZmdLv9OemsGhh2SMPsoFdaNwn.rgHZpJu8mMBU0SRVR2MD.BibQ+n
+m0.08XbnXFiY3QYuoNZhsvKd+nCe.y3HaNmyFrF0.4WVG1ng2e0vyFzjxR+b
+We.7krNIGRM.JgvVbFdrvYiO6j9cNAJj08v4WkYBp6rMTOcIIYsZfaK21amx
+fezfOcJT2ybrAQwwX+P02BhbCii6dJBcjlp3d+fot5x5+5uz9sZGjy8oeEBG
+7jXO3A3DD09lDb24LKmSRtdIDPik1I17RFGlj7rjqa2sdbT8Hmb+gdz2i8bf
+L39u1L33ou.F7l5088+92fie0YvieAL3lXmXyMF9cs816UGit2Kf81uyof7M
+0dqkgN4wu5+4A8xTewicbBp30hjM3aSoOPx0aVpozJYFir4Xvu79qZG8PoNX
+qjl.yg2ADj5xr6sf7LywgEz8qlsWsfauj7lk+iJZUsI8FiXa.Y32Jko29Uld
+81ewJI2aHN0BOyICff7sw6X5PgnCJogPPtVHn3gPP13GFYri8RPgVJm9BnHK
+jyPPFFaimf2wfLzZI6NzLG138i2Q2ZBkRJK+DUT0LXsHfLm9fIij3Q5lYLSS
+8Mq3HneJay3iz8PDPFBRH8fZgdY4b6DSou5arVvpyZvH.NPj5rxXPxJUkMQ3
+0Iuc5WN8+AHUt1FO
 -----------end_max5_patcher-----------
 </code></pre>
 ```
