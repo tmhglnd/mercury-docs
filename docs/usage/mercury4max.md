@@ -7,6 +7,51 @@ id: mercury4max-overview
 
 This chapter gives an overview of the features in the user interface of Mercury4Max
 
+## Mercury Folder
+
+When you start Mercury4Max for the first time it creates a folder `~/Documents/Mercury` containing a few subdirectories like: `Code Logs`, `Data`, `Library`, `Preferences` and `Recordings`. These folders are used to store various files when you are working in Mercury such as recorded sounds, autosaves of the code you evaluate and dictionaries of the loaded soundfiles.
+
+### Change the `/Mercury` Folder location
+
+You can change the mercury folder location. Go to your download of Mercury4Max, which can be found in `/Users/<User>/Documents/Max 8/Projects/mercury` considering you followed the *Getting Started* steps. In the `/mercury-ide` you will find a file called `mercury.ini`. In the `.ini` file you can adjust `base` to the location of your preference:
+
+```
+base = /Documents/Mercury
+user = /Users/<yourname>
+```
+
+Now restart the `mercury_ide.maxproj` and you can see it generated all the necessary folders in your newly specified location.
+
+:::note
+Beware that the `base` is appended to the `user`, so the full location will be: `/Users/<yourname>/Documents/Mercury`
+:::
+
+### Sounds
+
+You can add sounds (samples and single-cycle waveforms) to the Mercury file path so you can use them while coding music. Files can be added through the menubar (see below) but can also be added in the `mercury-user.ini` file. Go to your Mercury folder (by default in `~/Documents/Mercury`) and open the `mercury-user.ini` file. In the file you'll see:
+
+```
+[samples]
+path[] = default
+
+[waveforms]
+path[] = default
+```
+
+These `path[]`'s are pointing to the default location of the soundfiles included in Mercury. If you like to add a folder of sounds you can add a new line under `[samples]` or `[waveforms]`. Samples are used with `new sample`, waveforms are used with `new synth`. The path must be an absolute path. For example:
+
+```
+[samples]
+path[] = default
+path[] = /Users/<yourusername>/Music/Samples/aSampleFolder/
+```
+
+On load the system searches for all `.wav`, `.aiff` and `.mp3` files located in this folder and any subdirectories. Folders are loaded from top to bottom of the page. If a file is loaded with the same name of a file that was already loaded it overwrites the previous file.
+
+:::warning
+Folders and all subdirectories are searched for files that match `.wav`, `.aiff` or `.mp3`. Be careful when selecting a folder with many subdirectories and audiofiles.
+:::
+
 ## Mercury Main Window
 
 The Mercury main window gives you access to the most used settings in the Mercury Environment. For more detailed settings you can use the menubar on top.
@@ -70,23 +115,27 @@ Via the File menu you can:
 
 ### Sounds
 
-Via the Sounds menu you can add folders of sounds and waveforms to the searchpath of the Mercury environment. The filenames of these sounds can then be used in the code to refer to. This works best if you rename your files to shorter filenames and **don't** use spaces in the name. It will recursively search for all the files that match `.wav`, `.aiff` or `.mp3`, so be careful with selecting a folder with many subdirectories and audiofiles. These files will be loaded into the RAM, so try to keep the loaded soundfiles under **4 GB**.
+Via the Sounds menu you can add folders of sounds and waveforms to the searchpath of the Mercury environment. The filenames of these sounds can then be used in the code to refer to. This works best if you rename your files to shorter filenames and **don't** use spaces in the name.  These files will be loaded into the RAM, so try to keep the loaded soundfiles under **4 GB**.
+
+:::warning
+Folders are searched for all subdirectories for files that match `.wav`, `.aiff` or `.mp3`. Be careful when selecting a folder with many subdirectories and audiofiles.
+:::
 
 #### Add
 
-The **Add** option appends all the found audiofiles to the current list of already loaded files. A library with the loaded sounds is stored under `~/Documents/Mercury/Data`. 
+The **Add** option appends all the found audiofiles to the current list of already loaded files. The path is stored in `mercury-user.ini`. A library with the loaded sounds is stored under `~/Documents/Mercury/Data`. 
 
 #### Replace
 
-The **Replace** option removes all the current loaded files from the library and only addes the files that are found in the currently selected folder. The library is updated accordingly.
+The **Replace** option removes all the current loaded files from the library and only addes the files that are found in the currently selected folder (and subfolders). The `mercury-user.ini` file and library are updated accordingly.
 
 #### Default
 
-The **Default** option resets the library to the files that are included in the Mercury project by default. These files can be found in the `mercury_ide/media` folder
+The **Default** option resets the library to the files that are included in the Mercury project by default. These files can be found in the `mercury_ide/media` folder. The `mercury-user.ini` file is updated as well.
 
 #### Show Loaded
 
-The **Show Loaded** option opens the library of loaded soundfiles. This will give you insight in if your files were loaded correctly and also shows you the buffername, duration, number of channels and samplerate of the files.
+The **Show Loaded** option opens the library of loaded soundfiles and waveforms. This will give you insight in if your files were loaded correctly and also shows you the buffername, duration, number of channels and samplerate of the files.
 
 #### Example for file naming
 I have a soundfile: `my cool Sound 05.wav` on the computer. 
