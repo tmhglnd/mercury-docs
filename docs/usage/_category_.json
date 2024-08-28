@@ -2,6 +2,8 @@
   "label": "🕹 Usage",
   "position": 2,
   "link": {
+    "type": "generated-index",
+    "slug": "/usage",
     "description": "How to use Mercury"
   }
 }

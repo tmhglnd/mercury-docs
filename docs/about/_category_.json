@@ -2,6 +2,8 @@
   "label": "📟 About",
   "position": 1,
   "link": {
+    "type": "generated-index",
+    "slug": "/about",
     "description": "What is Mercury and What can you do with Mercury?"
   }
 }
