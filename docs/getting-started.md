@@ -149,7 +149,7 @@ If you experience any issues, please see the <!-- [Troubleshooting](troubleshoot
 
 You are now ready to play all you want! For example you can listen some random examples or follow the tutorials. You can read the Usage chapter for more info on how to navigate the environment and you can read the Reference for explanation of all the functions. For Max users I also recommended following the interactive tutorials in the [MercuryPlayground](https://mercury.timohoogland.com) before continuing in Max.
 
-- [Usage](category/-usage)
-- [Reference](category/-reference)
+- [Usage](./usage/)
+- [Reference](./reference/)
 <!-- - [Examples](category/-examples) -->
 <!-- - [Tutorials](category/-tutorials) -->
