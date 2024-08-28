@@ -105,7 +105,7 @@ The Mercury Playground uses the [**ToneJS**](https://tonejs.github.io/) framewor
 
 ### Setup
 
-First clone the project from `https://github.com/tmhglnd/mercury-playground` so you can run it locally. Follow the steps in the [Getting Started](./../getting-started.md#🌑-without-internet)
+First clone the project from `https://github.com/tmhglnd/mercury-playground` so you can run it locally. Follow the steps in the [Getting Started](./../getting-started.md#-without-internet)
 
 ### Create an Instrument Class
 

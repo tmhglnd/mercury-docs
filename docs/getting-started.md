@@ -10,7 +10,7 @@ sidebar_position: 1
 - **Mercury4Max**, running in [Cycling'74's Max8](https://cycling74.com/downloads) (Windows/Mac only)
 
 :::info for everyone
-I recommend to use the MercuryPlayground (browser version) first. Please read further in chapter [MercuryPlayground](#mercuryplayground).
+I recommend to use the MercuryPlayground (browser version) first. Please read further in chapter [MercuryPlayground](#-mercuryplayground).
 :::
 
 If you have experience with Max8 you can also consider using Mercury4Max instead. Please read further in chapter [Mercury4Max](#-mercury4max) for instructions on installing and setting up the environment.

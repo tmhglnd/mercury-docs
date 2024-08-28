@@ -15,7 +15,7 @@ Mercury makes use of the [`total-serialism`](https://www.npmjs.com/package/total
 - [Generative](#generative-functions)
 <!-- - [Algorithmic](#algorithmic-functions) -->
 - [Stochastic](#stochastic-functions)
-- [Transform](#transformative-functions)
+- [Transform](#transform-functions)
 - [Translate](#translate-functions)
 - [Utility & Math](#utility-functions)
 

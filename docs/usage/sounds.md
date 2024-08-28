@@ -7,7 +7,7 @@ id: sounds
 
 Most of the sounds in Mercury are from [freesound.org](http://www.freesound.org) and are licensed with Creative Commons Attribution or Creative Commons 0 licenses. If not downloaded from freesound it is made sure that the license allows you to redistribute the sounds via the Mercury environment and that you can use them in your projects. All the sounds are listed below with their original source, license and credits.
 
-- [Credits](#credits)
+- [Credits](#sample-credits)
 - [One-shots](#one-shots)
 	- [Drums](#drums) (kick, snare, hat, ...)
 	- [Nord Mini Kit](#nord-mini-kit) (kick, snare, hat, ...)
@@ -23,10 +23,9 @@ Most of the sounds in Mercury are from [freesound.org](http://www.freesound.org)
 	- [Breakbeats](#breakbeats) (amen, house)
 	- [Idiophonic](#idiophonic-1) (chimes)
 	- [Foley](#foley-1) (wood, wiper)
-	- [Noise](#noise-1) (noise)
-- [Credits](#credits)
+	- [Noise](#noise) (noise)
+- [Credits](#sample-credits)
 - [Waveforms](#waveforms)
-	- [Overview](#overview)
 
 ## One-shots
 
@@ -611,7 +610,7 @@ One-shots are samples best used for triggering once with `new sample` or `new po
 * url: https://freesound.org/s/147998/
 * license: Attribution Noncommercial
 
-### Woodwinds / Flutes
+### Woodwinds Flutes
 
 #### flute
 

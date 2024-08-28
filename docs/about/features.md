@@ -100,7 +100,7 @@ new emitter osc address(yourDevice) theParam(params) time(1/4)
 //          etc...
 ```
 
-Easily control parameters in Mercury via external OSC-messages (*only when running MercuryPlayground [localhost](#-install) or Mercury4Max*)
+Easily control parameters in Mercury via external OSC-messages (*only when running MercuryPlayground [localhost](./../getting-started.md#-without-internet) or Mercury4Max*)
 
 ```js
 new synth triangle fx(reverb '/synth/verb') fx(filter low '/synth/cutoff' 0.4) time(1) shape(1 'synth/length')

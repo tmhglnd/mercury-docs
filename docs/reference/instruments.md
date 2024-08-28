@@ -769,7 +769,7 @@ Alias: `out()`
 
 ### chord
 
-By default the `midi` instrument's output is monophonic. You can turn the chord output (polyphony) on for a midi instrument with this function. This allows you to use `2D-list`s where the 2nd dimension is used to generate chords. Read more about chords under [`polySynth`](#polySynth).
+By default the `midi` instrument's output is monophonic. You can turn the chord output (polyphony) on for a midi instrument with this function. This allows you to use `2D-list`s where the 2nd dimension is used to generate chords. Read more about chords under [`polySynth`](#polysynth).
 
 **arguments**
 

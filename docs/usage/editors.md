@@ -39,7 +39,7 @@ Windows doesn't support `ppm`, instead use `npm` and the following steps:
 
 ### 🎮 Usage
 
-1. Start Mercury4Max or the MercuryPlayground (running locally!, [**see instructions here**](./../getting-started.md#🌑-without-internet))
+1. Start Mercury4Max or the MercuryPlayground (running locally!, [**see instructions here**](./../getting-started.md#-without-internet))
 2. Create an empty file in Pulsar and write your code. This can be a plain `.txt` file.
 3. Go to `Menu` > `Packages` > `Open Package Manager`, find the `mercury` package and click on `Enable`.
 4. The package should be automatically activated

@@ -16,12 +16,12 @@ const config = {
   url: 'https://tmhglnd.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/mercury-docs',
+  baseUrl: '/mercury',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'tmhglnd', // Usually your GitHub org/user name.
-  projectName: 'mercury-docs', // Usually your repo name.
+  projectName: 'mercury', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -111,7 +111,7 @@ const config = {
             items: [
               {
                 label: 'Docs',
-                to: '/docs/welcome',
+                to: '/docs/',
               },
             ],
           },
