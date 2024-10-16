@@ -45,6 +45,13 @@ new sample kick_909 name(alice)
 /alice 1
 ```
 
+The `name` can also be used to receive a stereo signal from the specific instrument sound in a Max patch (*this feature only works in Mercury4Max*). This can be helpful for recording a multi-track of your code, or when wanting to work with multichannel outputs.
+
+```
+[receive~ alice]    <- receive a mono signal from alice in a max-patch
+[mc.receive~ bob 2] <- receive a stereo signal from bob in a max-patch
+```
+
 ### group 
 
 :::warning Currently (and hopefully temporarily) not working<!-- MercuryPlayground only! -->
