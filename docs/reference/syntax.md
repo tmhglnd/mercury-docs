@@ -10,6 +10,10 @@ Mercury is a minimal and human-readable language for the live coding of algorith
 
 Mercury code is evaluated as an `entire page`, `per line` and from `top to bottom`. One of the main reasons the entire code page is evaluated is that this allows the code to always be a direct reflection of the state of the system and therefore what you hear. This helps to keep an overview what is going on in the system. The downside is that it is more difficult to prepare snippets of code in the same file without evaluating them. Code that you don't want to hear can therefore be `commented`, or you can store it in a separate file.
 
+:::info
+With Mercury4Max the default texteditor allows a maximum of 80 characters on a line. See [Mercury4Max Overview](../usage/mercury4max) for more details and options. Mercury Playground does not have this limitation.
+:::
+
 ## Syntax Structure
 
 The following chart gives an overview of how the syntax is structured when you type code in Mercury. There are of course many combinations of instruments, lists, methods and functions possible. Please refer to the specific functions in the reference and the tutorials for more concrete examples.

@@ -26,6 +26,10 @@ Don't give your synth a filename with spaces! Instead I recommend using programm
 
 The patch will be loaded inside a `poly~` object. Therefore it is required to use an `[in 1]` object to receive incoming messages and an `[out~ 1]` object to send a signal out.
 
+:::info
+Signal output from a custom synth needs to be mono. Adding `[out~ 2]` for a stereo synth won't work. This is because the FX chain starts mono, then becomes stereo after `pan()` and `reverb/delay`.
+:::
+
 ### Muting
 
 Make sure you include a `[thispoly~]` and send it a `[loadmess mute 1]` to make sure the patcher is muted on initialization of Mercury. This prevents high cpu load and unwanted sound when not using the synth.
@@ -45,6 +49,10 @@ Send a bang to `[pv noteCount]` to retrieve the current count the instrument is 
 ### argListLookup
 
 Use the `[argListLookup]` abstraction to allow Mercury to lookup values from a `list` created in the code. `[argListLookup]` expects the `value` or `name` on the left inlet, and the `[pv noteCount]` on the right inlet to index the correct value from the `list`.
+
+:::info
+You only need to use `[argListLookup]` and `[pv noteCount]` for parameter values where you will use lists and list functions. If you have a parameter that will only have a single value, connect it directly from the `route` object. (For example, if you want a parameter to control a toggle object.)
+:::
 
 :::tip
 While coding in Max it could be that you can't create the `[argListLookup]` object because it is not recognized. To fix this you can add the Mercury folder to the searchpath, or you can save the patcher first and open it when Mercury is open. Another "hack" is to create a `[join 2]` object, make all the connections, than replace the text for `argListLookup`. The connections will stay even tho the object turns orange.
