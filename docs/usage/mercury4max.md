@@ -64,6 +64,18 @@ Start or stop the audio calculations (Digital Signal Processing, DSP). Turning t
 
 Start or stop the rendering of the text-editor. This is an OpenGL environment that renders the responsive texteditor in the second window. The rendering is done at a framerate synced to the screen you use (which usually defaults to 60fps). This rendering is also necessary to use when coding visuals displayed behind the text. You don't have to use this texteditor, you can also use an external editor like Pulsar or Flok.
 
+:::info
+The texteditor allows a maximum of 80 characters on a line. If you keep typing past 80 characters, it will create a new line which will be "orphaned" and evaluated without connection to the original line. To avoid this, use the `set` action command to append instrument functions and effects settings using one or more new lines. To use this you must first add a name value, and refer to it in each set command. More details in [Actions](../actions#set).
+
+```
+new synth saw name(mySaw) time(1/2)
+  set mySaw note(2 2) shape(1000 500)
+  set mySaw fx(reverb 0.95 12) pan(0.2)
+```
+
+You can also avoid this limitation by using an external editor like Pulsar with the [Pulsar-Mercury](https://github.com/tmhglnd/mercury-pulsar) plugin.
+:::
+
 ### CPU and FPS Meter 
 
 This CPU meter shows the current CPU usage of the audio processes running in Mercury. If you experience a very high cpu-usage (more then 70) you can find some info under [Audio Setup](#audio-setup) to help you adjust settings for your computer.
