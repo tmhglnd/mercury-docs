@@ -68,6 +68,10 @@ degrade (downsampling)
 |
 squash (basic compression/distortion)
 |
+vocoder 
+|
+looper (looping delay)
+|
 gain (the volume of the sound) -> sender
 |
 panning (mono to stereo)
