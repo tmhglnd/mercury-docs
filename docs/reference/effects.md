@@ -304,6 +304,25 @@ fx(lfo <time> <type> <dry-wet> <width> <offset>)
 new loop amen fx(lfo 1/16)
 ```
 
+## looper
+
+Add a looping delay effect to the sound. This is a (very) long delay line (1 bar or more, maximum of 64 seconds, 32 bars at 120 BPM) with a high feedback, resulting in a looping sound. If the feedback is less then 1 the looped sound will slowly die out over the amount of bars delaytime. If the capture/feed is 1 the loop is being recorded, if less then 1 the gain of the input sound is adjusted, and if 0 the capture is off. With dry/wet you can adjust the balance between the direct throughput of the signal and the looper sound. This effect is inspired by the Dual Looping Delay modular: https://4mscompany.com/p.php?p=709
+
+**arguments**
+- `Fraction(List)` -> delaytime in fraction (default=4/1)
+- `Float+(List)` -> capture on/off, feed amount 0-1 (default=0)
+- `Float+(List)` -> feedback amplitude 0-1 (default=1)
+- `Float+(List)` -> dry/wet amount 0-1 (default=0.5)
+
+```js
+fx(looper)
+fx(looper <time-fraction> <capture> <feedback> <dry-wet>)
+```
+
+```js
+new loop amen time(1/1) once(on) fx(looper 1/1)
+```
+
 ## reverb
 
 Add a reverberation effect to the sound, making it sound like it's in a room or big hall. The effect has 2 arguments, the amplitude of the reverb and the reverb-size. The amplitude is specified as floating-point amplitude and the length is a value between `0` and `18` (choosing between 19 presets). The default is `0.5` amplitude and `10` length.
