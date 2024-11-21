@@ -65,7 +65,7 @@ Start or stop the audio calculations (Digital Signal Processing, DSP). Turning t
 Start or stop the rendering of the text-editor. This is an OpenGL environment that renders the responsive texteditor in the second window. The rendering is done at a framerate synced to the screen you use (which usually defaults to 60fps). This rendering is also necessary to use when coding visuals displayed behind the text. You don't have to use this texteditor, you can also use an external editor like Pulsar or Flok.
 
 :::info
-The texteditor allows a maximum of 80 characters on a line. If you keep typing past 80 characters, it will create a new line which will be "orphaned" and evaluated without connection to the original line. To avoid this, use the `set` action command to append instrument functions and effects settings using one or more new lines. To use this you must first add a name value, and refer to it in each set command. More details in [Actions](../actions#set).
+The texteditor allows a maximum of 80 characters on a line. If you keep typing past 80 characters, it will create a new line which will be "orphaned" and evaluated without connection to the original line. To avoid this, use the `set` action command to append instrument functions and effects settings using one or more new lines. To use this you must first add a name value, and refer to it in each set command. More details in [Actions](./../reference/actions.md#set).
 
 ```
 new synth saw name(mySaw) time(1/2)
