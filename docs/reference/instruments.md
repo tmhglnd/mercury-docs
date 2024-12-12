@@ -990,6 +990,10 @@ new synth saw note(/myOsc/sliderValue3{2:19} 0) shape(1 /myOsc/sliderValue4{50:5
 
 The modulator allows you to send a modulation signal as an argument to parameters in `instrument-function`s of other instruments. These parameters are continuously modulated at a specific rate with a specific waveform. The modulation rate is independent from the instruments `time()` (in comparison when using a list as an argument). It is also possible to send the modulation signal directly out to the connected soundcard on a specific DAC channel (Digital Analog Converter). This can for example be used for CV-modulations.
 
+:::info maximum 8 Modulators
+Mercury has a limit of 8 active Modulators. This may be relevant when using an external editor (Pulsar) with multiple instruments. If you exceed 8 Modulators, a warning will go to the Max Console and the last Modulator won't be evaluated. If you encounter this limit, you can comment out Modulator lines and uncomment them when you need them.
+:::
+
 **arguments**
 - `Name` -> modulator waveform type: `sine`/`sin`, `sawUp`/`phasor`, `sawDown`/`saw`, `square`/`rect`, `triangle`/`tri`, `random`/`rand`, `randomLine`/`randL`, `trigger`/`gate`
 
