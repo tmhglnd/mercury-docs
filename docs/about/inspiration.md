@@ -4,7 +4,13 @@ Below is some inspiration of awesome things made by the Mercury community.
 
 Made something with Mercury? I'm very happy to add it to the list! So please edit this file by adding a URL here and send a pull request! 😎 Read [Contribute](./../contribute) to find out more about editting files on github.
 
-- [Damage Such - Live at Algorave Barcelona](https://youtu.be/Ykhjx7ZkaEQ?si=_POsFQqALz3jeijJ&t=336)
+- [Pere Faura](https://youtu.be/lG67cQcAN9c?si=HfkEvG4gLHZER3cq)
+- [Mia Knop Jacobsen](https://youtu.be/hbu_Q_8NAe0?si=NB7V4HD4CMFYFpcx)
+- [Felipe Gonzalez](https://youtu.be/n13y0xwCqks?si=awdPUIB6LOHB9EGd)
+- [el Amaru](https://youtu.be/sp2oCJ7ay18?si=3CSPYyXq-dZWlzRR)
+- [Agustin (Elconx)](https://youtu.be/O9RB_ovurVk?si=j4XvKCvyZSdV1sD3)
+- [Damage Such - Live at /* VIU */ Algorave Barcelona](https://youtu.be/7KH7fn4k8kE?si=8Dv_l1gHcyIaL7Bv&t=1429)
+<!-- - [Damage Such - Live at Algorave Barcelona](https://youtu.be/Ykhjx7ZkaEQ?si=_POsFQqALz3jeijJ&t=336) -->
 - [Sabrina Verhage & Flor de Fuego - Live at LIVECODERA8M](https://www.youtube.com/live/iY9Vc8LpMFQ?si=vsDIlYW3YXhF29iq&t=3494)
 - [iTypeMusic - Live Coding Techno Vibes](https://youtu.be/aB1mdxLCR7c?si=6Vk0MzKmK0bDoX_K&t=856)
 - [LXT @levoxtrip (at Solstice Stream December 2023)](https://www.youtube.com/watch?v=TzM-koWkRow&ab_channel=Eulerroom)
@@ -20,10 +26,10 @@ Made something with Mercury? I'm very happy to add it to the list! So please edi
 - [Roald van Dillewijn - Mercury & DigiLog](https://www.youtube.com/watch?v=1v7xicXuSbo&t=346s)
 - [Sasj & Timo - Amalgam (Live at Github Sattelite 2020)](https://www.youtube.com/watch?v=zzmgX4QSBMM)
 - [Anne Veinberg - CodeKlaver & Mercury Extension Tryout](https://www.youtube.com/watch?v=VSoibHwQJ98&t=175s)
-- [Timo - Live at NerdLab VR 2020](https://www.youtube.com/watch?v=EW9x68sxhvM)
-- [Timo - Live at Eulerroom Equinox 2020](https://www.youtube.com/watch?v=X0FFcdd1QEE)
-- [Timo - Live at Algo:Ritmi 2020](https://www.facebook.com/timohoogland/videos/3654187371320680/)
-- [Timo - Live at NLCL Meetup STEIM](https://www.youtube.com/watch?v=leckC_yUMss)
+<!-- - [Timo - Live at NerdLab VR 2020](https://www.youtube.com/watch?v=EW9x68sxhvM) -->
+<!-- - [Timo - Live at Eulerroom Equinox 2020](https://www.youtube.com/watch?v=X0FFcdd1QEE) -->
+<!-- - [Timo - Live at Algo:Ritmi 2020](https://www.facebook.com/timohoogland/videos/3654187371320680/) -->
+<!-- - [Timo - Live at NLCL Meetup STEIM](https://www.youtube.com/watch?v=leckC_yUMss) -->
 
 ## 🔍 Further reading
 
