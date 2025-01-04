@@ -85,7 +85,7 @@ You can customize the shortkeys by opening the `Setup Shortkeys` under `Settings
 
 ### Menu Items Quick Access
 
-The following shortkeys only work when focused on the code editor.
+The following shortkeys only work when focused on the code editor. You can find these shortkeys also by keeping the mouse over the button for a short period until the tooltip appears.
 
 | Keymap | Function |
 | - | - |
@@ -124,7 +124,7 @@ The following shortkeys only work when focused on the code editor.
 | `Cmd` `C` | Copy the selected code or if nothing selected copy the entire line |
 | `Cmd` `V` | Paste whatever is currently in the clipboard |
 | `Cmd` `Z` | Undo editing of the code | 
-| `Cmd` `Shift` + `Z` | Redo editing of the code | 
+| `Cmd` `Shift` `Z` | Redo editing of the code | 
 | `Alt` `Right` | Jump a word to the right |
 | `Alt` `Left` | Jump a word to the left |
 | `Ctrl` `O` | Enter a new line |
@@ -132,4 +132,3 @@ The following shortkeys only work when focused on the code editor.
 | `Ctrl` `D` | Delete character on the right |
 | `Ctrl` `H` | Backspace character on the left |
 | `Ctrl` `K` | Delete everything on right side of the cursor |
-| `Ctrl` `Shift` + `H` | Hide the code editor |
