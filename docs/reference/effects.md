@@ -48,6 +48,8 @@ Not all effects from *Mercury4Max* are available in the *MercuryPlayground* beca
 ```
 instrument (eg. sample, synth, input)
 |
+looper (looping delay)
+|
 freeze (spectral freezer)
 |
 shift (pitchshifter)
@@ -69,8 +71,6 @@ degrade (downsampling)
 squash (basic compression/distortion)
 |
 vocoder 
-|
-looper (looping delay)
 |
 gain (the volume of the sound) -> sender
 |
