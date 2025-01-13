@@ -50,6 +50,8 @@ instrument (eg. sample, synth, input)
 |
 looper (looping delay)
 |
+retune (autotune effect)
+|
 freeze (spectral freezer)
 |
 shift (pitchshifter)
@@ -325,6 +327,22 @@ fx(looper <time-fraction> <capture> <feedback> <dry-wet>)
 
 ```js
 new loop amen time(1/1) once(on) fx(looper 1/1)
+```
+
+## retune
+
+:::warning Mercury4Max only
+:::
+
+Add a retuning (autotune) effect to the incoming sound. The sound will be tuned to the specified semitone and based on the set `scale`. You can specify a chord if you prefer to retune to multiple notes at the same time. With a second argument you can set the wet-dry balance.
+
+**arguments**
+- `Int+(List)` -> semitone or chord to retune to (default=0)
+- `Float+(List)` -> drywet balance 0-1 (optional, 1=100% wet, default=1)
+
+```js
+list chord [[ 0 3 9 ]]
+new sample harp_down time(1/1) fx(retune chord 0.7)
 ```
 
 ## reverb
