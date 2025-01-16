@@ -52,6 +52,25 @@ The `name` can also be used to receive a stereo signal from the specific instrum
 [mc.receive~ bob 2] <- receive a stereo signal from bob in a max-patch
 ```
 
+### solo
+
+:::warning currently Mercury4Max only
+:::
+
+Solo one (or more) instrument(s). This means that if you solo one instrument you will only hear that instrument and all the others are muted. If a few instruments are solo'd you will hear all the solo'd instruments. If you remove all the solo functions or set all of them to 0 you will again hear all the instruments. This is a useful feature to quickly mute many instruments at once and just listen one sound. The solo mode can also be modulated with a list for some interesting results, try it!
+
+**arguments**
+- `Bool(List)` -> turn the solo on/off (default=0)
+
+```js
+new sample kick_909 time(1/4) 
+new sample hat_909 time(1/8) solo(1)
+new synth saw note(0 0) time(3/16) solo(1)
+new synth saw note(0 1) time(1/8)
+
+// set all solo(0) // uncomment this to quickly overwrite all the solos
+```
+
 ### group 
 
 :::warning Currently (and hopefully temporarily) not working<!-- MercuryPlayground only! -->
