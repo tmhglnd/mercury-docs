@@ -7,7 +7,7 @@ sidebar_position: 1
 `Hello, World!` Welcome to the Getting Started guide for Mercury. The various chapters in this guide will get you up and running in no time! Before we get started it is good to know that Mercury currently has 2 versions:
 
 - **MercuryPlayground**, running in the [browser](https://mercury.timohoogland.com/) (Windows/Mac/Linux)
-- **Mercury4Max**, running in [Cycling'74's Max8](https://cycling74.com/downloads) (Windows/Mac only)
+- **Mercury4Max**, running in [Cycling'74's Max8](https://cycling74.com/downloads) (Windows/Mac/Experimental Linux via Wine)
 
 :::info for everyone
 I recommend to use the MercuryPlayground (browser version) first. Please read further in chapter [MercuryPlayground](#-mercuryplayground).
@@ -67,7 +67,7 @@ If you want to run the MercuryPlayground locally (for using without internet, or
 
 ## 💻 Mercury4Max
 
-Mercury also runs in Max8 (sometimes also called MaxMSP), a node-based creative coding environment from Cycling'74. 
+Mercury also runs in Max8 (sometimes also called MaxMSP), a node-based creative coding environment from Cycling'74 for MacOS or Windows. Linux users can try out the [Experimental Linux Guide](./usage/mercury4max-linux.md), but I recommend trying to work with the Playground first.
 
 :::info You do not need to buy a Max-license in order to use Mercury in Max8
 :::
