@@ -305,6 +305,31 @@ There are differences in sound between the *Mercury4Max* and *MercuryPlayground*
 Not all effects from *Mercury4Max* are available in the *MercuryPlayground* because some are in the process of being ported, and some are sadly not as easy to implement with Web Audio.
 :::
 
+### channel
+
+Choose the (direct) output to send the instrument signal to. The first argument is for the left channel, the second argument for the right channel. If only one argument is used the right channel is muted (resulting in mono output). 
+
+The default is out(1 2) where left is send to channel 1 and right to channel 2. When out(0) is used the sound is basically muted. When out(3 4) or higher is used the signal is send directly to that specific DAC output. The signal omits the `volume`, `highpass` and `lowpass` filters and the built-in limiter.
+
+:::info
+Note that the `midi` instrument also has a `channel()` method, but this is for MIDI-channel.
+:::
+
+**arguments**
+- `Number+(List)` -> left output channel (optional, default=1)
+- `Number+(List)` -> right output channel (optional, default=2)
+
+```js
+// stereo output to dac 3 and 4
+new synth saw channel(3 4)
+
+// mono output to dac 5 and 6
+new sample kick_909 time(1/4) channel(5)
+new sample snare_909 time(1/2 1/4) channel(6)
+```
+
+alias: `out()`
+
 ### ratchet
 
 :::warning Mercury4Max only
