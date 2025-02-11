@@ -771,7 +771,7 @@ Functions `note()`, `time()`, `name()`, `group()`, `once()`, `play()`, `ratchet(
 
 ### note
 
-The `note` function allows you to play a midinote. The function works the same as the `note` function explained under the `synth`. Please see [`note()`](#note) for further information.
+The `note` function allows you to play a MIDI-note. The function works the same as the `note` function explained under the `synth`. Please see [`note()`](#note) for further information. 
 
 ```js
 set scale major D
@@ -780,6 +780,18 @@ list notes [0 7 5 3]
 
 new midi default note(notes 2)
 // plays the midi notes 62 69 67 64
+```
+
+Optionally you can turn the note `off` by adding this value to the function. This is useful in the case you only want to send CC or ProgramChange, and the note messages are in the way.
+
+### midinote 
+
+The `midinote` function allows you to play a MIDI-note based on the original pitch number as is well known with MIDI (from 0-127). This value is also not adjust based on the `set scale` and `set root`. Using this method overwrites the `note()` function.
+
+```js
+list midinotes [60 63 67 48 72]
+
+new midi default midinote(midinotes)
 ```
 
 ### length
