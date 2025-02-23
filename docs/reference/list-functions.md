@@ -412,7 +412,7 @@ list hex3 hexBeat(f9cb)
 Alias: `hex`
 
 :::info
-In the MercuryPlayground writing `hex(82fc)` causes an error because the value `82fc` starts with a number so it is nota valid `name`. To be able to use it anyways change that value into a string by adding quotes: `hex('82fc')`
+In the MercuryPlayground writing `hex(82fc)` causes an error because the value `82fc` starts with a number so it is not a valid `name`. To be able to use it anyways change that value into a string by adding quotes: `hex('82fc')`
 :::
 
 ### fibonacci

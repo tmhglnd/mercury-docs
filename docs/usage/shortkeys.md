@@ -99,6 +99,7 @@ The following shortkeys only work when focused on the code editor. You can find 
 | `Ctrl/Alt` `Shift` `A` | Add sounds | 
 | `Ctrl/Alt` `Shift` `Z` | Toggle zen mode (hiding the menu) |
 | `Ctrl/Alt` `Shift` `H` | Show/hide editor |
+| `Ctrl/Alt` `Shift` `L` | Listen to all the sounds individually |
 
 ### Editor Navigation
 
