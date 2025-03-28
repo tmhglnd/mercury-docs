@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 4
 ---
 
 # 🎛 Using MIDI Devices
@@ -9,7 +9,7 @@ You can extend your projects in Mercury with external MIDI devices. These device
 **In summary you can:**
 
 1. Send MIDI from Mercury with the `midi` instrument
-2. Receive MIDI in Mercury as arguments in instrument functions
+2. Receive MIDI in Mercury as `/osc` messages in instrument functions
 3. Connect to physical or virtual MIDI devices
 
 ## Sending MIDI from Mercury
