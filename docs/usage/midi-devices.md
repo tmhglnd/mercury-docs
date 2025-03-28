@@ -111,8 +111,18 @@ new synth saw fx(filter low `/cc/2{100:3000}`)
 
 You can receive the pitch of played MIDI-note through the OSC-address `/pitch`. This number is the actual MIDI value between `0-127`. You can also receive the pitch of the note scaled to the relative semitone that Mercury's `note()` function works with. Access this through `/note`. In that case the note C3 (36) will return `0`. This will work well with the `note()` function if you want.
 
+
 ```js
 new synth square note('/note')
+```
+
+You have to keep in mind tho, that if you use a `set scale`, the note will be transposed if you change the root to anything other than `c`, and if you use a scale other than `chromatic` any played note that doesn't fit the scale will be forced to a note that does.
+
+```js
+set scale dorian eb
+// if you play a C on the piano, it will become a Eb. 
+// if you play an E, it will become a Gb
+new synth sine note('/note')
 ```
 
 The velocity of the note is, similarly to the controlchange values, a normalized number between `0` and `1`, instead of the regular 0-127 range. This means the velocity can also be easily used for the `gain()` of an instrument.
