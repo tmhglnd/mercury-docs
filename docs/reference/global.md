@@ -253,6 +253,26 @@ set midi getPorts
 // prints the available ports to the console
 ```
 
+## midiLog
+
+If you enable the midiLog with `on` it will print the available midi devices, both inputs and outputs, to the console. It will also start logging any received control-change or midi-note messages from any externally connected midi device. The default is `off`.
+
+```
+set midiLog on
+```
+
+:::tip
+While this feature is helpful for debugging I don't recommend to leave this on during performances, due to the fact that it can overflow your console with many printed messages when receiving lots of midi information and make the performance of the editor laggy.
+:::
+
+## midiEnable
+
+If you enable the midi it will allow you to send midi messages to Mercury from any externally connected midi device. This is `on` by default.
+
+```
+set midiEnable off
+```
+
 ## midiClock
 
 :::warning Mercury4Max only
