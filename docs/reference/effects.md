@@ -66,6 +66,8 @@ distort (distortion)
 |
 filter (low/hi/band filter with optional LFO modulation)
 |
+vowel (formant filter)
+|
 comb (combfiltering)
 |
 degrade (downsampling)
@@ -446,4 +448,39 @@ A classic vocoder effect consisting of 16 resonant bandpass filters spread logar
 new synth saw name(bass) note(0 0) shape(-1) gain(1 0 1)
 
 new loop amen fx(vocoder bass 20 100 1 50 5000)
+```
+
+## vowel
+
+:::warning Mercury4Max only
+:::
+
+A formant/vowel filter. With this filter you can imitate the vowels of human speech. Formants are resonances in the frequency spectrum of the human speech. Every vowel has a set of characteristic frequencies that allow you to distinguish between them. The filter works best if you provide a harmonically rich sound source, such as a sawtooth or squarewave synth or some noise, but of course you can use the effect on any synth or sample as you like. You can add a slide time in milliseconds or as a fraction to interpolate between various selected vowels. You can also shift the formants of the selected vowel with a ratio, where 1 is the default and 2 is an octave higher. The vowels are selected by a string of letters like `u` or by index number `1`. The vowels you can choose from are: 
+
+| Index | Vowel | Like |
+| - | - | - |
+| 0 | oo | book |
+| 1 | o  | fold |
+| 2 | oh | pot |
+| 3 | u  | foot |
+| 4 | uh | bug |
+| 5 | a  | part |
+| 6 | er | bird |
+| 7 | oe | you |
+| 8 | ae | bat |
+| 9 | e  | let |
+| 10 | i  | bit |
+| 11 | ee | leap |
+
+**arguments**
+- `Name(List)/Number+(List)` -> selected vowel (optional, default = o)
+- `Fraction/Number+(List)` -> slide time between changing vowels (optional, default = 0)
+- `Number+(List)` -> formant shifting ratio (optional, default = 1)
+- `Float+(List)` -> dry-wet factor 0-1 (optional, default = 1)
+
+```js
+list vowels [o e i u a]
+list randVowels choose(20 vowels)
+
+new synth square time(1/4) shape(off) fx(vowel randVowels 1/4)
 ```
