@@ -4,6 +4,7 @@ Below is some inspiration of awesome things made by the Mercury community.
 
 Made something with Mercury? I'm very happy to add it to the list! So please edit this file by adding a URL here and send a pull request! 😎 Read [Contribute](./../contribute) to find out more about editting files on github.
 
+- [Various Explorations in Mercury - Beryann Parker](https://github.com/beryann/My-Mercury-Tutorials-Examples)
 - [Pere Faura](https://youtu.be/lG67cQcAN9c?si=HfkEvG4gLHZER3cq)
 - [Mia Knop Jacobsen](https://youtu.be/hbu_Q_8NAe0?si=NB7V4HD4CMFYFpcx)
 - [Felipe Gonzalez](https://youtu.be/n13y0xwCqks?si=awdPUIB6LOHB9EGd)
