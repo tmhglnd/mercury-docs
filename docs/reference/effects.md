@@ -452,9 +452,6 @@ new loop amen fx(vocoder bass 20 100 1 50 5000)
 
 ## vowel
 
-:::warning Mercury4Max only
-:::
-
 A formant/vowel filter. With this filter you can imitate the vowels of human speech. Formants are resonances in the frequency spectrum of the human speech. Every vowel has a set of characteristic frequencies that allow you to distinguish between them. The filter works best if you provide a harmonically rich sound source, such as a sawtooth or squarewave synth or some noise, but of course you can use the effect on any synth or sample as you like. You can add a slide time in milliseconds or as a fraction to interpolate between various selected vowels. You can also shift the formants of the selected vowel with a ratio, where 1 is the default and 2 is an octave higher. The vowels are selected by a string of letters like `u` or by index number `1`. The vowels you can choose from are: 
 
 | Index | Vowel | Like |
