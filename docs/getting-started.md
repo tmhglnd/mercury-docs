@@ -33,11 +33,11 @@ The MercuryPlayground runs directly in the browser using WebAudio and WebMIDI te
 
 ### 🌑 Without internet
 
-If you want to run the MercuryPlayground locally (for using without internet, or using the OSC-messages functionality, or when developing extra features) you can follow these steps:
+If you want to run the MercuryPlayground locally (for using without internet, or using the OSC-messages functionality, or when developing extra features) you can use the steps below. This requires some Terminal (Mac/Linux) or Command Prompt (Win) knowledge. If you've never used the Terminal or Command Prompt before I recommend you search for some basic tutorial on Google/Youtube first.
 
-1. Make sure you have [NodeJS installed for your Operating System](https://nodejs.org/en)
+1. Make sure you have [Git](https://git-scm.com/downloads) and [NodeJS](https://nodejs.org/en) installed for your Operating System.
 
-2. In the terminal navigate to the folder where you want to install Mercury.
+2. In the Terminal (Mac/Linux) or Command Prompt (Win) navigate to the folder where you want to install Mercury (do this with `cd`).
 
 	- Then run: `git clone http://github.com/tmhglnd/mercury-playground`
 
