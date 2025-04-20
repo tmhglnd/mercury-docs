@@ -270,7 +270,7 @@ list saw1 sawFloat(25 2.5)
 //   -0.64 ┤╭─╯      │╭─╯      │╭─╯  
 //   -1.00 ┼╯        ╰╯        ╰╯    
 
-// Modulation on frequency
+// print lation on frequency
 list saw2 saw(34 sinF(30 2 0 100) 0 12)
 //=> 11.00 ┼         ╭╮             ╭╮╭╮      
 //   10.00 ┤         ││╭─╮     ╭╮   ││││      
@@ -307,7 +307,7 @@ list sqr1 square(30 4 0 1 0.2)
 ```
 
 ```js
-// Frequency Modulation with Gen.sin
+// Frequency print lation with Gen.sin
 list sqr2 squareFloat(30 sinF(30 2 1 5))
 //=>  1.00 ┼───╮     ╭──╮╭──╮ ╭─╮  ╭─╮ ╭─ 
 //    0.80 ┤   │     │  ││  │ │ │  │ │ │  
@@ -1070,6 +1070,43 @@ list melodyB palindrome(notes 1)
 
 Alias: `palin`, `mirror`
 
+### pinky
+
+The pinky/pinkyUp technique takes a list and outputs a transformed list where the last value alternates between every other previous value in a left to right order. This function is inspired by the Ableton arpeggiator algorithms. For example a list of `[0 3 7 12 19]` results in `[0 19 3 19 7 19 12 19]`.
+
+**type: `transformer`**
+
+**arguments**
+- `List` -> list to transform
+
+```js
+list notes [0 3 7 12 19]
+print pinky(notes)
+//=> [ 0 19 3 19 7 19 12 19 ]
+```
+
+Alias: `pinkyUp`
+
+#### pinkyDown
+
+PinkyDown is similar to pinkyUp, but in reverse order. For instance `[0 3 7 12 19]` results in `[12 19 7 19 3 19 0 19]`.
+
+```js
+list notes [0 3 7 12 19]
+print pinkyDown(notes)
+//=> [12 19 7 19 3 19 0 19]
+```
+
+#### pinkyUpDown
+
+PinkyUpDown is similar to pinkyUp and pinkyDown and is basically a combination of both. For instance `[0 3 7 12 19]` results in `[0 19 3 19 7 19 12 19 7 19 3 19]`.
+
+```js
+list notes [0 3 7 12 19]
+print pinkyUpDown(notes)
+//=> [0 19 3 19 7 19 12 19 7 19 3 19]
+```
+
 ### repeat
 
 Repeats separate values in a list a certain amount of times. The repeat-er argument can be a list that will be iterated for every value in the to-repeat list.
@@ -1249,6 +1286,43 @@ list str stretchFloat(notes 15)
 ```
 
 Alias: `stretchF`
+
+### thumb
+
+The thumb/thumbUp technique takes an array and outputs a transformed array where the first value alternates between every other value of the array in a left to right order. This is inspiredy by the Ableton arpeggiator algorithms. For example `[0 3 7 12 19]` results in `[0 3 0 7 0 12 0 19]`.
+
+**type: `transformer`**
+
+**arguments**
+- `List` -> list to transform
+
+```js
+list notes [0 3 7 12 19]
+print thumb(notes)
+//=> [0 3 0 7 0 12 0 19]
+```
+
+Alias: `thumbUp`
+
+#### thumbDown
+
+Similar to thumb-up, but in reverse order. For instance `[0 3 7 12 19]` results in `[0 19 0 12 0 7 0 3]`.
+
+```js
+list notes [0 3 7 12 19]
+print thumbDown(notes)
+//=> [0 19 0 12 0 7 0 3]
+```
+
+#### thumbUpDown
+
+Similar to thumbUp and thumbDown, basically a combination of both. Creates a palindrome of the notes. For instance `[0 3 7 12 19]` results in `[0 3 0 7 0 12 0 19 0 12 0 7]`.
+
+```js
+list notes [0 3 7 12 19]
+print thumbUpDown(notes)
+//=> [0 3 0 7 0 12 0 19 0 12 0 7]
+```
 
 ### unique
 

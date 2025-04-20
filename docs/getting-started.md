@@ -74,7 +74,7 @@ Mercury also runs in Max8 (sometimes also called MaxMSP), a node-based creative 
 
 ### 🛠 System Requirements
 
-These system requirements are recommended to install and run Max8 and Mercury on your computer. Lower specs may work but it's not guaranteed. A dedicated Graphics Card (GPU) is also recommended to run the visuals of Mercury smoothly (the text-editor runs on the graphics card as well). If you don't have a good Graphics Card you can also use an external text-editor like Pulsar or Flok. You can find instructions for using those in .
+These system requirements are recommended to install and run Max8 and Mercury on your computer. Lower specs may work but it's not guaranteed. A dedicated Graphics Card (GPU) is also recommended to run the visuals of Mercury smoothly (the text-editor runs on the graphics card as well). If you don't have a good Graphics Card you can also use an external text-editor like Pulsar or Flok. You can find instructions for using those in [External Editors](./usage/editors.md).
 
 | OS | CPU | RAM |
 | -- | --- | --- |
