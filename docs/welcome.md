@@ -25,7 +25,7 @@ In the menu on the left side you can find everything you need, from [About](abou
 
 ### ☮️ Make Music, Not War
 
-:::info Life on earth is in crisis. Please support a charity! No one is too small to make a difference!
+:::info Consider supporting a charity
 
 If you enjoy the work I do and consider supporting me, then please instead (or as well) consider donating that money to a charity.
 
