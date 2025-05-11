@@ -6,8 +6,6 @@ sidebar_position: 0
 
 # 🌕 Mercury Live Coding Environment 
 
-**Welcome to Mercury! ✌️ ☮️ Make Music, Not War!** ☮️ ✌️
-
 **Mercury is a free/open-source, beginner-friendly, minimal and human-readable language for the live coding of algorithmic electronic music performances**
 
 In the menu on the left side you can find everything you need, from [About](about) and [Getting Started](getting-started) to Tips&Tricks, How-To's and the [Reference](./reference/syntax.md). Also make sure you check out the [Collaborative Coding](collaborate) chapter, because making music together is fun!
@@ -25,17 +23,15 @@ In the menu on the left side you can find everything you need, from [About](abou
 
 <!-- ⭐️ *watch and star the [**repo**](https://github.com/tmhglnd/mercury) to keep up-to-date with the latest changes whenever they're made* -->
 
-## ☮️ Make Music, Not War!
+### ☮️ Make Music, Not War
 
 :::info Life on earth is in crisis. Please support a charity! No one is too small to make a difference!
 
-**We live in a war-torn world, where millions of people have their lives destroyed by conflict. On top of that our climate is changing faster than scientists predicted and the stakes are high.**
+If you enjoy the work I do and consider supporting me, then please instead (or as well) consider donating that money to a charity.
 
-If you enjoy the work I do and consider donating money for my efforts, then please instead (or also) consider donating that money to a charity like:
+[**International Committee of the Red Cross**](https://www.icrc.org/en/donate) | [**Doctors Without Borders**](https://donate.doctorswithoutborders.org/secure/rr-donate-monthly-web?source=ADU2011U0W46) | [**Oxfam International**](https://www.oxfam.org/en?form=general) | [**Save the Children**](https://support.savethechildren.org/site/Donation2?df_id=1620&1620.donation=form1) | [**Unicef**](https://help.unicef.org/) | [**World Wildlife Fund**](https://protect.worldwildlife.org/page/65220/donate/1?en_og_source=Web_Donation&ea.tracking.id=Web_Topnav&supporter.appealCode=AWE2402OQ18299A01179RX) | [**Future For Fridays**](https://fridaysforfuture.org/what-we-do/contact-us/#countries) | [**Greenpeace**](https://engage.us.greenpeace.org/onlineactions/GB7jeaDze0eR5tWt3kWG_w2?sourceid=1015094)
 
-[**International Committee of the Red Cross**](https://www.icrc.org/en/donate) | [**Doctors Without Borders**](https://donate.doctorswithoutborders.org/secure/rr-donate-monthly-web?source=ADU2011U0W46) | [**Oxfam International**](https://www.oxfam.org/en?form=general) | [**Save the Children**](https://support.savethechildren.org/site/Donation2?df_id=1620&1620.donation=form1) | [**World Wildlife Fund**](https://protect.worldwildlife.org/page/65220/donate/1?en_og_source=Web_Donation&ea.tracking.id=Web_Topnav&supporter.appealCode=AWE2402OQ18299A01179RX) | [**Extinction Rebellion**](https://rebellion.global/) | [**Future For Fridays**](https://fridaysforfuture.org/what-we-do/contact-us/#countries) | [**Greenpeace**](https://engage.us.greenpeace.org/onlineactions/GB7jeaDze0eR5tWt3kWG_w2?sourceid=1015094)
-
-Or find another high-rated charity you like to support on for example [CharityWatch](https://www.charitywatch.org/) and [CharityNavigator](https://www.charitynavigator.org/)
+Or find another high-rated charity you like to support
 :::
 
 ## 🔋 Powered By
