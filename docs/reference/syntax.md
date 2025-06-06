@@ -59,7 +59,7 @@ print <list-name>
 	- Example: `new`, `set`, `list`, `print`
 - `name` 
 	- A name is a group of 3 or more characters (`A-Z a-z - _ 0-9`), but may not start with any number
-	- Names can be used for for example instrument instances, lists and sample-files
+	- Names can be used for instrument instances, lists and sample-files
 	- Example: `kick_909`, `polySynth`, `melody`
 - `string` 
 	- A string is a collection of any character including spaces between `" "` or `' '`
@@ -82,7 +82,7 @@ print <list-name>
 	- Example: `random(4)`, `spread(10 300 1000)`, `time(1/4)`
 - `list-function` 
 	- A list-function returns a list that can be stored in a named `list`
-	- Example: `new list coin(8)`
+	- Example: `list tosses coin(8)`
 - `instrument-function`
 	- An instrument-function is like a `function` but is part of an instance created with `new` (in most cases an instrument)
 	- Instrument-functions are specific to that instance only and can not be used outside that scope
