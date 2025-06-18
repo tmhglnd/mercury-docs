@@ -365,7 +365,7 @@ Below you can read various use-case scenarios:
 
 ### freesound
 
-Load a single soundfile from for example freesound.org. Go to the site and find the file you like, right-click on the file and click 'inspect' (in chromium browser). Search for the `cdn.freesound.org/previews` url in the html, this is the soundfile that needs to be copy-pasted. By default the name of the soundfile will be the name you use in the code.
+Load a single soundfile from for example freesound.org. Go to the site and find the file you like, right-click on the file and click 'inspect' (in chromium browser). Search for the `cdn.freesound.org/previews` url in the html, this is the soundfile that needs to be copy-pasted. By default the name of the soundfile will be the name you use in the code. Alternatively you can also open the Developer Console in the browser and run the line `document.getElementsByClassName('bw-player')[0].dataset.mp3`, this should print the url as well.
 
 ```js
 // only evaluate set samples once, when loading is done you can comment the line
