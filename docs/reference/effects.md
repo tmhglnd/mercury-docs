@@ -314,6 +314,9 @@ new loop amen fx(lfo 1/16)
 
 ## looper
 
+:::warning Mercury4Max only
+:::
+
 Add a looping delay effect to the sound. This is a (very) long delay line (1 bar or more, maximum of 64 seconds, 32 bars at 120 BPM) with a high feedback, resulting in a looping sound. If the feedback is less then 1 the looped sound will slowly die out over the amount of bars delaytime. If the capture/feed is 1 the loop is being recorded, if less then 1 the gain of the input sound is adjusted, and if 0 the capture is off. With dry/wet you can adjust the balance between the direct throughput of the signal and the looper sound. This effect is inspired by the [Dual Looping Delay](https://4mscompany.com/p.php?p=709) modular device.
 
 **arguments**
