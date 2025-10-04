@@ -1204,3 +1204,45 @@ new emitter osc name(myOSC) time(1/4)
 ### name
 
 Set the name for the OSC emitter. This can be any string of 2 or more characters. The `name` is used as reference to the instrument when the `set` method is used to call methods for a specific object. The `name` is also prepended as first address in the osc-message of the format `/<name>/<function> argument`. -->
+
+## Monitoring
+
+:::warning MercuryPlayground only
+:::
+
+There are a few functions in the Mercury Playground that can be used to monitor signals per instrument. These functions are not available in the Mercury4Max version or if you are using just the Mercury Engine or run Mercury in Flok. When used the editor will expand and display the monitoring below the line where the instrument is created.
+
+### scope
+
+Display an amplitude analysis of the signal, in the editor below the line where the instrument is created. This works only for instruments that generate sound, so therefore not for MIDI or OSC type instruments. The scope shows a detailed (and therefore fast changing) amplitude of the current signal, giving insight in the type of wave used and the frequency content.
+
+**arguments**
+- `Number+` -> height of the scope in pixels (default = 30)
+
+```js
+new synth saw time(1/4) scope(80)
+```
+
+### waveform
+
+Display an average loudness of the signal over time, in the editor below the line where the instrument is created. This works only for instruments that generate sound, so therefore not for MIDI or OSC type instruments. The waveform shows changes in amplitude on a slower time scale, giving a better insight in rhythmical information of patterns.
+
+**arguments**
+- `Number+` -> height of the waveform in pixels (default = 30)
+
+```js
+new sample kick_house time(1/4) waveform()
+```
+
+### spectrum
+
+**work in progress**
+
+Display the frequency content (spectrum/timbre) of a signal, in the editor below the line where the instrument is created. This works only for instruments that generate sound, so therefore not for MIDI or OSC type instruments. The spectrum gives insight in which frequencies are present in a sound, allowing you to see if the sound is low or high or very flat or noisy.
+
+**arguments**
+- `Number+` -> height of the spectroscope in pixels (default = 30)
+
+```js
+new sample chimes time(2/1) spectrum()
+```

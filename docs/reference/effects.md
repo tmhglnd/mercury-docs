@@ -43,7 +43,7 @@ There are differences in sound between the *Mercury4Max* and *MercuryPlayground*
 Not all effects from *Mercury4Max* are available in the *MercuryPlayground* because some are in the process of being ported, and some are sadly not as easy to implement with Web Audio.
 :::
 
-## Static FX-Chain
+### Static FX-Chain
 
 ```
 instrument (eg. sample, synth, input)
