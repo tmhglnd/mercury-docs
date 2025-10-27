@@ -60,9 +60,7 @@ vibrato (pitch modulation)
 |
 triggerFilter (envelope modulated filter)
 |
-kink (distortion)
-|
-distort (distortion)
+distort (distortion/overdrive)
 |
 filter (low/hi/band filter with optional LFO modulation)
 |
@@ -75,6 +73,8 @@ degrade (downsampling)
 squash (basic compression/distortion)
 |
 vocoder 
+|
+fuzz (fuzz distortion)
 |
 gain (the volume of the sound) -> sender
 |
@@ -196,14 +196,14 @@ Alias: `echo`
 
 ## distort
 
-A distortion/overdrive/soft-clipping effect. Uses the `tanh(x * g)` algorithm and a `1.0/sqrt(g)` for gain compensation.
+A soft-clipping distortion/overdrive effect. Uses the `arctan(x * g)` algorithm. Over the years of making Mercury I've tried many different algorithms, and this one seems to sound the best so far.
 
 **arguments**
-- `Number+(List)` -> distortion amount, greater then 0 (optional, default=2)
+- `Number+(List)` -> distortion amount, greater then 0 (optional, default=5)
 - `Float+(List)` -> dry-wet factor 0-1 (optional, default=1)
 
 ```js
-new sample kick_909 fx(drive 15 0.4)
+new sample kick_909 fx(distort 15 0.4)
 ```
 
 Alias: `drive`
@@ -273,7 +273,23 @@ new sample harp_up time(1/4) beat(playHarp) name(harp)
     set harp fx(freeze trigger)
 ```
 
-## kink
+## fuzz
+
+:::warning Mercury4Max only
+:::
+
+Add a fuzz distortion effect. This effect is modelled after the Big Muff π fuzz pedal by Electro Harmonix, described in [this paper]( https://github.com/hazza-music/EHX-Big-Muff-Pi-Emulation/blob/main/Technical%20Essay.pdf) by Harriet Drury. The emulation uses three stages of distortion, starting with a soft-clipping, followed by a half-wave rectifier and finalizing with hard-clipping. The tone parameter (from 0 to 1) adds a lowpass and highpass filtering stage, pre-filtering the input before distortion between a frequency range. When set to 0 the signal is filtered between 46 and 260 Hz (very low) and when set to 1 between 1865 and 11175 Hz. The default (0.5) filters the signal from 46 to 11000.
+
+**arguments**
+- `Number+(List)` -> fuzz amount, 1+ (optional, default = 10)
+- `Float+(List)` -> tone adjustment 0-1 (optional, default = 0.5)
+- `Float+(List)` -> dry-wet factor 0-1 (optional, default=1)
+
+```js
+new sample violin_c time(1/1) fx(fuzz 10 0.5)
+```
+
+<!-- ## kink
 
 :::warning Mercury4Max only
 :::
@@ -286,7 +302,7 @@ A kink distortion algorithm. Creates a bend or "kink" in the audio signal.
 
 ```js
 new sample violin_c time(1) fx(kink 15)
-```
+``` -->
 
 ## lfo
 
