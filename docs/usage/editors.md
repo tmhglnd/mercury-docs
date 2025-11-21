@@ -19,23 +19,36 @@ Instead of using the built-in editor that comes with Mercury4Max (an editor that
 
 After installing the `mercury-pulsar` plugin you can type code in the editor and send it via OSC-messages as `/mercury-code "<code here>"` over UDP to port `4880`.
 
-### 💻 Install (OSX/Linux)
+### 💻 Install
 
-Make sure that `ppm` (Pulsar Package Manager) is installed. On linux, it should be automatically installed with Atom. On OSX, go to the `Pulsar` menu and click `Install Shell Commands`.
+The Mercury Pulsar plugin is now available through the built-in Package Manager in Pulsar. 
 
-1. Download the [**plugin**](http://github.com/tmhglnd/mercury-pulsar) or clone via `$ git clone http://github.com/tmhglnd/mercury-pulsar`
-2. Navigate to the directory `$ cd mercury-pulsar` and install the dependencies `ppm install`
-3. Load the package `$ ppm link .`
+1. Open Pulsar.app
+2. Click on Packages > Open Package Manager
+3. Search for `mercury`
+4. Click `Install`
+
+### 💻 Install via commandline
+
+Make sure that `ppm` (Pulsar Package Manager) is installed. On linux and windows, it should be automatically installed with Atom. On OSX, go to the `Pulsar` menu and click `Install Shell Commands`.
+
+Open the Terminal and type: `ppm install tmhglnd/mercury` (If `ppm` fails, you can also use `pulsar -p`).
+	
+Optionally you can also first clone this repository and install it manually:
+
+1. Download this repository via  `git clone http://github.com/tmhglnd/mercury-pulsar`
+2. Navigate to the directory and install the dependencies `cd mercury-pulsar` and `ppm install`
+3. Load the package `ppm link .`
 4. Restart Pulsar
 
-#### 💾 Install (Windows)
+<!-- #### 💾 Install (Windows)
 
 Windows doesn't support `ppm`, instead use `npm` and the following steps:
 
 1. Download this repository via `$ git clone http://github.com/tmhglnd/mercury-pulsar`
 2. Navigate to the directory and install the dependencies with `npm` instead of `ppm`:
 	- `$ cd mercury-pulsar` and `npm install`
-3. Manually copy-paste the entire folder `mercury-pulsar` to `C:\Users\<username>\.pulsar\packages`
+3. Manually copy-paste the entire folder `mercury-pulsar` to `C:\Users\<username>\.pulsar\packages` -->
 
 ### 🎮 Usage
 
