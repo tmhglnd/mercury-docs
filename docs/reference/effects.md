@@ -196,7 +196,7 @@ Alias: `echo`
 
 ## distort
 
-A soft-clipping distortion/overdrive effect. Uses the `arctan(x * g)` algorithm. Over the years of making Mercury I've tried many different algorithms, and this one seems to sound the best so far.
+A soft-clipping distortion/overdrive effect. This uses the `arctan(x * g)` algorithm as the basis. Over the years of making Mercury I've tried many different algorithms (eg. tanh, other sigmoid functions, etc), and this one seems to sound the best so far.
 
 **arguments**
 - `Number+(List)` -> distortion amount, greater then 0 (optional, default=5)
@@ -275,14 +275,15 @@ new sample harp_up time(1/4) beat(playHarp) name(harp)
 
 ## fuzz
 
-:::warning Mercury4Max only
-:::
-
-Add a fuzz distortion effect. This effect is modelled after the Big Muff π fuzz pedal by Electro Harmonix, described in [this paper]( https://github.com/hazza-music/EHX-Big-Muff-Pi-Emulation/blob/main/Technical%20Essay.pdf) by Harriet Drury. The emulation uses three stages of distortion, starting with a soft-clipping, followed by a half-wave rectifier and finalizing with hard-clipping. The tone parameter (from 0 to 1) adds a lowpass and highpass filtering stage, pre-filtering the input before distortion between a frequency range. When set to 0 the signal is filtered between 46 and 260 Hz (very low) and when set to 1 between 1865 and 11175 Hz. The default (0.5) filters the signal from 46 to 11000.
+Add a fuzz distortion effect. This effect is modelled after the Big Muff π fuzz pedal by Electro Harmonix, described in [this paper]( https://github.com/hazza-music/EHX-Big-Muff-Pi-Emulation/blob/main/Technical%20Essay.pdf) by Harriet Drury. The emulation uses three stages of distortion, starting with a soft-clipping, followed by a half-wave rectifier and finalizing with hard-clipping. The input signal is added after the half-wave rectifing stage to create asymmetric distortion before clipping. The tone parameter (from 0 to 1) adds a lowpass and highpass filtering stage, pre-filtering the input before distortion between a frequency range (not available yet in the MercuryPlayground). When set to 0 the signal is filtered between 46 and 260 Hz (very low) and when set to 1 between 1865 and 11175 Hz. The default (0.5) filters the signal from 46 to 11000.
 
 **arguments**
 - `Number+(List)` -> fuzz amount, 1+ (optional, default = 10)
-- `Float+(List)` -> tone adjustment 0-1 (optional, default = 0.5)
+- `Float+(List)` -> tone adjustment 0-1 (optional, default = 0.5) 
+- `Float+(List)` -> dry-wet factor 0-1 (optional, default=1)
+
+**arguments MercuryPlayground**
+- `Number+(List)` -> fuzz amount, 1+ (optional, default = 10)
 - `Float+(List)` -> dry-wet factor 0-1 (optional, default=1)
 
 ```js
