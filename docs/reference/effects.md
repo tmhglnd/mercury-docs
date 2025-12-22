@@ -66,7 +66,7 @@ filter (low/hi/band filter with optional LFO modulation)
 |
 vowel (formant filter)
 |
-comb (combfiltering)
+karplus (karplus-strong string synthesis, a lowpass feedback combfilter)
 |
 degrade (downsampling)
 |
@@ -137,22 +137,6 @@ fx(chorus <rate>)
 fx(chorus <rate> <depth> <dry-wet>)
 ```
 :::
-
-## comb
-
-:::warning Mercury4Max only
-:::
-
-A combfilter effect. This combines a small delayed version of the sound with the original sound resulting in a combfilter, giving a metallic quality to the sound. The first argument is the semitone the filter is tuned at (synced to the scale and allowing for detuning with floating points), the second optional argument is a feedback amount.
-
-**arguments**
-- `Number+(List)` -> filter frequency as note semiton (default=0)
-- `Float+(List)` -> filter feedback between 0 and 0.99 (default=0.8)
-- `Float+(List)` -> dry-wet factor 0-1 (optional, default=0.5)
-
-```js
-new synth saw fx(comb 7 0.4)
-```
 
 ## degrade
 
@@ -304,6 +288,22 @@ A kink distortion algorithm. Creates a bend or "kink" in the audio signal.
 ```js
 new sample violin_c time(1) fx(kink 15)
 ``` -->
+
+## karplus
+
+A string synthesis effect, based on the [Karplus-Strong Synthesis](https://en.wikipedia.org/wiki/Karplus%E2%80%93Strong_string_synthesis) design. This combines a small delayed version of the sound with the original sound resulting in a combfilter. When creating feedback in this filter it starts to resonate at the specified pitch, giving it a metallic string quality to the sound. A lowpass filter in the feedback loop allows to give a damping effect to the string. The first argument is the semitone the filter is tuned at (synced to the scale and allowing for detuning with floating points), the second optional argument is the feedback amount from -0.999 to 0.999. Negative values will create odd harmonics and drops the sound one octave. The third optional argument is the damping from 0 to 1, where 0 is no damping. 
+
+**arguments**
+- `Number+(List)` -> note as semitone offset for tuning the filter (default=0)
+- `Float+(List)` -> feedback between 0 and 0.99 (default=0.8)
+- `Float+(List)` -> damping between 0 and 1 (default=0.5)
+- `Float+(List)` -> dry-wet factor 0-1 (optional, default=0.5)
+
+```js
+new noise white time(1/4) shape(1 10) fx(string 7 0.9 0.5)
+```
+
+Alias: `comb`
 
 ## lfo
 
