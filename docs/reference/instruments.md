@@ -549,6 +549,54 @@ Add a noise oscillator to the synth sound. The first argument is the *amplitude*
 new synth saw note(0 1) noise(0.3 0.8 1)
 ```
 
+## fm
+
+:::warning currently Mercury4Max only
+:::
+
+The FM-synth is a type of synth that allows you to perform Frequency Modulation. The synth contains of a single carrier (a sinewave oscillator) and a modulator (also a sinewave oscillator). The modulator modulates the frequency of the carrier, and based on the harmonicity ratio and the modulation index a number of sidebands (overtones) are generated, giving the synth the ability to generate a wide range of sounds. The modulation index can also be controlled with an additional envelope through a function called fmShape. Read more about [FM synthesis on wikipedia](https://en.wikipedia.org/wiki/Frequency_modulation_synthesis).
+
+```js
+new synth fm note(0 1) ratio(2) index(8) fmShape(1 1/8) 
+```
+
+### ratio
+
+Set the harmonicity ratio for the modulator of the FM-synth. The ratio is calculated based on the fundamental note. A ratio of 2 results in a modulation frequency of one octave higher than the note, and 0.5 results in one octave lower. Use the ratio to modal different types of sounds, for example a more percussive sound like a xylophone could have some brighter harmonics, and a sound like a bell could have a more dissonant ratio.
+
+**arguments**
+- `Float+(List)` -> harmonicity ratio (default = 2)
+
+```js
+new synth fm note(3 1) ratio(3)
+```
+
+Alias: `harmonicity`
+
+### index
+
+Set the modulation index for the modulator. A higher index will result in more audible overtones and therefore a brighter sound. Modulating this number with a list can give a "filtering" kind of effect.
+
+**arguments**
+- `Float+(List)` -> modulation index (default = 3)
+
+```js
+new synth fm note(7 0) index(10)
+```
+
+### fmShape
+
+Change the envelope that is applied to the modulator of the FM-synth. This function works the same as the `shape` function. You can also disable the envelope by typing `off`. For more details see the [shape](#shape) function.
+
+**arguments**
+- `Number+(List)/Fraction(List)` -> Attack time (optional, default=2)
+- `Number+(List)/Fraction(List)` -> Decay time (optional, default=0)
+- `Number+(List)/Fraction(List)` -> Release time (optional, default=100)
+
+```js
+new synth fm shape(1 1/1) fmShape(1/8 1/4)
+```
+
 ## sample
 
 The sample instrument allows you to play sound-recordings and loops. These so called "samples" are loaded in memory and can be accessed by their filename (without the extension).
