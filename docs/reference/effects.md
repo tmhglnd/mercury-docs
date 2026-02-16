@@ -300,7 +300,7 @@ A string synthesis effect, based on the [Karplus-Strong Synthesis](https://en.wi
 - `Float+(List)` -> dry-wet factor 0-1 (optional, default=0.5)
 
 ```js
-new noise white time(1/4) shape(1 10) fx(string 7 0.9 0.5)
+new noise white time(1/4) shape(1 10) fx(karplus 7 0.9 0.5)
 ```
 
 Alias: `comb`
