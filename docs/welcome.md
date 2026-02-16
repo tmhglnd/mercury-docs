@@ -15,7 +15,7 @@ In the menu on the left side you can find everything you need, from [About](abou
 * Original version running in Max8 (Windows/Mac only) (you're in the right place)
 * Web version running in the browser (Windows/Mac/Linux) [go to this repo](https://github.com/tmhglnd/mercury-playground) -->
 
-[**🚀 Start coding directly in the playground!**](https://mercury.timohoogland.com/)
+[**🚀 Start coding directly at mercury-playground.cc!**](https://mercury-playground.cc/)
 
 [**🙏 Support Mercury by buying me a coffee ko-fi**](https://ko-fi.com/tmhglnd)
 

@@ -25,7 +25,7 @@ There are 3 options for how you can use Flok with Mercury:
 
 ## Flok & MercuryPlayground
 
-Follow these steps if you are a beginner and have been using the MercuryPlayground at [mercury.timohoogland.com](https://mercury.timohoogland.com)
+Follow these steps if you are a beginner and have been using the MercuryPlayground at [https://mercury-playground.cc/](https://mercury-playground.cc/)
 
 1. Open a Chromium based browser (eg. Brave, Arc) and go to [https://flok.cc/](https://flok.cc/)
 2. Choose a username.

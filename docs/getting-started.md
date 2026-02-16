@@ -6,7 +6,7 @@ sidebar_position: 1
 
 `Hello, World!` Welcome to the Getting Started guide for Mercury. The various chapters in this guide will get you up and running in no time! Before we get started it is good to know that Mercury currently has 2 versions:
 
-- **MercuryPlayground**, running in the [browser](https://mercury.timohoogland.com/) (Windows/Mac/Linux)
+- **MercuryPlayground**, running in the [browser](https://mercury-playground.cc/) (Windows/Mac/Linux)
 - **Mercury4Max**, running in [Cycling'74's Max8](https://cycling74.com/downloads) (Windows/Mac/Experimental Linux via Wine)
 
 :::info for everyone
@@ -23,7 +23,7 @@ The MercuryPlayground runs directly in the browser using WebAudio and WebMIDI te
 
 1. Install a Chromium based browser on your computer (for example Chrome, Brave, Arc, Opera)
 
-2. You can start coding immediately: [https://mercury.timohoogland.com/](https://mercury.timohoogland.com/)
+2. You can start coding immediately: [https://mercury-playground.cc/](https://mercury-playground.cc/)
 
 3. Wait till the sounds are loaded (depending on your internet speed this could take some time)
 
@@ -147,7 +147,7 @@ If you experience any issues, please see the <!-- [Troubleshooting](troubleshoot
 
 ### What's next?
 
-You are now ready to play all you want! For example you can listen some random examples or follow the tutorials. You can read the Usage chapter for more info on how to navigate the environment and you can read the Reference for explanation of all the functions. For Max users I also recommended following the interactive tutorials in the [MercuryPlayground](https://mercury.timohoogland.com) before continuing in Max.
+You are now ready to play all you want! For example you can listen some random examples or follow the tutorials. You can read the Usage chapter for more info on how to navigate the environment and you can read the Reference for explanation of all the functions. For Max users I also recommended following the interactive tutorials in the [MercuryPlayground](https://mercury-playground.cc/) before continuing in Max.
 
 - [Usage](./usage/)
 - [Reference](./reference/)
