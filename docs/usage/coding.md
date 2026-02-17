@@ -11,7 +11,7 @@ This short introduction will help you to get started with coding your first soun
 First we will look briefly at what *Live Coding* is and how this works in Mercury. Then we will make a sampler to play a basic sound, changing the timing, changing the tempo, play more samples together and make a rhythm. We'll look at how we can create these rhythms with functions too to make the compisition *algorithmic*. After that we will focus on creating a synthesizer that allows us to play melodies. We'll see how we can make a melody with a list of numbers and apply a scale. We can also play chords and adjust the sound to our liking by changing the waveform,  changing the length of the sound and applying different effects such as a filter, a echo and a reverb. If you run into an issue please see the [**Troubleshooting**](troubleshooting) page.
 
 :::tip More tutorials
-**You can find many more bite-sized tutorials in the [Mercury Playground](https://mercury-playground.pages.dev/) in the bottom left corner drop down menu.**
+**You can find many more bite-sized tutorials in the [Mercury Playground](https://mercury-playground.cc/) in the bottom left corner drop down menu.**
 :::
 
 <!-- We will also look into shaping the sound to our liking by changing the playback speed or the position where we start playing. -->
