@@ -6,7 +6,7 @@
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-[**🚀 Start coding directly in the playground!**](https://mercury.timohoogland.com/)
+[**🚀 Start coding directly in the playground!**](https://mercury-playground.cc/)
 
 [**🙏 Support Mercury by buying me a coffee on ko-fi**](https://ko-fi.com/tmhglnd)
 
