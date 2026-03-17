@@ -92,7 +92,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://mercury.timohoogland.com',
+            href: 'https://mercury-playground.cc',
             label: 'playground',
             position: 'right',
           },
