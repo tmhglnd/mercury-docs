@@ -7,19 +7,19 @@ sidebar_position: 1
 `Hello, World!` Welcome to the Getting Started guide for Mercury. The various chapters in this guide will get you up and running in no time! Before we get started it is good to know that Mercury currently has 2 versions:
 
 - **MercuryPlayground**, running in the [browser](https://mercury-playground.cc/) (Windows/Mac/Linux)
-- **Mercury4Max**, running in [Cycling'74's Max8](https://cycling74.com/downloads) (Windows/Mac/Experimental Linux via Wine)
+- **Mercury4Max**, running in [Cycling'74's Max8/9](https://cycling74.com/downloads) (Windows/Mac/Experimental Linux via Wine)
 
 :::info for everyone
 I recommend to use the MercuryPlayground (browser version) first. Please read further in chapter [MercuryPlayground](#-mercuryplayground).
 :::
 
-If you have experience with Max8 you can also consider using Mercury4Max instead. Please read further in chapter [Mercury4Max](#-mercury4max) for instructions on installing and setting up the environment.
+If you have experience with Max8/9 you can also consider using Mercury4Max instead. Please read further in chapter [Mercury4Max](#-mercury4max) for instructions on installing and setting up the environment.
 
 <!-- If you are curious what the pros and cons are between these two versions please read [Browser or Max?](browser-max). -->
 
 ## 🌎 MercuryPlayground
 
-The MercuryPlayground runs directly in the browser using WebAudio and WebMIDI technologies based on the JavaScript and the ToneJS framework. This makes it very accessible for everyone, no matter if you're a beginner or an expert.
+The MercuryPlayground runs directly in the browser using WebAudio and WebMIDI technologies based on the JavaScript WebAudioAPI and the ToneJS framework. This makes it very accessible for everyone, no matter if you're a beginner or an expert.
 
 1. Install a Chromium based browser on your computer (for example Chrome, Brave, Arc, Opera)
 
@@ -82,7 +82,7 @@ Read the [system requirements](#-system-requirements) before getting started.
 
 1. Download Max for your Operating System through the link below
 
-- [Download Max](https://cycling74.com/downloads)
+	- [Download Max](https://cycling74.com/downloads)
 
 2. Launch Max after installing. It will create a `Max 8` or `Max 9` folder in your `Documents`. Go inside that folder and create an empty folder named `Projects`. The full path should now look like this: `<User>/Documents/Max 9/Projects`
 
@@ -91,7 +91,7 @@ Read the [system requirements](#-system-requirements) before getting started.
 	- **Or** git-users can clone/fork Mercury to the Projects folder manually.
 
 	```
-	$ cd ~/Documents/Max\ 8/Projects
+	$ cd ~/Documents/Max\ 9/Projects
 	$ git clone http://github.com/tmhglnd/mercury
 	```
 

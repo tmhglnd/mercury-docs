@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # 🎮 Quick Features Overview
 
-Below is a brief overview of several things you can do with Mercury. But this is of course just scratching the surface!
+Below is a brief overview of several things you can do with Mercury. But this is just scratching the surface!
 
 ---
 
@@ -56,7 +56,7 @@ set all fx(lfo 1/16) fx(delay) fx(reverb 0.5 11)
 
 Sync audio loops to the tempo of your music
 
-```java
+```js
 set tempo 97
 
 new loop amen time(1)
@@ -78,12 +78,20 @@ list melody lace(melody melody)
 new synth triangle note(melody 1) shape(1 80) play(rhythm)
 ```
 
+Inspect the signals you are creating with various metering functions
+
+```js
+new synth saw scope()
+new sample snare_min waveform()
+new loop amen meter()
+```
+
 Control external midi devices or applications by sending midi and cc <!--and use clock sync-->
 
-```java
-new midi "Your Awesome Midi Device" time(1/16) note(7 1) name(mDev)
-    set mDev length(1/16) gain(0.8) chord(off)
-    set mDev control(10 [20 50 100])
+```js
+new midi "Your Awesome Midi Device" time(1/16) note(7 1) name(md)
+    set md duration(1/16) gain(0.8) chord(off)
+    set md cc(10 [20 50 100])
 ```
 
 Control other environments via OSC-messages
@@ -91,12 +99,12 @@ Control other environments via OSC-messages
 ```js
 list params [0.25 0.5 0.75]
 
-new emitter osc address(yourDevice) theParam(params) time(1/4)
+new osc 'yourDevice' value(params) time(1/4)
 
-// emits => /yourDevice/theParam 0.25
-//          /yourDevice/theParam 0.5
-//          /yourDevice/theParam 0.75
-//          /yourDevice/theParam 0.25
+// emits => /yourDevice/value 0.25
+//          /yourDevice/value 0.5
+//          /yourDevice/value 0.75
+//          /yourDevice/value 0.25
 //          etc...
 ```
 
@@ -106,9 +114,9 @@ Easily control parameters in Mercury via external OSC-messages (*only when runni
 new synth triangle fx(reverb '/synth/verb') fx(filter low '/synth/cutoff' 0.4) time(1) shape(1 'synth/length')
 ```
 
-Sequence Hyrda visuals with instruments (*experimental and MercuryPlayground only*)
+Sequence Hyrda visuals with instruments (*experimental and for MercuryPlayground only*)
 
-```java
+```js
 list hydras ['osc(10,0.1,2).out()' 'osc(20,-0.5,5).out()' 'osc(5,1,12).out()']
 
 new sample kick_min time(1/16) play([1 0 0 1 0]) visual(hydras)
