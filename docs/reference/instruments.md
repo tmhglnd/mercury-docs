@@ -15,7 +15,8 @@ For detailed explanation of the syntax see: [Syntax](syntax) and [`list`](action
 - [`loop`](#loop)
 - [`noise`](#noise-1)
 - [`polySynth`](#polysynth)
-- [`polySample`](#polysample) *MercuryPlayground only*
+- [`polySample`](#polysample)
+- [`wavetable`](#wavetable) *Mercury4Max only*
 - [`input`](#input)
 - [`midi`](#midi)
 - [`osc`](#osc)
@@ -403,7 +404,7 @@ new synth <waveform>
 ```
 
 :::note
-The waveforms in MercuryPlayground are currently not created with single-cycle soundfiles but via WebAudio's `PeriodicWave`, constructing a waveform from a Fourier Series. This results in slightly different sounding oscillators between the Max and Web version.
+The waveforms in MercuryPlayground are not created with single-cycle waveforms but via WebAudio's `PeriodicWave`, constructing a waveform from a Fourier Series. This results in slightly different sounding oscillators between the Max and Web version.
 :::
 
 ### note
@@ -812,9 +813,6 @@ new polySynth sine note(notes 2) shape(1 1/1) time(1/1) spread(150 50)
 
 ## polySample
 
-:::warning Mercury Playground only
-:::
-
 The polySample functions the same as the `sample` in the sense that you choose a sample file, set a `speed()`, add a `shape()`, etc. For explanation of those functions see [`sample`](#sample).
 
 The extra feature of the polySample is that it allows for overlapping sounds. For example useful when generating chords. Notes provided to the `note()` function as a 2-dimensional list will be played at the same time as a chord. By default there are 8 voices available at the same time.
@@ -828,6 +826,85 @@ set scale dorian eb
 list notes shuffle(spread(24))
 new polySample piano_e time(1/16) note(notes 1) shape(1 1/2) steal(off) tune(64)
 ```
+
+## wavetable
+
+:::warning Mercury4Max Only
+:::
+
+:::warning Still experimental
+Some functions and features may still change in future updates
+:::
+
+Use a wavetable (a soundfile containing multiple single-cycle waveforms that can be looked-up as if on a 2-dimensional grid) as the source oscillator for some synthesis. This wavetable is similar to applications such as Vital and Serum, albeit very minimal in implementation. If you're not sure how wavetable synthesis works I can recommend to try [Vital](https://vital.audio/).
+
+The waveform used can contain as many single-cycle waveforms as you like, the synth will automatically adapt to as many as it detects. You do need to specify the width of a single cycle of the waveform in samples, the default is 2048 (which is common for modern wavetable synths, but older ones might use a size of 128, 256 or 512 samples). The wavetable synth performs interpolation between adjecent single-cycle waveforms, allow the y-axis position of the table to be modulated by a floating-point value between 0 and 1.
+
+If you want to generate your own wavetables for this synth, you can use free tools such as [Vital](https://vital.audio/) (it has an export option) or [WaveEdit](https://synthtech.com/waveedit/).
+
+The synth works very similar to the `synth` and `polySynth` in the sense that you can specify a `note()`, add a `shape()`, set the `gain()`, etc. For explanation of those functions see [`synth`](#synth) and [All Instruments functions](#all-instruments).
+
+```js
+new wavetable <wavetable_name>
+```
+
+The wavetable specific functions are:
+
+### offset
+
+Set the position in the wavetable that you want to read from. The position is a normalized value between 0 and 1, where 0 is the beginning of the table and 1 is the end. This value can be specified with a `float`, with a `list`, or with a `modulator`.
+
+**arguments**
+- `Float|FloatList` -> wavetable position between 0 and 1 (default = 0)
+
+```js
+// set a static position for the table
+new wavetable <wavetable_name> offset(0.3)
+```
+
+```js
+// use a list to change the table position
+list tablePositions [0 0.5 0.2 0.8]
+new wavetable <wavetable_name> offset(tablePositions)
+```
+
+```js
+// works well together with the modulator in Mercury4Max
+// use the time for the modulation speed and the range for the selection of the table
+new modulator sine name(positionModulator) time(4/1) range(0.2 0.8)
+new wavetable <wavetable_name> offset(positionModulator)
+```
+
+### modShape
+
+Use an envelope to modulate the position in the wavetable. The envelope is triggered at the same time as the `shape()` of the synth, based on the functions like `time` and `play`. The envelope can have an attack, sustain and release time, specified in milliseconds or fraction. By default the `modShape()` is `off` so it doesn't interfere with the `offset()`. It is however possible to combine the offset and the modshape, the modulation will be added.
+
+**arguments**
+- `Number+(List)/Fraction(List)` -> Attack time in ms or fraction (optional, default=off)
+- `Number+(List)/Fraction(List)` -> Decay time in ms or fraction (optional)
+- `Number+(List)/Fraction(List)` -> Release time in ms or fraction (optional)
+
+```js
+// the wavetable y-axis position is shortly modulated by the modShape
+// in 10 milliseconds the position goes from 0 to 1, and in 1/16th note it goes down to 0
+new wavetable <wavetable_name> time(3/8) modShape(10 1/16) shape(1 1/4)
+```
+
+### size
+
+Set the size of a single-cycle waveform in the wavetable. This is important when you are using wavetables that don't use the default size of 2048 samples for a single cycle. The `wavetable` synth will automatically determine the amount of waves within the table (so basically the height of the y-axis) based on the size of a single cycle waveform in the table. For example: if you have a wavetable of 16384 samples large, and the size of a single cycle is 2048 samples, then it follows that there are (16384/2048)= 8 different waveforms in the table. 
+
+*NB: Specifying the wrong tablesize will lead to undesired distortion and incorrectly pitched oscillators.*
+
+**arguments**
+- `Number+` -> The size of single-cycle waveform in the table (optional, default=2048)
+
+```js
+// when using a wavetable with smaller (or larger) size, specify the correct size
+new wavetable <wavetable_name> size(512)
+```
+
+<!-- ### lfo -->
 
 ## midi
 
