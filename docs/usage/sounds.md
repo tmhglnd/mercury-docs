@@ -26,6 +26,7 @@ Most of the sounds in Mercury are from [freesound.org](http://www.freesound.org)
 	- [Noise](#noise) (noise)
 - [Credits](#sample-credits)
 - [Waveforms](#waveforms)
+- [Wavetables](#wavetables)
 
 ## One-shots
 
@@ -1439,3 +1440,44 @@ Part of the basic waveforms
 * AKWF_hvoice_0036.wav
 * url: https://github.com/KristofferKarlAxelEkstrand/AKWF-FREE/tree/master/AKWF
 * license: Creative Commons 0
+
+# Wavetables
+
+All wavetables have been generated from (slightly) adapted code from the Mutable Instruments Plaits module, thanks to Emilie Gillet. The original source can be found through the link below. The code to my adaptation for these wavetables can be found on my codeberg here: https://codeberg.org/tmhglnd/plaits-wavetables
+
+* url: https://github.com/pichenettes/eurorack/blob/master/plaits/resources/wavetables.py
+* license: MIT License
+
+#### burst
+
+#### comb
+
+#### drawbars
+
+#### drawbars2
+
+#### formant
+
+#### formant_bp
+
+#### formant_sq
+
+#### formant_digi
+
+#### harmonic
+
+#### pair
+
+#### pulsemod
+
+#### quadra
+
+#### sawtri
+
+#### sine_even
+
+#### sine_odd
+
+#### sine_power
+
+#### trisaw
