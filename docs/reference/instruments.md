@@ -397,7 +397,7 @@ new sample hat_909 time(1/4) wait(100)
 
 ## synth
 
-The `synth` and `polySynth` instruments allow you to play synthesized sounds using a single cycle waveform. These waveforms are loaded in memory and can be accessed by their filename (without the extension). The default waveforms are `sine`, `triangle`, `square` and `saw`.
+The `synth` and `polySynth` instruments allow you to play synthesized sounds using a single cycle waveform. These waveforms are loaded in memory and can be accessed by their filename (without the extension). The default waveforms are `sine`, `triangle`, `square` and `saw`. For a full list of the available waveforms, see [Sounds in Mercury](./../usage/sounds.md#waveforms).
 
 ```js
 new synth <waveform>
@@ -838,7 +838,9 @@ Some functions and features may still change in future updates
 
 Use a wavetable (a soundfile containing multiple single-cycle waveforms that can be looked-up as if on a 2-dimensional grid) as the source oscillator for some synthesis. This wavetable is similar to applications such as Vital and Serum, albeit very minimal in implementation. If you're not sure how wavetable synthesis works I can recommend to try [Vital](https://vital.audio/).
 
-The waveform used can contain as many single-cycle waveforms as you like, the synth will automatically adapt to as many as it detects. You do need to specify the width of a single cycle of the waveform in samples, the default is 2048 (which is common for modern wavetable synths, but older ones might use a size of 128, 256 or 512 samples). The wavetable synth performs interpolation between adjecent single-cycle waveforms, allow the y-axis position of the table to be modulated by a floating-point value between 0 and 1.
+The waveform used can contain as many single-cycle waveforms as you like, the synth will automatically adapt to as many as it detects. You do need to specify the width of a single cycle of the waveform in samples, the default is 2048 (which is common for modern wavetable synths, but older ones might use a size of 128, 256 or 512 samples). The wavetable synth performs interpolation between adjecent single-cycle waveforms, allow the y-axis position of the table to be modulated by a floating-point value between 0 and 1. 
+
+For a full list of the available wavetables, see [Sounds in Mercury](./../usage/sounds.md#wavetables)
 
 If you want to generate your own wavetables for this synth, you can use free tools such as [Vital](https://vital.audio/) (it has an export option) or [WaveEdit](https://synthtech.com/waveedit/).
 

@@ -1441,7 +1441,7 @@ Part of the basic waveforms
 * url: https://github.com/KristofferKarlAxelEkstrand/AKWF-FREE/tree/master/AKWF
 * license: Creative Commons 0
 
-# Wavetables
+## Wavetables
 
 All wavetables have been generated from (slightly) adapted code from the Mutable Instruments Plaits module, thanks to Emilie Gillet. The original source can be found through the link below. The code to my adaptation for these wavetables can be found on my codeberg here: https://codeberg.org/tmhglnd/plaits-wavetables
 
