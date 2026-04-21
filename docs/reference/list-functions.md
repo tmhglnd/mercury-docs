@@ -1702,6 +1702,56 @@ sum([1 2 [3 4 [5 6] 7] 8])
 //=> 36
 ```
 
+## plot
+
+Generate an ASCII-plot based on the input `list`. This function outputs a `string` of text that contains the plot, and is meant to be printed to the console with the `print` action.
+
+**type: `transformer`**
+
+**arguments**
+- {Number/List/String} -> values to plot
+
+```js
+print plot( coin(16) )
+//    1.00 ┼╮╭──╮╭─╮╭╮    ╭ 
+//    0.00 ┤╰╯  ╰╯ ╰╯╰────╯ 
+
+print plot( sine(20 3.1415 0 12) )
+//   11.00 ┼╭─╮    ╭╮    ╭╮     
+//   10.00 ┤│ │    ││    │╰╮    
+//    9.00 ┤│ │   ╭╯╰╮   │ │    
+//    8.00 ┤│ │   │  │   │ │    
+//    7.00 ┤│ ╰╮  │  │  ╭╯ │    
+//    6.00 ┼╯  │  │  │  │  │    
+//    5.00 ┤   │  │  │  │  ╰╮ ╭ 
+//    4.00 ┤   │  │  │  │   │ │ 
+//    3.00 ┤   │ ╭╯  ╰╮ │   │ │ 
+//    2.00 ┤   │ │    │╭╯   │ │ 
+//    1.00 ┤   ╰╮│    ││    │ │ 
+//    0.00 ┤    ╰╯    ╰╯    ╰─╯ 
+```
+
+## draw
+
+Draw a grayscale ascii character image of the input 2D-array to the console and return drawing as a string. If you just want the graph returned as string and not log to console set `{ log: false }`. If you want to print using a characterset under ascii-code 256 use `{ extend: false }`. For error reporting when values are `NaN` use `{ error: true }`.
+
+**type: `transformer`**
+
+**arguments**
+- {List/2DList} -> values to draw
+
+```js
+print draw( split( drunk(256 5) 32) )
+// ▓▒▒░  ░░  ░ ░  ░  ░▒▒▓▒▓▒█▓▒▓▒▒█     
+// ▓▓▓▒█▒██▓▒▓▓░▒▒▒▓▒░   ░     ▒▒▒▒     
+// █▓▓▓▓██▒███▒█▒░░░ ░  ░░▓█▓█▒░        
+// ░  ▒▓▒▒▓█▒██▓█▒░    ░░ ░ ░░▒▓▓▓▓     
+// █▒██▓░  ▒ ░░   ░░▒▒▒▒ ▒░▓█▒██▓▒█     
+// ▒▓█▒▒▒▒▒░▒▓▒█▓▓▒▓▓░▒▒▒ ▒▓▒▒░░        
+// ░ ░▒██▓█▓▓▒  ░ ░  ░░ ░ ░░░▒  ░░░     
+// ░▒ ▒░▓▒▒░  ░░▓▓▒▒▓█▒░▓▒░▒▒▒▒▒▓▒░ 
+```
+
 ## Translate Functions
 
 ### Conversion between pitch units
