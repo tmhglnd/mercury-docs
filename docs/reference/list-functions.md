@@ -1656,7 +1656,7 @@ list vals lte([0 10 20 30] [20 0 30 30])
 
 Alias: `lte`
 
-## size
+### size
 
 Return the length/size of a list as a `number` if the argument is a list. If the argument is a number return the number as a positive integer greater than 0. If the argument is not a number return 1. The method can be used to input lists as arguments for other functions.
 
@@ -1682,7 +1682,7 @@ size('foo')
 
 Alias: `length`
 
-## sum
+### sum
 
 Return the sum of all values in a list as a `number`. The function ignores all non-numeric values. Works recursively with n-dimensional lists.
 
@@ -1702,14 +1702,14 @@ sum([1 2 [3 4 [5 6] 7] 8])
 //=> 36
 ```
 
-## plot
+### plot
 
 Generate an ASCII-plot based on the input `list`. This function outputs a `string` of text that contains the plot, and is meant to be printed to the console with the `print` action.
 
 **type: `transformer`**
 
 **arguments**
-- {Number/List/String} -> values to plot
+- `Number(List)` -> values to plot
 
 ```js
 print plot( coin(16) )
@@ -1731,14 +1731,14 @@ print plot( sine(20 3.1415 0 12) )
 //    0.00 ┤    ╰╯    ╰╯    ╰─╯ 
 ```
 
-## draw
+### draw
 
 Draw a grayscale ascii character image of the input 2D-array to the console and return drawing as a string. If you just want the graph returned as string and not log to console set `{ log: false }`. If you want to print using a characterset under ascii-code 256 use `{ extend: false }`. For error reporting when values are `NaN` use `{ error: true }`.
 
 **type: `transformer`**
 
 **arguments**
-- {List/2DList} -> values to draw
+- `Value(List)` -> values to draw
 
 ```js
 print draw( split( drunk(256 5) 32) )
@@ -1750,6 +1750,62 @@ print draw( split( drunk(256 5) 32) )
 // ▒▓█▒▒▒▒▒░▒▓▒█▓▓▒▓▓░▒▒▒ ▒▓▒▒░░        
 // ░ ░▒██▓█▓▓▒  ░ ░  ░░ ░ ░░░▒  ░░░     
 // ░▒ ▒░▓▒▒░  ░░▓▓▒▒▓█▒░▓▒░▒▒▒▒▒▓▒░ 
+```
+
+### cowsay
+
+Use the classic `cowsay` or `cowthink` cli commands, originally written in Perl by [Tony Monroe](https://github.com/tnalpgge/rank-amateur-cowsay). Specify a `string` of characters or a `list` and the cow will say it printed to the console. You can change the cow to other animals such as `dragon`, `bunny` and more.
+
+**type: `transformer`**
+
+**arguments**
+- `Value` -> value to let the cow say
+- `Name` -> name of the animal to use or `random`
+
+```js
+print cowsay('I code mercury!')
+//  _________________
+// < I code mercury! >
+//  -----------------
+//         \   ^__^
+//          \  (oo)\_______
+//             (__)\       )\/\
+//                 ||----w |
+//                 ||     ||
+
+print cowsay('Im a random animal' random)
+//  ____________________
+// < Im a random animal >
+//  --------------------
+//  \
+//   \
+//    \ >()_
+//       (__)__ _
+```
+
+### cowthink
+
+Similar to the `cowsay` cli command, but with a thought-bubble instead of textbox.
+
+**type: `transformer`**
+
+**arguments**
+- `Value` -> value to let the cow say
+- `Name` -> name of the animal to use or `random`
+
+```js
+print cowthink('Im thinking' unipony-smaller)
+//  _____________
+// ( Im thinking )
+//  -------------
+//    o        \
+//     o        \
+//      o       _\^
+//       o    _- oo\
+//            \---- \______
+//                  \       )\
+//                 ||-----||  \
+//                 ||     ||
 ```
 
 ## Translate Functions
