@@ -552,9 +552,6 @@ new synth saw note(0 1) noise(0.3 0.8 1)
 
 ## fm
 
-:::warning currently Mercury4Max only
-:::
-
 The FM-synth is a type of synth that allows you to perform Frequency Modulation. The synth contains of a single carrier (a sinewave oscillator) and a modulator (also a sinewave oscillator). The modulator modulates the frequency of the carrier, and based on the harmonicity ratio and the modulation index a number of sidebands (overtones) are generated, giving the synth the ability to generate a wide range of sounds. The modulation index can also be controlled with an additional envelope through a function called fmShape. Read more about [FM synthesis on wikipedia](https://en.wikipedia.org/wiki/Frequency_modulation_synthesis).
 
 ```js
