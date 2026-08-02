@@ -4,16 +4,16 @@ sidebar_position: 1
 
 # 🚀 Getting Started
 
-`Hello, World!` Welcome to the Getting Started guide for Mercury. The various chapters in this guide will get you up and running in no time! Before we get started it is good to know that Mercury currently has 2 versions:
+`Hello, World!` Welcome to the Getting Started guide for Mercury. This page will get you up and running in no time! But, before we get started it is good to know that Mercury has 2 versions:
 
 - **MercuryPlayground**, running in the [browser](https://mercury-playground.cc/) (Windows/Mac/Linux)
-- **Mercury4Max**, running in [Cycling'74's Max8/9](https://cycling74.com/downloads) (Windows/Mac/Experimental Linux via Wine)
+- **Mercury4Max**, running in [Cycling'74's Max9](https://cycling74.com/downloads) (Windows/Mac/Experimental Linux via Wine)
 
 :::info for everyone
-I recommend to use the MercuryPlayground (browser version) first. Please read further in chapter [MercuryPlayground](#-mercuryplayground).
+I recommend to use the MercuryPlayground (in the browser) first. Please read further in chapter [MercuryPlayground](#-mercuryplayground).
 :::
 
-If you have experience with Max8/9 you can also consider using Mercury4Max instead. Please read further in chapter [Mercury4Max](#-mercury4max) for instructions on installing and setting up the environment.
+If you have experience with MaxMSP you can also use Mercury4Max. Please read the chapter [Mercury4Max](#-mercury4max) for further instructions.
 
 <!-- If you are curious what the pros and cons are between these two versions please read [Browser or Max?](browser-max). -->
 
@@ -67,48 +67,36 @@ If you want to run the MercuryPlayground locally (for using without internet, or
 
 ## 💻 Mercury4Max
 
-Mercury also runs in Max8/9 (sometimes also called MaxMSP), a node-based creative coding environment from Cycling'74 for MacOS or Windows. Linux users can try out the [Experimental Linux Guide](./usage/mercury4max-linux.md), but I recommend trying to work with the Playground first.
+Mercury also runs in Max8/9 (a.k.a. MaxMSP), a node-based creative coding environment from Cycling'74 for MacOS or Windows. Linux users can try the [Experimental Linux Guide](./usage/mercury4max-linux.md), but I recommend using the Mercury Playground first.
 
-:::info You do not need to buy a Max-license in order to use Mercury in Max8/9
+:::warning You do not need to buy a license in order to use Mercury in Max
 :::
 
 ### 🛠 System Requirements
 
-Check the [system requirements](https://cycling74.com/downloads) on the download page from Cycling'74. The requirements are recommended for running Max and Mercury on your computer properly. Lower specs may work but it's not guaranteed. A dedicated Graphics Card (GPU) is also recommended to run the visuals of Mercury smoothly (the text-editor runs on the graphics card as well). If you don't have a good Graphics Card you can also use an external text-editor like Pulsar or Flok. You can find instructions for using those in [External Editors](./usage/editors.md).
+Check the [system requirements](https://cycling74.com/downloads) on the download page from Cycling'74. The requirements are recommended for running Max and Mercury on your computer properly. A dedicated Graphics Card (GPU) is also recommended, for running visuals of Mercury and the text-editor smoothly. If you don't have a good GPU you can also use the external text-editor package for Pulsar. Instructions for using that are in [External Editors](./usage/editors.md).
 
 ### ⚙️ Install Mercury
 
-Read the [system requirements](#-system-requirements) before getting started.
+1. Download and install Max for your Operating System at https://cycling74.com/downloads
 
-1. Download Max for your Operating System through the link below
+2. Launch Max. It will create a `Max 9` folder in your `~/Documents`. Create an empty folder named `Projects` inside `~/Documents/Max 9/`. The full path should look like this: `<User>/Documents/Max 9/Projects` (on Mac).
 
-	- [Download Max](https://cycling74.com/downloads)
+3. Download the [latest version of Mercury here](https://github.com/tmhglnd/mercury/archive/refs/heads/master.zip). Unzip the entire folder in `~/Documents/Max 9/Projects`.
 
-2. Launch Max after installing. It will create a `Max 8` or `Max 9` folder in your `Documents`. Go inside that folder and create an empty folder named `Projects`. The full path should now look like this: `<User>/Documents/Max 9/Projects`
+	- **Or** Git-users can clone Mercury with `git clone http://github.com/tmhglnd/mercury`.
 
-3. Download the [latest version of Mercury](https://github.com/tmhglnd/mercury/archive/refs/heads/master.zip) by clicking on the green button `code` and `download .zip`. Unzip the entire folder in `~/Documents/Max 9/Projects`.
+4. Your filepath should look something like: `<User>/Documents/Max 9/Projects/mercury-v.x.x.x`
 
-	- **Or** git-users can clone/fork Mercury to the Projects folder manually.
-
-	```
-	$ cd ~/Documents/Max\ 9/Projects
-	$ git clone http://github.com/tmhglnd/mercury
-	```
-
-4. Now your filepath should look something like: `<User>/Documents/Max 9/Projects/mercury-v.x.x.x`
+5. **Optional**: install the [Pulsar editor and the mercury-pulsar](./usage/editors.md#️-pulsar) package.
 
 ### 🚀 Launch Mercury4Max
 
-Launch Mercury by double clicking `mercury_ide.maxproj` located in the folder `mercury-v.x.x.x/mercury-ide` **or** by running the following terminal command:
+Launch Mercury by double clicking `mercury_ide.maxproj` located in the folder `mercury-v.x.x.x/mercury-ide`.
 
-```
-$ cd mercury
-$ open mercury_ide/mercury_ide.maxproj
-```
+<!-- You can create a shortcut or alias on your desktop or Applications folder for easy access. -->
 
-You can create a shortcut or alias on your desktop or Applications folder for easy access.
-
-- ⏳ Now give it some time to load.
+- ⏳ Give it some time to load.
 	- **Mac Users**: You may need to give some permissions under Security & Privacy Preferences. Please be on the lookout for any messages popping up.
 
 Once it's ready you will see two windows:
@@ -116,10 +104,12 @@ Once it's ready you will see two windows:
 - The `_mercury_main` window 
 - The  `mercury` window (still black). 
 
-The *main window* is used to quickly access the most important settings in Mercury such as turning the audio on/off and starting a recording of your sound. When you turn the Rendering on you will start to see the text-editor in the `mercury` window. This editor is rendered in a 3D visual environment called Jitter. This is the window were you can type your code. If your computer can't handle the rendering please use an external editor instead.
+The *main window* is used to quickly access the most important settings in Mercury, such as audio on/off. The *mercury window* is used to display the text-editor.
 
 - 🔈 Turn the **Audio on**
 - 📺 Turn the **Rendering on** (or use an [external editor like Pulsar](./usage/editors.md))
+
+:::warning If your computer can't handle the rendering of the editor, please use Pulsar with the Mercury-pulsar package instead.
 
 You are now ready to start coding your first sounds! 🎶💻🎶
 

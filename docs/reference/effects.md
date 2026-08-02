@@ -222,7 +222,14 @@ new synth saw note(0 1) shape(-1) fx(filter low 800 0.6)
 
 ### filter modulation
 
-You can provide extra arguments to have the filter modulate between a low and high cutoff-frequency. In this case the arguments are as follows (in order): The filter-type `low / high / band`. The modulation speed in float/fraction where `0.25` or `1/4` = a quarter note. The upper cutoff in Hz, the lower cutoff in Hz the resonance between `0` and `0.99`. The modulation shape tilt between `0` and `1`, where 0 is ramp-down, 1 is ramp-up and 0.5 is triangle form (although the ramp-up and down can change if you swap the upper and lower cutoff values). The exponential curve for the filter as floating point `0` - `100`.
+You can provide extra arguments to have the filter modulate between a low and high cutoff-frequency, sometimes called "auto-filter". In this case the arguments are as follows (in order): 
+- The filter-type `low / high / band`. 
+- The modulation speed in float/fraction where `0.25` or `1/4` = a quarter note. 
+- The upper cutoff in Hz 
+- The lower cutoff in Hz 
+- The resonance between `0` and `0.99`. 
+- The modulation shape tilt between `0` and `1`, where 0 is ramp-down, 1 is ramp-up and 0.5 is triangle form (although the ramp-up and down can change if you swap the upper and lower cutoff values). 
+- The exponential curve for the filter as floating point `0` - `100`.
 
 **arguments**
 - `Name` -> filter type, low, high, band (default=low)
