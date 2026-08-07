@@ -1208,7 +1208,7 @@ new modulator <waveform-type> name(<name>) range(<lo> <hi> <exp>) time(<fraction
 
 ### name
 
-Replaces the `name()` function. Set the name for the modulator, this name can be used as argument in the functions of an instrument like `synth` and `sample`
+Set the name for the modulator, this name can be used as argument in the functions of an instrument like `synth` and `sample`
 
 **arguments**
 - `Name` -> the modulator `name` for reference in other functions
@@ -1223,7 +1223,7 @@ new synth saw gain(myModulator)
 
 ### time
 
-Replaces the `time()` function. Set the modulation speed as a `fraction` or `float+`. The default is `1/1` (one period per bar).
+Set the modulation speed as a `fraction` or `float+`. The default is `1/1` (one period per bar).
 
 **arguments**
 - `Fraction/Float+` -> The time interval for one period of the modulation waveform (optional, default=1/1)
