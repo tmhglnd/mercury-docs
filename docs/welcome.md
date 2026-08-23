@@ -6,9 +6,9 @@ sidebar_position: 0
 
 # 🌕 Mercury Live Coding Environment 
 
-**Mercury is a free/open-source, beginner-friendly, minimal and human-readable language for the live coding of algorithmic electronic music performances**
+**Mercury is a human-made/handcrafted, free/open, beginner-friendly, minimal and readable language for the live coding of algorithmic electronic music performances**
 
-In the menu on the left side you can find everything you need, from [About](about) and [Getting Started](getting-started) to Tips&Tricks, How-To's and the [Reference](./reference/syntax.md). Also make sure you check out the [Collaborative Coding](collaborate) chapter, because making music together is fun!
+<!-- In the menu on the left side you can find everything you need, from [About](about) and [Getting Started](getting-started) to Tips&Tricks, How-To's and the [Reference](./reference/syntax.md). Also make sure you check out the [Collaborative Coding](collaborate) chapter, because making music together is fun! -->
 
 <!-- Mercury currently has 2 versions:
 
@@ -17,7 +17,9 @@ In the menu on the left side you can find everything you need, from [About](abou
 
 [**🚀 Start coding directly at mercury-playground.cc!**](https://mercury-playground.cc/)
 
-[**🙏 Support Mercury by buying me a coffee ko-fi**](https://ko-fi.com/tmhglnd)
+[**🙏 Support Mercury by buying me a ko-fi**](https://ko-fi.com/tmhglnd)
+
+[**🙏 Support me on Patreon**](https://patreon.com/timohoogland)
 
 [**💬 Join the Discord Community!**](https://discord.gg/vt59NYU)
 
