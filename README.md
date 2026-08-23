@@ -2,13 +2,15 @@
 
 **Welcome to the Mercury Docs! ✌️ ☮️ Make Music, Not War!** ☮️ ✌️
 
-**Mercury is a free/open-source, beginner-friendly, minimal and human-readable language for the live coding of algorithmic electronic music performances**
+**Mercury is a human-made, free/open, beginner-friendly, minimal and readable language for the live coding of algorithmic electronic music performances**
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 [**🚀 Start coding directly in the playground!**](https://mercury-playground.cc/)
 
-[**🙏 Support Mercury by buying me a coffee on ko-fi**](https://ko-fi.com/tmhglnd)
+[**🙏 Support Mercury by buying me a coffee on coffee**](https://ko-fi.com/tmhglnd)
+
+[**🙏 Support Mercury by becoming a Patron**](https://patreon.com/timohoogland)
 
 [**💬 Join the Discord Community!**](https://discord.gg/vt59NYU)
 
