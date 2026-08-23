@@ -17,13 +17,24 @@ sidebar_position: 0
 
 [**🚀 Start coding directly at mercury-playground.cc!**](https://mercury-playground.cc/)
 
-[**🙏 Support Mercury by buying me a coffee on coffee**](https://ko-fi.com/tmhglnd)
+[**🙏 Support Mercury by buying me a coffee**](https://ko-fi.com/tmhglnd)
 
 [**🙏 Support Mercury by becoming a Patron**](https://patreon.com/timohoogland)
 
 [**💬 Join the Discord Community!**](https://discord.gg/vt59NYU)
 
 <!-- ⭐️ *watch and star the [**repo**](https://github.com/tmhglnd/mercury) to keep up-to-date with the latest changes whenever they're made* -->
+
+### 👩🏻‍💻 People over Prompting
+
+:::info prefer slow human art over a single prompt
+
+You - as a human - are very welcome to use Mercury and experience this work! If you used Mercury for something, I'm interested to hear about it.
+
+You - and your bot - are not welcome to use any form of autonomous agent to scrape my art, auto-generate art with it, or submit low-effort generated contributions. 
+
+[Longer version here](/docs/about/about-mercury.md) | [AI usage guide here](/docs/contribute.md)
+:::
 
 ### ☮️ Make Music, Not War
 
