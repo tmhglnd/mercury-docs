@@ -2,7 +2,7 @@
 sidebar_position: 0
 ---
 
-# 📚 How To's
+# 🤨 How To's
 
 This page will contain various *Tips 'n Tricks*, *How to?*'s and *Did You Know?*'s.
 

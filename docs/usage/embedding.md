@@ -1,8 +1,8 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 ---
 
-# 📦 Add Mercury in your Site
+# 📦 Add Mercury to your Site
 
 It is also possible to include Mercury in your own website. This is done with the [`mercury-engine`](https://www.npmjs.com/package/mercury-engine). The engine is available as a package on npmjs.com or via unpkg.com.
 
